@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>数据结构-双向链表(list) | kpsun</title>
+  <meta name="keywords" content=" 数据结构 ">
+  <meta name="description" content="数据结构-双向链表(list) | kpsun">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="个人简介孙楷朋准大二计算机相关专业在读热爱编程,乐于合作,善于总结分享,有良好的的编程习惯目标BAT大厂联系方式 QQ: 1287923885 WeChat: code_cpp Email: &amp;#107;&amp;#112;&amp;#x73;&amp;#117;&amp;#x6e;&amp;#64;&amp;#102;&amp;#111;&amp;#120;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于我">
+<meta property="og:url" content="http://goskp.github.io/about/index.html">
+<meta property="og:site_name" content="kpsun">
+<meta property="og:description" content="个人简介孙楷朋准大二计算机相关专业在读热爱编程,乐于合作,善于总结分享,有良好的的编程习惯目标BAT大厂联系方式 QQ: 1287923885 WeChat: code_cpp Email: &amp;#107;&amp;#112;&amp;#x73;&amp;#117;&amp;#x6e;&amp;#64;&amp;#102;&amp;#111;&amp;#120;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-14T04:24:56.000Z">
+<meta property="article:modified_time" content="2022-09-14T12:29:33.592Z">
+<meta property="article:author" content="kpsun">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/o.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="false" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="false" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/o.jpg"/>
+</a>
+<div class="author">
+    <span>kpsun</span>
+</div>
+
+<div class="icon">
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(54)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        
+                        后端
+                        <small>(22)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="QT">
+                        
+                        QT
+                        <small>(6)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="数据结构">
+                        
+                        数据结构
+                        <small>(24)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="算法">
+                        
+                        算法
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="计算机硬件">
+                        
+                        计算机硬件
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="54">
+<input type="hidden" id="yelog_site_word_count" value="99.2k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://fomalhaut1998.github.io/">Fomalhaut1998a</a></li>
+            
+            <li><a target="_blank" href="https://cnhuazhu.gitee.io/">cnhuazhu</a></li>
+            
+            <li><a target="_blank" href="https://wangeasycloud.cn/">cheerio</a></li>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://lee-jhong001-github-io.vercel.app/">lee-jhong</a></li>
+            
+            <li><a target="_blank" href="https://hi-wilson.github.io/">Wilson</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Algorithm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>C++</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>QT</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Rust</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数据结构</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>计算机硬件</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 算法 "
+           href="/2022/09/30/C++%E5%B8%B8%E7%94%A8%E5%88%B7%E9%A2%98%E6%8A%80%E5%B7%A7/"
+           data-tag="Algorithm"
+           data-author="" >
+            <span class="post-title" title="C/C++常用刷题技巧">C/C++常用刷题技巧</span>
+            <span class="post-date" title="2022-09-30 15:36:35">2022/09/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 QT "
+           href="/2022/09/29/QT(%E5%B8%83%E5%B1%80)/"
+           data-tag="QT"
+           data-author="" >
+            <span class="post-title" title="QT(布局)">QT(布局)</span>
+            <span class="post-date" title="2022-09-29 18:53:52">2022/09/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 QT "
+           href="/2022/09/26/QT(%E5%AF%B9%E8%AF%9D%E6%A1%86)/"
+           data-tag="QT"
+           data-author="" >
+            <span class="post-title" title="QT(对话框)">QT(对话框)</span>
+            <span class="post-date" title="2022-09-26 07:06:17">2022/09/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 QT "
+           href="/2022/09/23/QT(%E6%8E%A7%E4%BB%B6)/"
+           data-tag="QT"
+           data-author="" >
+            <span class="post-title" title="QT(控件)">QT(控件)</span>
+            <span class="post-date" title="2022-09-23 16:07:57">2022/09/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 QT "
+           href="/2022/09/22/QT(QWidget)/"
+           data-tag="QT"
+           data-author="" >
+            <span class="post-title" title="QT(QWidget)">QT(QWidget)</span>
+            <span class="post-date" title="2022-09-22 19:09:02">2022/09/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 QT "
+           href="/2022/09/06/QT(%E4%BF%A1%E5%8F%B7%E5%92%8C%E6%A7%BD)/"
+           data-tag="QT"
+           data-author="" >
+            <span class="post-title" title="QT(信号和槽)">QT(信号和槽)</span>
+            <span class="post-date" title="2022-09-06 12:08:32">2022/09/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 QT "
+           href="/2022/09/01/QT(%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)/"
+           data-tag="QT"
+           data-author="" >
+            <span class="post-title" title="QT(常用数据类型)">QT(常用数据类型)</span>
+            <span class="post-date" title="2022-09-01 15:32:46">2022/09/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/08/31/Rust(1)/"
+           data-tag="Rust"
+           data-author="" >
+            <span class="post-title" title="Rust(1)">Rust(1)</span>
+            <span class="post-date" title="2022-08-31 18:39:55">2022/08/31</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%9E%E6%BA%AF%E6%B3%95(DP,Queen)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-回溯法(DP,Queen)">数据结构-回溯法(DP,Queen)</span>
+            <span class="post-date" title="2022-07-22 16:19:29">2022/07/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92(DP)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-动态规划(DP)">数据结构-动态规划(DP)</span>
+            <span class="post-date" title="2022-07-20 16:18:50">2022/07/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95(sort)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-排序算法(sort)">数据结构-排序算法(sort)</span>
+            <span class="post-date" title="2022-07-18 10:35:06">2022/07/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-分而治之">数据结构-分而治之</span>
+            <span class="post-date" title="2022-07-17 16:18:25">2022/07/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95(graph)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-贪心算法(graph)">数据结构-贪心算法(graph)</span>
+            <span class="post-date" title="2022-07-16 16:17:58">2022/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%B7%B1%E5%BA%A6%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88(DFS,BFS)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-深度/广度优先(DFS,BFS)">数据结构-深度/广度优先(DFS,BFS)</span>
+            <span class="post-date" title="2022-07-15 16:17:01">2022/07/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%BE(graph)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-图(graph)">数据结构-图(graph)</span>
+            <span class="post-date" title="2022-07-13 16:16:30">2022/07/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%A2%E9%BB%91%E6%A0%91(RB)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-红黑树(RB)">数据结构-红黑树(RB)</span>
+            <span class="post-date" title="2022-07-12 16:15:41">2022/07/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91(AVL)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-平衡二叉树(AVL)">数据结构-平衡二叉树(AVL)</span>
+            <span class="post-date" title="2022-07-11 16:15:25">2022/07/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%88%86%E6%94%AF%E5%AE%9A%E7%95%8C(C++%E6%8F%8F%E8%BF%B0)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-分支定界(C++描述)">数据结构-分支定界(C++描述)</span>
+            <span class="post-date" title="2022-07-10 16:14:33">2022/07/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91(tree)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-哈夫曼树(tree)">数据结构-哈夫曼树(tree)</span>
+            <span class="post-date" title="2022-07-09 16:06:00">2022/07/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/08/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91(tree)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-二叉搜索树(tree)">数据结构-二叉搜索树(tree)</span>
+            <span class="post-date" title="2022-07-08 19:34:11">2022/07/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91(tree)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-二叉树(tree)">数据结构-二叉树(tree)</span>
+            <span class="post-date" title="2022-07-07 08:26:46">2022/07/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/06/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%A0%86(heap)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-堆(heap)">数据结构-堆(heap)</span>
+            <span class="post-date" title="2022-07-06 12:50:51">2022/07/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%93%88%E5%B8%8C%E8%A1%A8(hash)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-哈希表(hash)">数据结构-哈希表(hash)</span>
+            <span class="post-date" title="2022-07-05 18:06:58">2022/07/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%93%88%E5%B8%8C%E5%AD%98%E5%82%A8(hash)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-哈希存储(hash)">数据结构-哈希存储(hash)</span>
+            <span class="post-date" title="2022-07-05 17:12:58">2022/07/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%B0%81%E8%A3%85string%E7%B1%BB(C++%E6%8F%8F%E8%BF%B0)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-简单封装string类(C++描述)">数据结构-简单封装string类(C++描述)</span>
+            <span class="post-date" title="2022-07-04 16:17:52">2022/07/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%B8%B2(string,BF,KMP)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-串(string,BF,KMP)">数据结构-串(string,BF,KMP)</span>
+            <span class="post-date" title="2022-07-03 14:36:09">2022/07/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97(queue)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-队列(queue)">数据结构-队列(queue)</span>
+            <span class="post-date" title="2022-07-02 15:38:29">2022/07/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88(stack)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-栈(stack)">数据结构-栈(stack)</span>
+            <span class="post-date" title="2022-07-01 20:29:22">2022/07/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/06/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%A1%BA%E5%BA%8F%E8%A1%A8(list)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-顺序表(list)">数据结构-顺序表(list)</span>
+            <span class="post-date" title="2022-06-30 12:46:33">2022/06/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/06/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%90%88%E5%B9%B6,%E5%8F%8D%E8%BD%AC,%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8(list)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-合并,反转,有序链表(list)">数据结构-合并,反转,有序链表(list)</span>
+            <span class="post-date" title="2022-06-29 10:40:49">2022/06/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/06/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8(list)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-双向链表(list)">数据结构-双向链表(list)</span>
+            <span class="post-date" title="2022-06-28 10:34:06">2022/06/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/06/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E7%A1%80%E5%8D%95%E9%93%BE%E8%A1%A8(list)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-基础单链表(list)">数据结构-基础单链表(list)</span>
+            <span class="post-date" title="2022-06-27 20:54:15">2022/06/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/26/C++%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E6%A8%A1%E6%9D%BF/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++可变参数模板">C++可变参数模板</span>
+            <span class="post-date" title="2022-06-26 18:15:05">2022/06/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/24/C++%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++正则表达式">C++正则表达式</span>
+            <span class="post-date" title="2022-06-24 17:10:54">2022/06/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/21/C++%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++智能指针">C++智能指针</span>
+            <span class="post-date" title="2022-06-21 19:06:51">2022/06/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/17/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E7%AE%97%E6%B3%95%E7%AF%87(%E6%8B%B7%E8%B4%9D,%E7%AE%97%E6%95%B0,%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88,%E5%A0%86)/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库算法篇(拷贝,算数,排列组合,堆)">C++标准模板库算法篇(拷贝,算数,排列组合,堆)</span>
+            <span class="post-date" title="2022-06-17 14:01:01">2022/06/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/13/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E7%AE%97%E6%B3%95%E7%AF%87(%E6%9F%A5%E6%89%BE,%E6%8E%92%E5%BA%8F,%E9%9B%86%E5%90%88)/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库算法篇(查找,排序,集合)">C++标准模板库算法篇(查找,排序,集合)</span>
+            <span class="post-date" title="2022-06-13 15:56:33">2022/06/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/09/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库之迭代器">C++标准模板库之迭代器</span>
+            <span class="post-date" title="2022-06-09 16:47:20">2022/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/04/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E4%B9%8Binitalizer_list%E4%B8%8Eset%E4%B8%8Emap/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库之initalizer_list与set与map">C++标准模板库之initalizer_list与set与map</span>
+            <span class="post-date" title="2022-06-04 16:41:40">2022/06/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/30/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E4%B9%8Blist%E4%B8%8Estack%E4%B8%8Equeue/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库之list与stack与queue">C++标准模板库之list与stack与queue</span>
+            <span class="post-date" title="2022-05-30 12:35:09">2022/05/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/27/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E4%B9%8Barray%E4%B8%8Evector/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库之array与vector">C++标准模板库之array与vector</span>
+            <span class="post-date" title="2022-05-27 14:16:07">2022/05/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/26/C++%E6%A8%A1%E6%9D%BF/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++模板">C++模板</span>
+            <span class="post-date" title="2022-05-26 08:32:18">2022/05/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/25/C++%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++异常处理">C++异常处理</span>
+            <span class="post-date" title="2022-05-25 16:26:04">2022/05/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/24/C++IO%E6%B5%81/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++IO流">C++IO流</span>
+            <span class="post-date" title="2022-05-24 16:11:36">2022/05/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/23/C++%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++虚函数与多态">C++虚函数与多态</span>
+            <span class="post-date" title="2022-05-23 16:04:05">2022/05/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/22/C++%E7%BB%A7%E6%89%BF/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++继承">C++继承</span>
+            <span class="post-date" title="2022-05-22 11:47:42">2022/05/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/21/C++%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++运算符重载">C++运算符重载</span>
+            <span class="post-date" title="2022-05-21 08:32:18">2022/05/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/20/C++%E5%8F%8B%E5%85%83/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++友元">C++友元</span>
+            <span class="post-date" title="2022-05-20 18:37:54">2022/05/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/19/C++%E7%89%B9%E6%AE%8A%E6%88%90%E5%91%98/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++特殊成员">C++特殊成员</span>
+            <span class="post-date" title="2022-05-19 21:07:35">2022/05/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/18/C++%E7%B1%BB%E7%9A%84%E7%BB%84%E5%90%88%E6%A1%88%E4%BE%8B/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++类的组合案例">C++类的组合案例</span>
+            <span class="post-date" title="2022-05-18 19:07:35">2022/05/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/17/C++%E6%9E%84%E9%80%A0%E4%B8%8E%E6%9E%90%E6%9E%84/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++构造与析构">C++构造与析构</span>
+            <span class="post-date" title="2022-05-17 13:17:08">2022/05/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/16/C++%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++类和对象">C++类和对象</span>
+            <span class="post-date" title="2022-05-16 11:58:16">2022/05/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/15/C++%E5%92%8CC%E7%9A%84%E5%8C%BA%E5%88%AB/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++和C的区别">C++和C的区别</span>
+            <span class="post-date" title="2022-05-15 15:24:31">2022/05/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 计算机硬件 "
+           href="/2022/05/10/%E8%AE%A1%E7%BB%84-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80/"
+           data-tag="计算机硬件"
+           data-author="" >
+            <span class="post-title" title="计组-计算机硬件基础">计组-计算机硬件基础</span>
+            <span class="post-date" title="2022-05-10 10:30:46">2022/05/10</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-数据结构-双向链表(list)" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">数据结构-双向链表(list)</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="数据结构">数据结构</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">数据结构</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2022-09-04 16:09:17'>2022-06-28 10:34</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:1.1k</span>
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D"><span class="toc-text">参考书籍:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90-%E9%BB%91%E7%9A%AE%E4%B9%A6"><span class="toc-text">数据结构与算法分析(黑皮书)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%9C%E8%80%85-Mark-Allen-Weiss"><span class="toc-text">作者:Mark Allen Weiss</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8"><span class="toc-text">双向链表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%8F%98%E9%87%8F%E9%87%87%E7%94%A8%E5%A6%82%E4%B8%8B%E5%91%BD%E5%90%8D%E6%96%B9%E5%BC%8F"><span class="toc-text">本篇博客中变量采用如下命名方式:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%86%9F%E6%82%89%E7%9A%84%E5%A5%97%E8%B7%AF-%E5%88%9B%E5%BB%BA%E7%BB%93%E7%82%B9-%E5%88%9B%E5%BB%BA%E9%93%BE%E8%A1%A8"><span class="toc-text">熟悉的套路:创建结点,创建链表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E5%A4%B4%E6%B3%95%E6%8F%92%E5%85%A5-%E5%9C%A8%E6%9C%89%E5%A4%B4%E7%BB%93%E7%82%B9%E5%89%8D%E6%8F%92%E5%85%A5%E6%96%B0%E8%8A%82%E7%82%B9"><span class="toc-text">表头法插入,在有头结点前插入新节点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%88%E5%88%A4%E6%96%AD%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%BB%93%E7%82%B9%E4%B8%AA%E6%95%B0%E6%98%AF%E5%90%A6%E4%B8%BA%E7%A9%BA-%E4%B8%BA%E7%A9%BA%E5%88%99%E7%9B%B4%E6%8E%A5%E5%B0%86%E5%A4%B4-x2F-%E5%B0%BE%E7%BB%93%E7%82%B9%E8%B5%8B%E4%B8%BA%E6%96%B0%E8%8A%82%E7%82%B9"><span class="toc-text">先判断链表中结点个数是否为空,为空则直接将头&#x2F;尾结点赋为新节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%93%BE%E8%A1%A8%E4%B8%8D%E4%B8%BA%E7%A9%BA"><span class="toc-text">链表不为空:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B0%E8%8A%82%E7%82%B9%E7%9A%84%E6%96%B0%E8%8A%82%E7%82%B9%E7%9A%84%E5%8F%B3%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E5%A4%B4%E7%BB%93%E7%82%B9"><span class="toc-text">新节点的新节点的右指针指向头结点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%B4%E7%BB%93%E7%82%B9%E7%9A%84%E5%B7%A6%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E6%96%B0%E7%BB%93%E7%82%B9"><span class="toc-text">头结点的左指针指向新结点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%B4%E7%BB%93%E7%82%B9%E5%8F%98%E4%B8%BA%E6%96%B0%E7%BB%93%E7%82%B9"><span class="toc-text">头结点变为新结点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BB%93%E7%82%B9%E4%B8%AA%E6%95%B0-1"><span class="toc-text">结点个数+1</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="toc-text">实现代码如下:</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E5%B0%BE%E6%B3%95%E6%8F%92%E5%85%A5-%E5%9C%A8%E5%B0%BE%E7%BB%93%E7%82%B9%E5%90%8E%E6%8F%92%E5%85%A5%E6%96%B0%E7%BB%93%E7%82%B9"><span class="toc-text">表尾法插入,在尾结点后插入新结点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%92%8C%E8%A1%A8%E5%A4%B4%E6%B3%95%E6%8F%92%E5%85%A5%E5%A4%A7%E5%90%8C%E5%B0%8F%E5%BC%82"><span class="toc-text">和表头法插入大同小异</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE%E6%8F%92%E5%85%A5"><span class="toc-text">指定位置插入</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%92%8C%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE%E6%8F%92%E5%85%A5%E7%B1%BB%E4%BC%BC"><span class="toc-text">和单链表的指定位置插入类似</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%9F%E6%98%AF%E9%87%87%E7%94%A8%E5%8F%8C%E7%BB%93%E7%82%B9%E9%81%8D%E5%8E%86%E6%95%B4%E4%B8%AA%E9%93%BE%E8%A1%A8-%E5%9B%A0%E4%B8%BA%E4%B8%A4%E4%B8%AA%E7%BB%93%E7%82%B9%E8%83%BD%E7%A1%AE%E5%AE%9A%E5%8F%A6%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9"><span class="toc-text">也是采用双结点遍历整个链表,因为两个结点能确定另一个结点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-text">插入的方式:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%89%8D%E9%A9%B1%E7%BB%93%E7%82%B9%E7%9A%84%E5%8F%B3%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E6%96%B0%E7%BB%93%E7%82%B9"><span class="toc-text">前驱结点的右指针指向新结点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B0%E7%BB%93%E7%82%B9%E7%9A%84%E5%B7%A6%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E5%89%8D%E9%A9%B1%E7%BB%93%E7%82%B9"><span class="toc-text">新结点的左指针指向前驱结点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B0%E7%BB%93%E7%82%B9%E7%9A%84%E5%8F%B3%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E5%BD%93%E5%89%8D%E7%BB%93%E7%82%B9"><span class="toc-text">新结点的右指针指向当前结点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BD%93%E5%89%8D%E7%BB%93%E7%82%B9%E7%9A%84%E5%B7%A6%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E6%96%B0%E7%BB%93%E7%82%B9"><span class="toc-text">当前结点的左指针指向新结点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BB%93%E7%82%B9%E4%B8%AA%E6%95%B0-1-1"><span class="toc-text">结点个数+1</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%81%8D%E5%8E%86%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8-%E7%9C%8B%E4%B8%80%E7%9C%BC%E5%B0%B1%E8%A1%8C%E4%BA%86-%E5%92%8C%E5%8D%95%E9%93%BE%E8%A1%A8%E9%81%8D%E5%8E%86%E4%B8%80%E4%B8%AA%E9%81%93%E7%90%86"><span class="toc-text">遍历双向链表(看一眼就行了,和单链表遍历一个道理)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-text">顺序遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%86%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-text">逆序遍历</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8"><span class="toc-text">双向循环链表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%99%E9%87%8C%E6%88%91%E5%B0%B1%E5%86%99%E4%BA%86%E4%B8%80%E4%B8%AA%E8%A1%A8%E5%B0%BE%E6%B3%95%E6%8F%92%E5%85%A5-%E6%9C%89%E6%97%B6%E9%97%B4%E5%9C%A8%E5%86%99%E5%88%AB%E7%9A%84-%E5%85%B6%E5%AE%9E%E9%83%BD%E5%A4%A7%E5%90%8C%E5%B0%8F%E5%BC%82"><span class="toc-text">这里我就写了一个表尾法插入,有时间在写别的,其实都大同小异</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F-%E4%B8%8D%E9%9C%80%E8%A6%81%E6%89%BE%E8%A1%A8%E5%B0%BE-%E8%A1%A8%E5%B0%BE%E5%B0%B1%E6%98%AF%E9%BB%98%E8%AE%A4%E5%A4%B4%E7%BB%93%E7%82%B9%E7%9A%84p-left%E6%8C%87%E9%92%88%E6%89%80%E6%8C%87%E5%90%91%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="toc-text">注意:不需要找表尾,表尾就是默认头结点的p_left指针所指向的位置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4-%E6%88%91%E4%BB%AC%E7%94%A8%E5%A4%B4%E7%BB%93%E7%82%B9%E6%9D%A5%E6%8F%8F%E8%BF%B0%E5%B0%BE%E7%BB%93%E7%82%B9"><span class="toc-text">也就是说,我们用头结点来描述尾结点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E6%8F%92%E5%85%A5"><span class="toc-text">如何插入:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%B4%E7%BB%93%E7%82%B9%E7%9A%84%E5%B7%A6%E6%8C%87%E9%92%88%E7%9A%84%E7%BB%93%E7%82%B9%E7%9A%84%E5%8F%B3%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E6%96%B0%E7%BB%93%E7%82%B9"><span class="toc-text">头结点的左指针的结点的右指针指向新结点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B0%E7%BB%93%E7%82%B9%E7%9A%84%E5%B7%A6%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E5%A4%B4%E7%BB%93%E7%82%B9%E7%9A%84%E5%B7%A6%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E7%9A%84%E7%BB%93%E7%82%B9"><span class="toc-text">新结点的左指针指向头结点的左指针指向的结点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B0%E7%BB%93%E7%82%B9%E7%9A%84%E5%8F%B3%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E5%A4%B4%E7%BB%93%E7%82%B9"><span class="toc-text">新结点的右指针指向头结点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%B4%E7%BB%93%E7%82%B9%E7%9A%84%E5%B7%A6%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E6%96%B0%E7%BB%93%E7%82%B9-1"><span class="toc-text">头结点的左指针指向新结点</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%81%8D%E5%8E%86%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8"><span class="toc-text">遍历双向循环链表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%A0%E4%B8%BA%E6%98%AF%E7%8E%AF%E5%BD%A2%E7%9A%84-%E6%89%80%E4%BB%A5%E4%B8%8D%E8%83%BD%E7%94%A8%E8%80%81%E8%A7%84%E7%9F%A9-NULL%E7%BB%93%E6%9D%9F%E9%81%8D%E5%8E%86"><span class="toc-text">因为是环形的,所以不能用老规矩(NULL结束遍历)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AA%E9%9C%80%E8%A6%81%E9%81%8D%E5%8E%86%E4%B8%80%E5%9C%88-%E5%86%8D%E8%B5%B0%E5%88%B0%E5%A4%B4%E7%BB%93%E7%82%B9%E7%BB%93%E6%9D%9F%E9%81%8D%E5%8E%86%E5%8D%B3%E5%8F%AF"><span class="toc-text">只需要遍历一圈,再走到头结点结束遍历即可</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E9%81%8D%E5%8E%86-1"><span class="toc-text">顺序遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%86%E5%BA%8F%E9%81%8D%E5%8E%86-1"><span class="toc-text">逆序遍历</span></a></li></ol></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><h1 id="参考书籍"><a href="#参考书籍" class="headerlink" title="参考书籍:"></a>参考书籍:</h1><ul>
+<li><h4 id="数据结构与算法分析-黑皮书"><a href="#数据结构与算法分析-黑皮书" class="headerlink" title="数据结构与算法分析(黑皮书)"></a><em>数据结构与算法分析(黑皮书)</em></h4></li>
+<li><h4 id="作者-Mark-Allen-Weiss"><a href="#作者-Mark-Allen-Weiss" class="headerlink" title="作者:Mark Allen Weiss"></a><em>作者:Mark Allen Weiss</em></h4></li>
+</ul>
+</li>
+</ul>
+<h1 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h1><h2 id="本篇博客中变量采用如下命名方式"><a href="#本篇博客中变量采用如下命名方式" class="headerlink" title="本篇博客中变量采用如下命名方式:"></a>本篇博客中变量采用如下命名方式:</h2><pre><code class="c">//结点类型,单一个体
+typedef struct Node &#123;
+    int data;
+    struct Node* p_left;   //指向左面的结点
+    struct Node* p_right;  //指向右面的结点
+&#125; NODE, *LPNODE;
+
+//链表类型
+typedef struct List &#123;
+    LPNODE p_head_node;  //头结点
+    LPNODE p_tail_node;  //尾结点
+    int size;            //当前链表中结点个数
+&#125; LIST, *LPLIST;
+</code></pre>
+<h2 id="熟悉的套路-创建结点-创建链表"><a href="#熟悉的套路-创建结点-创建链表" class="headerlink" title="熟悉的套路:创建结点,创建链表"></a>熟悉的套路:创建结点,创建链表</h2><pre><code class="c">//创建结点
+LPNODE CreateNode(int new_data) &#123;
+    LPNODE p_new_node = (LPNODE)malloc(sizeof(NODE));
+    if (NULL == p_new_node) &#123;
+        return NULL;
+    &#125;
+    p_new_node-&gt;data = new_data;
+    p_new_node-&gt;p_left = NULL;
+    p_new_node-&gt;p_right = NULL;
+    return p_new_node;
+&#125;
+
+//创建链表
+LPLIST CreateList() &#123;
+    LPLIST p_new_list = (LPLIST)malloc(sizeof(LIST));
+    if (NULL == p_new_list) &#123;
+        return NULL;
+    &#125;
+    p_new_list-&gt;size = 0;
+    p_new_list-&gt;p_head_node = NULL;
+    p_new_list-&gt;p_tail_node = NULL;
+    return p_new_list;
+&#125;
+</code></pre>
+<h2 id="表头法插入-在有头结点前插入新节点"><a href="#表头法插入-在有头结点前插入新节点" class="headerlink" title="表头法插入,在有头结点前插入新节点"></a>表头法插入,在有头结点前插入新节点</h2><ul>
+<li><h4 id="先判断链表中结点个数是否为空-为空则直接将头-x2F-尾结点赋为新节点"><a href="#先判断链表中结点个数是否为空-为空则直接将头-x2F-尾结点赋为新节点" class="headerlink" title="先判断链表中结点个数是否为空,为空则直接将头&#x2F;尾结点赋为新节点"></a>先判断链表中结点个数是否为空,为空则直接将头&#x2F;尾结点赋为新节点</h4></li>
+<li><h4 id="链表不为空"><a href="#链表不为空" class="headerlink" title="链表不为空:"></a>链表不为空:</h4><ul>
+<li><h5 id="新节点的新节点的右指针指向头结点"><a href="#新节点的新节点的右指针指向头结点" class="headerlink" title="新节点的新节点的右指针指向头结点"></a>新节点的新节点的右指针指向头结点</h5></li>
+<li><h5 id="头结点的左指针指向新结点"><a href="#头结点的左指针指向新结点" class="headerlink" title="头结点的左指针指向新结点"></a>头结点的左指针指向新结点</h5></li>
+<li><h5 id="头结点变为新结点"><a href="#头结点变为新结点" class="headerlink" title="头结点变为新结点"></a>头结点变为新结点</h5></li>
+<li><h5 id="结点个数-1"><a href="#结点个数-1" class="headerlink" title="结点个数+1"></a>结点个数+1</h5></li>
+<li><h5 id="实现代码如下"><a href="#实现代码如下" class="headerlink" title="实现代码如下:"></a>实现代码如下:</h5></li>
+</ul>
+</li>
+</ul>
+<pre><code class="c">void InsertNewNodeByHead(int new_data, LPLIST p_list) &#123;
+    LPNODE p_new_node = CreateNode(new_data);
+    if (p_list-&gt;size == 0) &#123;  //链表为空
+        p_list-&gt;p_tail_node = p_new_node;
+        // p_list-&gt;p_head_node = p_new_node;
+    &#125; else &#123;
+        p_new_node-&gt;p_right = p_list-&gt;p_head_node;  
+        p_list-&gt;p_head_node-&gt;p_left = p_new_node; 
+        // p_list-&gt;p_head_node = p_new_node;
+    &#125;
+    p_list-&gt;p_head_node = p_new_node;  //头结点变成新结点
+    p_list-&gt;size++;
+&#125;
+</code></pre>
+<h2 id="表尾法插入-在尾结点后插入新结点"><a href="#表尾法插入-在尾结点后插入新结点" class="headerlink" title="表尾法插入,在尾结点后插入新结点"></a>表尾法插入,在尾结点后插入新结点</h2><ul>
+<li><h4 id="和表头法插入大同小异"><a href="#和表头法插入大同小异" class="headerlink" title="和表头法插入大同小异"></a>和表头法插入大同小异</h4></li>
+</ul>
+<pre><code class="c">void InsertNewNodeByTail(int new_data, LPLIST p_list) &#123;
+    LPNODE p_new_node = CreateNode(new_data);
+    if (p_list-&gt;size == 0) &#123;
+        p_list-&gt;p_head_node = p_new_node;
+        // p_list-&gt;p_tail_node = p_new_node;
+    &#125; else &#123;
+        p_new_node-&gt;p_left = p_list-&gt;p_tail_node;
+        p_list-&gt;p_tail_node-&gt;p_right = p_new_node;
+        // p_list-&gt;p_tail_node = p_new_node;
+    &#125;
+    p_list-&gt;p_tail_node = p_new_node;
+    p_list-&gt;size++;
+&#125;
+</code></pre>
+<h1 id="指定位置插入"><a href="#指定位置插入" class="headerlink" title="指定位置插入"></a>指定位置插入</h1><ul>
+<li><h4 id="和单链表的指定位置插入类似"><a href="#和单链表的指定位置插入类似" class="headerlink" title="和单链表的指定位置插入类似"></a>和单链表的指定位置插入类似</h4></li>
+<li><h4 id="也是采用双结点遍历整个链表-因为两个结点能确定另一个结点"><a href="#也是采用双结点遍历整个链表-因为两个结点能确定另一个结点" class="headerlink" title="也是采用双结点遍历整个链表,因为两个结点能确定另一个结点"></a>也是采用双结点遍历整个链表,因为两个结点能确定另一个结点</h4></li>
+<li><h4 id="插入的方式"><a href="#插入的方式" class="headerlink" title="插入的方式:"></a>插入的方式:</h4><ul>
+<li><h5 id="前驱结点的右指针指向新结点"><a href="#前驱结点的右指针指向新结点" class="headerlink" title="前驱结点的右指针指向新结点"></a>前驱结点的右指针指向新结点</h5></li>
+<li><h5 id="新结点的左指针指向前驱结点"><a href="#新结点的左指针指向前驱结点" class="headerlink" title="新结点的左指针指向前驱结点"></a>新结点的左指针指向前驱结点</h5></li>
+<li><h5 id="新结点的右指针指向当前结点"><a href="#新结点的右指针指向当前结点" class="headerlink" title="新结点的右指针指向当前结点"></a>新结点的右指针指向当前结点</h5></li>
+<li><h5 id="当前结点的左指针指向新结点"><a href="#当前结点的左指针指向新结点" class="headerlink" title="当前结点的左指针指向新结点"></a>当前结点的左指针指向新结点</h5></li>
+<li><h5 id="结点个数-1-1"><a href="#结点个数-1-1" class="headerlink" title="结点个数+1"></a>结点个数+1</h5></li>
+</ul>
+</li>
+</ul>
+<pre><code class="c">void InsertByPosData(LPLIST p_list, int new_data, int pos_data) &#123;
+    LPNODE pos_front = NULL;
+    LPNODE pos_node = p_list-&gt;p_head_node;
+    //遍历寻找指定结点
+    while (NULL != pos_node &amp;&amp; pos_node-&gt;data != pos_data) &#123;
+        pos_front = pos_node;
+        pos_node = pos_front-&gt;p_right;
+    &#125;
+    if (NULL == pos_node) &#123;
+        printf(&quot;未找到指定结点&quot;);
+        return;
+    &#125; else &#123;
+        //表头法插入
+        if (NULL == pos_front) &#123;
+            InsertNewNodeByHead(new_data, p_list);
+        &#125; else &#123;  //指定结点插入
+            LPNODE p_new_node = CreateNode(new_data);
+            pos_front-&gt;p_right = p_new_node;
+            p_new_node-&gt;p_left = pos_front;
+            p_new_node-&gt;p_right = pos_node;
+            pos_node-&gt;p_left = p_new_node;
+            p_list-&gt;size++;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h1 id="遍历双向链表-看一眼就行了-和单链表遍历一个道理"><a href="#遍历双向链表-看一眼就行了-和单链表遍历一个道理" class="headerlink" title="遍历双向链表(看一眼就行了,和单链表遍历一个道理)"></a>遍历双向链表(看一眼就行了,和单链表遍历一个道理)</h1><ul>
+<li><h4 id="顺序遍历"><a href="#顺序遍历" class="headerlink" title="顺序遍历"></a>顺序遍历</h4></li>
+</ul>
+<pre><code class="c">void OrderPrintList(LPLIST p_list) &#123;
+    LPNODE p_move = p_list-&gt;p_head_node;
+    while (NULL != p_move) &#123;
+        printf(&quot;%d  &quot;, p_move-&gt;data);
+        p_move = p_move-&gt;p_right;
+    &#125;
+    putchar(&#39;\n&#39;);
+&#125;
+</code></pre>
+<ul>
+<li><h4 id="逆序遍历"><a href="#逆序遍历" class="headerlink" title="逆序遍历"></a>逆序遍历</h4></li>
+</ul>
+<pre><code class="c">void ReverseOrderPrintList(LPLIST p_list) &#123;
+    LPNODE p_move = p_list-&gt;p_tail_node;
+    while (NULL != p_move) &#123;
+        printf(&quot;%d  &quot;, p_move-&gt;data);
+        p_move = p_move-&gt;p_left;
+    &#125;
+    putchar(&#39;\n&#39;);
+&#125;
+</code></pre>
+<h1 id="双向循环链表"><a href="#双向循环链表" class="headerlink" title="双向循环链表"></a>双向循环链表</h1><ul>
+<li><h4 id="这里我就写了一个表尾法插入-有时间在写别的-其实都大同小异"><a href="#这里我就写了一个表尾法插入-有时间在写别的-其实都大同小异" class="headerlink" title="这里我就写了一个表尾法插入,有时间在写别的,其实都大同小异"></a>这里我就写了一个表尾法插入,有时间在写别的,其实都大同小异</h4></li>
+<li><h4 id="注意-不需要找表尾-表尾就是默认头结点的p-left指针所指向的位置"><a href="#注意-不需要找表尾-表尾就是默认头结点的p-left指针所指向的位置" class="headerlink" title="注意:不需要找表尾,表尾就是默认头结点的p_left指针所指向的位置"></a>注意:不需要找表尾,表尾就是默认头结点的p_left指针所指向的位置</h4></li>
+<li><h4 id="也就是说-我们用头结点来描述尾结点"><a href="#也就是说-我们用头结点来描述尾结点" class="headerlink" title="也就是说,我们用头结点来描述尾结点"></a>也就是说,我们用头结点来描述尾结点</h4></li>
+<li><h4 id="如何插入"><a href="#如何插入" class="headerlink" title="如何插入:"></a>如何插入:</h4><ul>
+<li><h5 id="头结点的左指针的结点的右指针指向新结点"><a href="#头结点的左指针的结点的右指针指向新结点" class="headerlink" title="头结点的左指针的结点的右指针指向新结点"></a>头结点的左指针的结点的右指针指向新结点</h5></li>
+<li><h5 id="新结点的左指针指向头结点的左指针指向的结点"><a href="#新结点的左指针指向头结点的左指针指向的结点" class="headerlink" title="新结点的左指针指向头结点的左指针指向的结点"></a>新结点的左指针指向头结点的左指针指向的结点</h5></li>
+<li><h5 id="新结点的右指针指向头结点"><a href="#新结点的右指针指向头结点" class="headerlink" title="新结点的右指针指向头结点"></a>新结点的右指针指向头结点</h5></li>
+<li><h5 id="头结点的左指针指向新结点-1"><a href="#头结点的左指针指向新结点-1" class="headerlink" title="头结点的左指针指向新结点"></a>头结点的左指针指向新结点</h5></li>
+</ul>
+</li>
+</ul>
+<pre><code class="c">void InsertNewNodeByTail(LPNODE p_head_node, int new_data) &#123;
+    LPNODE p_new_node = CreateNode(new_data);
+    //换了一种方式表示表尾,用表头的左指针表示表尾
+    // p_head_node-&gt;p_left-&gt;p_right = p_new_node
+    //也就是说表尾-&gt;p_right = p_new_node;
+    p_head_node-&gt;p_left-&gt;p_right = p_new_node;
+    p_new_node-&gt;p_left = p_head_node-&gt;p_left;
+    // p_new_node-&gt;p_left = p_head_node-&gt;p_left
+    // p_new_node-&gt;p_left等价于表尾
+    p_new_node-&gt;p_right = p_head_node;
+    p_head_node-&gt;p_left = p_new_node;
+&#125;
+</code></pre>
+<h1 id="遍历双向循环链表"><a href="#遍历双向循环链表" class="headerlink" title="遍历双向循环链表"></a>遍历双向循环链表</h1><ul>
+<li><h4 id="因为是环形的-所以不能用老规矩-NULL结束遍历"><a href="#因为是环形的-所以不能用老规矩-NULL结束遍历" class="headerlink" title="因为是环形的,所以不能用老规矩(NULL结束遍历)"></a>因为是环形的,所以不能用老规矩(NULL结束遍历)</h4></li>
+<li><h4 id="只需要遍历一圈-再走到头结点结束遍历即可"><a href="#只需要遍历一圈-再走到头结点结束遍历即可" class="headerlink" title="只需要遍历一圈,再走到头结点结束遍历即可"></a>只需要遍历一圈,再走到头结点结束遍历即可</h4><ul>
+<li><h4 id="顺序遍历-1"><a href="#顺序遍历-1" class="headerlink" title="顺序遍历"></a>顺序遍历</h4></li>
+</ul>
+</li>
+</ul>
+<pre><code class="c">void OrderPrintList(LPNODE p_head_node) &#123;
+    //因为是环形的,所以不能用老规矩(NULL结束遍历)
+    //只需要遍历一圈,再走到头结点结束遍历即可
+    LPNODE p_move = p_head_node-&gt;p_right;
+    while (p_head_node != p_move) &#123;
+        printf(&quot;%d  &quot;, p_move-&gt;data);
+        p_move = p_move-&gt;p_right;
+    &#125;
+    putchar(&#39;\n&#39;);
+&#125;
+</code></pre>
+<ul>
+<li><h4 id="逆序遍历-1"><a href="#逆序遍历-1" class="headerlink" title="逆序遍历"></a>逆序遍历</h4></li>
+</ul>
+<pre><code class="c">void ReverseOrderPrintList(LPNODE p_head_node) &#123;
+    LPNODE p_move = p_head_node-&gt;p_left;
+    while (p_head_node != p_move) &#123;
+        printf(&quot;%d  &quot;, p_move-&gt;data);
+        p_move = p_move-&gt;p_left;
+    &#125;
+    putchar(&#39;\n&#39;);
+&#125;
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。邮件至kpsun@foxmail.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>数据结构-双向链表(list)</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">1.1k</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="kpsun">kpsun</a></p>
+    <p><span class="copy-title">发布时间:</span>2022-06-28, 10:34:06</p>
+    <p><span class="copy-title">最后更新:</span>2022-09-04, 16:09:17</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/06/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8(list)/" title="数据结构-双向链表(list)">http://goskp.github.io/2022/06/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8(list)/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(e){e.imageLazyLoadSetting.processImages=t;var n=e.imageLazyLoadSetting.isSPA,i=e.imageLazyLoadSetting.preloadRatio||1,r=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){n&&(r=o());for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(e.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];e=function(){r=r.filter(function(t){return o!==t})},(t=o).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,t.removeAttribute("data-original"),e&&e()},t.src!==i&&(n.src=i))}()}function a(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",a),e.addEventListener("resize",a),e.addEventListener("orientationchange",a)}(this);</script></body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

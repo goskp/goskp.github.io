@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>C++友元 | kpsun</title>
+  <meta name="keywords" content=" C++ ">
+  <meta name="description" content="C++友元 | kpsun">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="个人简介孙楷朋准大二计算机相关专业在读热爱编程,乐于合作,善于总结分享,有良好的的编程习惯目标BAT大厂联系方式 QQ: 1287923885 WeChat: code_cpp Email: &amp;#107;&amp;#112;&amp;#x73;&amp;#117;&amp;#x6e;&amp;#64;&amp;#102;&amp;#111;&amp;#120;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于我">
+<meta property="og:url" content="http://goskp.github.io/about/index.html">
+<meta property="og:site_name" content="kpsun">
+<meta property="og:description" content="个人简介孙楷朋准大二计算机相关专业在读热爱编程,乐于合作,善于总结分享,有良好的的编程习惯目标BAT大厂联系方式 QQ: 1287923885 WeChat: code_cpp Email: &amp;#107;&amp;#112;&amp;#x73;&amp;#117;&amp;#x6e;&amp;#64;&amp;#102;&amp;#111;&amp;#120;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-14T04:24:56.000Z">
+<meta property="article:modified_time" content="2022-09-14T12:29:33.592Z">
+<meta property="article:author" content="kpsun">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/o.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="false" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="false" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/o.jpg"/>
+</a>
+<div class="author">
+    <span>kpsun</span>
+</div>
+
+<div class="icon">
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(54)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        
+                        后端
+                        <small>(22)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="QT">
+                        
+                        QT
+                        <small>(6)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="数据结构">
+                        
+                        数据结构
+                        <small>(24)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="算法">
+                        
+                        算法
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="计算机硬件">
+                        
+                        计算机硬件
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="54">
+<input type="hidden" id="yelog_site_word_count" value="99.2k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://fomalhaut1998.github.io/">Fomalhaut1998a</a></li>
+            
+            <li><a target="_blank" href="https://cnhuazhu.gitee.io/">cnhuazhu</a></li>
+            
+            <li><a target="_blank" href="https://wangeasycloud.cn/">cheerio</a></li>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://lee-jhong001-github-io.vercel.app/">lee-jhong</a></li>
+            
+            <li><a target="_blank" href="https://hi-wilson.github.io/">Wilson</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Algorithm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>C++</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>QT</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Rust</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数据结构</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>计算机硬件</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 算法 "
+           href="/2022/09/30/C++%E5%B8%B8%E7%94%A8%E5%88%B7%E9%A2%98%E6%8A%80%E5%B7%A7/"
+           data-tag="Algorithm"
+           data-author="" >
+            <span class="post-title" title="C/C++常用刷题技巧">C/C++常用刷题技巧</span>
+            <span class="post-date" title="2022-09-30 15:36:35">2022/09/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 QT "
+           href="/2022/09/29/QT(%E5%B8%83%E5%B1%80)/"
+           data-tag="QT"
+           data-author="" >
+            <span class="post-title" title="QT(布局)">QT(布局)</span>
+            <span class="post-date" title="2022-09-29 18:53:52">2022/09/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 QT "
+           href="/2022/09/26/QT(%E5%AF%B9%E8%AF%9D%E6%A1%86)/"
+           data-tag="QT"
+           data-author="" >
+            <span class="post-title" title="QT(对话框)">QT(对话框)</span>
+            <span class="post-date" title="2022-09-26 07:06:17">2022/09/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 QT "
+           href="/2022/09/23/QT(%E6%8E%A7%E4%BB%B6)/"
+           data-tag="QT"
+           data-author="" >
+            <span class="post-title" title="QT(控件)">QT(控件)</span>
+            <span class="post-date" title="2022-09-23 16:07:57">2022/09/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 QT "
+           href="/2022/09/22/QT(QWidget)/"
+           data-tag="QT"
+           data-author="" >
+            <span class="post-title" title="QT(QWidget)">QT(QWidget)</span>
+            <span class="post-date" title="2022-09-22 19:09:02">2022/09/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 QT "
+           href="/2022/09/06/QT(%E4%BF%A1%E5%8F%B7%E5%92%8C%E6%A7%BD)/"
+           data-tag="QT"
+           data-author="" >
+            <span class="post-title" title="QT(信号和槽)">QT(信号和槽)</span>
+            <span class="post-date" title="2022-09-06 12:08:32">2022/09/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 QT "
+           href="/2022/09/01/QT(%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)/"
+           data-tag="QT"
+           data-author="" >
+            <span class="post-title" title="QT(常用数据类型)">QT(常用数据类型)</span>
+            <span class="post-date" title="2022-09-01 15:32:46">2022/09/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/08/31/Rust(1)/"
+           data-tag="Rust"
+           data-author="" >
+            <span class="post-title" title="Rust(1)">Rust(1)</span>
+            <span class="post-date" title="2022-08-31 18:39:55">2022/08/31</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%9E%E6%BA%AF%E6%B3%95(DP,Queen)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-回溯法(DP,Queen)">数据结构-回溯法(DP,Queen)</span>
+            <span class="post-date" title="2022-07-22 16:19:29">2022/07/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92(DP)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-动态规划(DP)">数据结构-动态规划(DP)</span>
+            <span class="post-date" title="2022-07-20 16:18:50">2022/07/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95(sort)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-排序算法(sort)">数据结构-排序算法(sort)</span>
+            <span class="post-date" title="2022-07-18 10:35:06">2022/07/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-分而治之">数据结构-分而治之</span>
+            <span class="post-date" title="2022-07-17 16:18:25">2022/07/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95(graph)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-贪心算法(graph)">数据结构-贪心算法(graph)</span>
+            <span class="post-date" title="2022-07-16 16:17:58">2022/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%B7%B1%E5%BA%A6%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88(DFS,BFS)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-深度/广度优先(DFS,BFS)">数据结构-深度/广度优先(DFS,BFS)</span>
+            <span class="post-date" title="2022-07-15 16:17:01">2022/07/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%BE(graph)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-图(graph)">数据结构-图(graph)</span>
+            <span class="post-date" title="2022-07-13 16:16:30">2022/07/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%A2%E9%BB%91%E6%A0%91(RB)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-红黑树(RB)">数据结构-红黑树(RB)</span>
+            <span class="post-date" title="2022-07-12 16:15:41">2022/07/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91(AVL)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-平衡二叉树(AVL)">数据结构-平衡二叉树(AVL)</span>
+            <span class="post-date" title="2022-07-11 16:15:25">2022/07/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%88%86%E6%94%AF%E5%AE%9A%E7%95%8C(C++%E6%8F%8F%E8%BF%B0)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-分支定界(C++描述)">数据结构-分支定界(C++描述)</span>
+            <span class="post-date" title="2022-07-10 16:14:33">2022/07/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91(tree)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-哈夫曼树(tree)">数据结构-哈夫曼树(tree)</span>
+            <span class="post-date" title="2022-07-09 16:06:00">2022/07/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/08/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91(tree)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-二叉搜索树(tree)">数据结构-二叉搜索树(tree)</span>
+            <span class="post-date" title="2022-07-08 19:34:11">2022/07/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91(tree)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-二叉树(tree)">数据结构-二叉树(tree)</span>
+            <span class="post-date" title="2022-07-07 08:26:46">2022/07/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/06/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%A0%86(heap)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-堆(heap)">数据结构-堆(heap)</span>
+            <span class="post-date" title="2022-07-06 12:50:51">2022/07/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%93%88%E5%B8%8C%E8%A1%A8(hash)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-哈希表(hash)">数据结构-哈希表(hash)</span>
+            <span class="post-date" title="2022-07-05 18:06:58">2022/07/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%93%88%E5%B8%8C%E5%AD%98%E5%82%A8(hash)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-哈希存储(hash)">数据结构-哈希存储(hash)</span>
+            <span class="post-date" title="2022-07-05 17:12:58">2022/07/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%B0%81%E8%A3%85string%E7%B1%BB(C++%E6%8F%8F%E8%BF%B0)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-简单封装string类(C++描述)">数据结构-简单封装string类(C++描述)</span>
+            <span class="post-date" title="2022-07-04 16:17:52">2022/07/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%B8%B2(string,BF,KMP)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-串(string,BF,KMP)">数据结构-串(string,BF,KMP)</span>
+            <span class="post-date" title="2022-07-03 14:36:09">2022/07/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97(queue)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-队列(queue)">数据结构-队列(queue)</span>
+            <span class="post-date" title="2022-07-02 15:38:29">2022/07/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88(stack)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-栈(stack)">数据结构-栈(stack)</span>
+            <span class="post-date" title="2022-07-01 20:29:22">2022/07/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/06/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%A1%BA%E5%BA%8F%E8%A1%A8(list)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-顺序表(list)">数据结构-顺序表(list)</span>
+            <span class="post-date" title="2022-06-30 12:46:33">2022/06/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/06/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%90%88%E5%B9%B6,%E5%8F%8D%E8%BD%AC,%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8(list)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-合并,反转,有序链表(list)">数据结构-合并,反转,有序链表(list)</span>
+            <span class="post-date" title="2022-06-29 10:40:49">2022/06/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/06/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8(list)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-双向链表(list)">数据结构-双向链表(list)</span>
+            <span class="post-date" title="2022-06-28 10:34:06">2022/06/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/06/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E7%A1%80%E5%8D%95%E9%93%BE%E8%A1%A8(list)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-基础单链表(list)">数据结构-基础单链表(list)</span>
+            <span class="post-date" title="2022-06-27 20:54:15">2022/06/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/26/C++%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E6%A8%A1%E6%9D%BF/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++可变参数模板">C++可变参数模板</span>
+            <span class="post-date" title="2022-06-26 18:15:05">2022/06/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/24/C++%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++正则表达式">C++正则表达式</span>
+            <span class="post-date" title="2022-06-24 17:10:54">2022/06/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/21/C++%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++智能指针">C++智能指针</span>
+            <span class="post-date" title="2022-06-21 19:06:51">2022/06/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/17/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E7%AE%97%E6%B3%95%E7%AF%87(%E6%8B%B7%E8%B4%9D,%E7%AE%97%E6%95%B0,%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88,%E5%A0%86)/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库算法篇(拷贝,算数,排列组合,堆)">C++标准模板库算法篇(拷贝,算数,排列组合,堆)</span>
+            <span class="post-date" title="2022-06-17 14:01:01">2022/06/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/13/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E7%AE%97%E6%B3%95%E7%AF%87(%E6%9F%A5%E6%89%BE,%E6%8E%92%E5%BA%8F,%E9%9B%86%E5%90%88)/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库算法篇(查找,排序,集合)">C++标准模板库算法篇(查找,排序,集合)</span>
+            <span class="post-date" title="2022-06-13 15:56:33">2022/06/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/09/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库之迭代器">C++标准模板库之迭代器</span>
+            <span class="post-date" title="2022-06-09 16:47:20">2022/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/04/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E4%B9%8Binitalizer_list%E4%B8%8Eset%E4%B8%8Emap/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库之initalizer_list与set与map">C++标准模板库之initalizer_list与set与map</span>
+            <span class="post-date" title="2022-06-04 16:41:40">2022/06/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/30/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E4%B9%8Blist%E4%B8%8Estack%E4%B8%8Equeue/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库之list与stack与queue">C++标准模板库之list与stack与queue</span>
+            <span class="post-date" title="2022-05-30 12:35:09">2022/05/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/27/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E4%B9%8Barray%E4%B8%8Evector/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库之array与vector">C++标准模板库之array与vector</span>
+            <span class="post-date" title="2022-05-27 14:16:07">2022/05/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/26/C++%E6%A8%A1%E6%9D%BF/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++模板">C++模板</span>
+            <span class="post-date" title="2022-05-26 08:32:18">2022/05/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/25/C++%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++异常处理">C++异常处理</span>
+            <span class="post-date" title="2022-05-25 16:26:04">2022/05/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/24/C++IO%E6%B5%81/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++IO流">C++IO流</span>
+            <span class="post-date" title="2022-05-24 16:11:36">2022/05/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/23/C++%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++虚函数与多态">C++虚函数与多态</span>
+            <span class="post-date" title="2022-05-23 16:04:05">2022/05/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/22/C++%E7%BB%A7%E6%89%BF/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++继承">C++继承</span>
+            <span class="post-date" title="2022-05-22 11:47:42">2022/05/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/21/C++%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++运算符重载">C++运算符重载</span>
+            <span class="post-date" title="2022-05-21 08:32:18">2022/05/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/20/C++%E5%8F%8B%E5%85%83/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++友元">C++友元</span>
+            <span class="post-date" title="2022-05-20 18:37:54">2022/05/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/19/C++%E7%89%B9%E6%AE%8A%E6%88%90%E5%91%98/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++特殊成员">C++特殊成员</span>
+            <span class="post-date" title="2022-05-19 21:07:35">2022/05/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/18/C++%E7%B1%BB%E7%9A%84%E7%BB%84%E5%90%88%E6%A1%88%E4%BE%8B/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++类的组合案例">C++类的组合案例</span>
+            <span class="post-date" title="2022-05-18 19:07:35">2022/05/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/17/C++%E6%9E%84%E9%80%A0%E4%B8%8E%E6%9E%90%E6%9E%84/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++构造与析构">C++构造与析构</span>
+            <span class="post-date" title="2022-05-17 13:17:08">2022/05/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/16/C++%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++类和对象">C++类和对象</span>
+            <span class="post-date" title="2022-05-16 11:58:16">2022/05/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/15/C++%E5%92%8CC%E7%9A%84%E5%8C%BA%E5%88%AB/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++和C的区别">C++和C的区别</span>
+            <span class="post-date" title="2022-05-15 15:24:31">2022/05/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 计算机硬件 "
+           href="/2022/05/10/%E8%AE%A1%E7%BB%84-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80/"
+           data-tag="计算机硬件"
+           data-author="" >
+            <span class="post-title" title="计组-计算机硬件基础">计组-计算机硬件基础</span>
+            <span class="post-date" title="2022-05-10 10:30:46">2022/05/10</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-C++友元" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">C++友元</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="后端">后端</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">C++</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2022-09-18 10:35:38'>2022-05-20 18:37</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:1.6k</span>
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D"><span class="toc-text">参考书籍:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Primer"><span class="toc-text">C++ Primer</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Essential-C"><span class="toc-text">Essential C++</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%99%A8"><span class="toc-text">编译器:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#gcc-x2F-g"><span class="toc-text">gcc &#x2F; g++</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E5%AE%9A%E6%9C%9F%E8%BF%9B%E8%A1%8C%E6%9B%B4%E6%96%B0"><span class="toc-text">不定期进行更新</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#C-%E5%8F%8B%E5%85%83"><span class="toc-text">C++友元</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8B%E5%85%83%E5%87%BD%E6%95%B0"><span class="toc-text">友元函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8B%E5%85%83%E7%B1%BB"><span class="toc-text">友元类</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%BA%E4%BE%BF%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8BC-%E7%9A%84%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">顺便介绍一下C++的强制类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#static-cast%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">static_cast类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#const-cast%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">const_cast类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reinterpreat-cast%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">reinterpreat_cast类型转换</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><h1 id="参考书籍"><a href="#参考书籍" class="headerlink" title="参考书籍:"></a>参考书籍:</h1><ul>
+<li><h4 id="C-Primer"><a href="#C-Primer" class="headerlink" title="C++ Primer"></a><em>C++ Primer</em></h4></li>
+<li><h4 id="Essential-C"><a href="#Essential-C" class="headerlink" title="Essential C++"></a><em>Essential C++</em></h4></li>
+</ul>
+</li>
+<li><h1 id="编译器"><a href="#编译器" class="headerlink" title="编译器:"></a>编译器:</h1><ul>
+<li><h4 id="gcc-x2F-g"><a href="#gcc-x2F-g" class="headerlink" title="gcc &#x2F; g++"></a><em>gcc &#x2F; g++</em></h4></li>
+</ul>
+</li>
+<li><h2 id="不定期进行更新"><a href="#不定期进行更新" class="headerlink" title="不定期进行更新"></a><em>不定期进行更新</em></h2></li>
+</ul>
+<h1 id="C-友元"><a href="#C-友元" class="headerlink" title="C++友元"></a>C++友元</h1><p>C++友元是用friend关键修饰的函数或者类，友元用来打破类封装(忽视权限限定)</p>
+<ul>
+<li>友元并不是说直接访问数据成员，友元只是提供一个场所赋予对象具有打破权限限定</li>
+<li>友元函数</li>
+<li>友元类</li>
+<li>友元函数和友元类不属于当前类，实现函数或者类不需要类名限定</li>
+</ul>
+<h3 id="友元函数"><a href="#友元函数" class="headerlink" title="友元函数"></a>友元函数</h3><ul>
+<li>普通函数成为类的友元函数</li>
+</ul>
+<pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+class MM &#123;
+   public:
+    MM(string name, int age, int num) : name(name), age(age), num(num) &#123;&#125;
+    void print();
+    //友元函数
+    friend void visitedData();
+    friend void visited(MM mm);
+
+   protected:
+    int num;
+
+   private:
+    int age;
+    string name;
+&#125;;
+void MM::print() &#123;
+    cout &lt;&lt; name &lt;&lt; &quot;\t&quot; &lt;&lt; age &lt;&lt; &quot;\t&quot; &lt;&lt; num &lt;&lt; endl;
+&#125;
+//友元函数
+void visitedData() &#123;
+    // name = &quot;ILoveyou&quot;;   不是直接访问，赋予对象的具有这样权限
+    //创建对象的无视权限
+    MM mm(&quot;girl&quot;, 18, 1001);
+    cout &lt;&lt; mm.name &lt;&lt; &quot;\t&quot; &lt;&lt; mm.age &lt;&lt; &quot;\t&quot; &lt;&lt; mm.num &lt;&lt; endl;
+    MM* p = new MM(&quot;new&quot;, 28, 1002);
+    cout &lt;&lt; p-&gt;name &lt;&lt; &quot;\t&quot; &lt;&lt; p-&gt;age &lt;&lt; &quot;\t&quot; &lt;&lt; p-&gt;num &lt;&lt; endl;
+&#125;
+void visited(MM mm) &#123;
+    cout &lt;&lt; mm.name &lt;&lt; &quot;\t&quot; &lt;&lt; mm.age &lt;&lt; &quot;\t&quot; &lt;&lt; mm.num &lt;&lt; endl;
+&#125;
+int main(int argc, char** argv) &#123;
+    MM girl(&quot;girl&quot;, 19, 1002);
+    // girl.name=&quot;name&quot;;			//类外只能访问public
+    girl.print();
+    visitedData();
+    visited(girl);
+    return 0;
+&#125;
+</code></pre>
+<p>以另一个类的成员函数为友元函数</p>
+<pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+//前向声明
+class A;
+class B &#123;
+   public:
+    B(int b) : b(b) &#123;&#125;
+    void printA(A object);
+
+   private:
+    int b;
+&#125;;
+
+class A &#123;
+   public:
+    A(int a) : a(a) &#123;&#125;
+    friend void B::printA(A object);
+
+   private:
+    int a;
+&#125;;
+
+void B::printA(A object) &#123;
+    cout &lt;&lt; object.a &lt;&lt; endl;
+&#125;
+int main(int argc, char** argv) &#123;
+    B b(111);
+    A a(222);
+    b.printA(a);
+
+    return 0;
+&#125;
+/*
+    A以B的成员函数为友元函数，
+    B又以A类的成员函数为友元，
+    如果存在这种需求，
+    代码设计有问题，
+    但是C++允许这种关系
+*/
+</code></pre>
+<h2 id="友元类"><a href="#友元类" class="headerlink" title="友元类"></a>友元类</h2><pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+class MM &#123;
+    friend class Boy;  //声明boy类是MM友元类
+   public:
+    MM(string name) : name(name) &#123;&#125;
+
+   private:
+    string name;
+&#125;;
+
+//友元类中，MM类的对象无视权限
+class Boy &#123;
+   public:
+    Boy() : mm(&quot;mm&quot;) &#123; pObject = new MM(&quot;Object&quot;); &#125;
+    void print() &#123;
+        cout &lt;&lt; &quot;访问私有属性:&quot; &lt;&lt; mm.name &lt;&lt; endl;
+        cout &lt;&lt; &quot;访问私有属性:&quot; &lt;&lt; pObject-&gt;name &lt;&lt; endl;
+        MM* pMM = new MM(&quot;new&quot;);
+        cout &lt;&lt; &quot;访问私有属性:&quot; &lt;&lt; pMM-&gt;name &lt;&lt; endl;
+    &#125;
+
+   private:
+    MM mm;
+    MM* pObject;
+&#125;;
+
+class A &#123;
+   public:
+    friend class B;
+    void printA();
+
+   private:
+    string a_name = &quot;A&quot;;
+&#125;;
+
+class B &#123;
+   public:
+    friend class A;
+    void printB() &#123;
+        A a;
+        cout &lt;&lt; a.a_name &lt;&lt; endl;
+    &#125;
+
+   private:
+    string b_name = &quot;B&quot;;
+&#125;;
+
+void A::printA() &#123;
+    B b;
+    cout &lt;&lt; b.b_name &lt;&lt; endl;
+&#125;
+int main(int argc, char** argv) &#123;
+    Boy boy;
+    boy.print();
+    B b;
+    b.printB();
+    A a;
+    a.printA();
+    return 0;
+&#125;
+</code></pre>
+<h1 id="顺便介绍一下C-的强制类型转换"><a href="#顺便介绍一下C-的强制类型转换" class="headerlink" title="顺便介绍一下C++的强制类型转换"></a>顺便介绍一下C++的强制类型转换</h1><pre><code class="cpp">#include &lt;iostream&gt;
+using namespace std;
+int main(int argc, char** argv) &#123;
+    int num = 1.11;
+    cout &lt;&lt; num &lt;&lt; endl;
+    int cnum = (int)1.11;
+    cout &lt;&lt; cnum &lt;&lt; endl;
+    int cppnum = int(1.22);  // C++强制类型转换
+    cout &lt;&lt; cppnum &lt;&lt; endl;
+    return 0;
+&#125;
+</code></pre>
+<h2 id="static-cast类型转换"><a href="#static-cast类型转换" class="headerlink" title="static_cast类型转换"></a>static_cast类型转换</h2><p>类似C语言的强制类型转换，按照C++的说法 比C语言的更为安全</p>
+<ul>
+<li>基本数据类型的强制转换</li>
+<li>空指针转换目标类型指针</li>
+<li>不能操作带const属性的类型</li>
+</ul>
+<pre><code class="cpp">// static_cast&lt;要转换的类型&gt;(要转换目标)
+//要转换的类型: 数据类型
+//要转换目标  可以是表达式，或者常量，都可以
+#include &lt;iostream&gt;
+using namespace std;
+
+void test_static_cast() &#123;
+    // No.1 基本数据类型的强制转换
+    int num = static_cast&lt;int&gt;(1.111);
+    // No.2 空类型指针的转换
+    double* pD = new double(1.11);
+    void* pVoid = static_cast&lt;void*&gt;(pD);
+    // No.3 不能做const属性的类型的转换
+    //增加const属性
+    //不能去掉const属性
+    int number = 11;
+    const int cNum = static_cast&lt;const int&gt;(number);
+    const int ccNum = number;
+    const int data = 1;
+    int* pData = (int*)(&amp;data);  // C语言强制类型转换
+    // int* pcData = static_cast&lt;int*&gt;(&amp;data);		//错误
+&#125;
+int main(int argc, char** argv) &#123;
+    test_static_cast();
+    return 0;
+&#125;
+</code></pre>
+<h2 id="const-cast类型转换"><a href="#const-cast类型转换" class="headerlink" title="const_cast类型转换"></a>const_cast类型转换</h2><ul>
+<li>去掉const属性(提供一个可以修改接口去操作const数据类型)</li>
+<li>加上const属性(用的少一点)</li>
+</ul>
+<pre><code class="cpp">#include &lt;iostream&gt;
+using namespace std;
+
+class Str &#123;
+   public:
+    // 1.去掉const属性
+    Str(const char* str) : str(const_cast&lt;char*&gt;(str)) &#123;&#125;
+    void print() &#123; 
+        cout &lt;&lt; str &lt;&lt; endl; 
+    &#125;
+
+   private:
+    char* str;
+&#125;;
+class Test &#123;
+   public:
+    void print() &#123;
+         cout &lt;&lt; &quot;普通函数&quot; &lt;&lt; endl;
+    &#125;
+
+   private:
+&#125;;
+void printTest(const Test&amp; object) &#123;
+    Test&amp; m_test = const_cast&lt;Test&amp;&gt;(object);
+    m_test.print();
+&#125;
+
+void test_const_cast() &#123;
+    // 2.增加const属性
+    const int data = 1;
+    int* pData = const_cast&lt;int*&gt;(&amp;data);
+    *pData = 1001;  //不会作用到const变量，只是单纯提供一个接口
+    cout &lt;&lt; &quot;data:&quot; &lt;&lt; data &lt;&lt; endl;
+    cout &lt;&lt; &quot;*pData:&quot; &lt;&lt; *pData &lt;&lt; endl;
+    cout &lt;&lt; &amp;data &lt;&lt; endl;
+    cout &lt;&lt; pData &lt;&lt; endl;
+    Str str(&quot;ILoveyou&quot;);  //错误，C++对于const要求更为严格
+    str.print();
+    char sstr[20] = &quot;ILoveyoud&quot;;
+    Str str2(sstr);
+    str2.print();
+    // 3.引用类型
+    Test test;
+    test.print();
+    const Test&amp; c_test = test;
+    // c_test.print();		//常属性的对象只能调用常成员函数
+    Test&amp; m_test = const_cast&lt;Test&amp;&gt;(c_test);
+    m_test.print();
+&#125;
+
+int main(int argc, char** argv) &#123;
+    test_const_cast();
+    return 0;
+&#125;
+</code></pre>
+<h2 id="reinterpreat-cast类型转换"><a href="#reinterpreat-cast类型转换" class="headerlink" title="reinterpreat_cast类型转换"></a>reinterpreat_cast类型转换</h2><p>把指针转换为一个整数，又可以把整数转换为一个指针，指针的效果依然有效</p>
+<pre><code class="cpp">#include &lt;iostream&gt;
+using namespace std;
+int Max(int a, int b) &#123;
+    return a &gt; b ? a : b;
+&#125;
+//官方案例
+unsigned short Hash(void* p) &#123;
+    unsigned int val = reinterpret_cast&lt;unsigned int&gt;(p);
+    return (unsigned short)(val ^ (val &gt;&gt; 16));
+&#125;
+
+void test_reinterpret_cast() &#123;
+    int* p = reinterpret_cast&lt;int*&gt;(0);  // p=nullptr;
+    //官方案例
+    int a[20];
+    for (int i = 0; i &lt; 20; i++)
+        cout &lt;&lt; Hash(a + i) &lt;&lt; endl;
+
+    //允许将任何指针转换为任何其他指针类型。
+    //也允许将任何整数类型转换为任何指针类型以及反向转换
+    int* num = reinterpret_cast&lt;int*&gt;(Max);  //把函数地址转换为int类型的数字
+    cout &lt;&lt; *num &lt;&lt; endl;
+    auto pMax = reinterpret_cast&lt;int (*)(int, int)&gt;(num);
+    cout &lt;&lt; &quot;max:&quot; &lt;&lt; pMax(1, 2) &lt;&lt; endl;
+&#125;
+int main(int argc, char** argv) &#123;
+    test_reinterpret_cast();
+    return 0;
+&#125;
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。邮件至kpsun@foxmail.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>C++友元</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">1.6k</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="kpsun">kpsun</a></p>
+    <p><span class="copy-title">发布时间:</span>2022-05-20, 18:37:54</p>
+    <p><span class="copy-title">最后更新:</span>2022-09-18, 10:35:38</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/05/20/C++%E5%8F%8B%E5%85%83/" title="C++友元">http://goskp.github.io/2022/05/20/C++%E5%8F%8B%E5%85%83/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(e){e.imageLazyLoadSetting.processImages=t;var n=e.imageLazyLoadSetting.isSPA,i=e.imageLazyLoadSetting.preloadRatio||1,r=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){n&&(r=o());for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(e.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];e=function(){r=r.filter(function(t){return o!==t})},(t=o).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,t.removeAttribute("data-original"),e&&e()},t.src!==i&&(n.src=i))}()}function a(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",a),e.addEventListener("resize",a),e.addEventListener("orientationchange",a)}(this);</script></body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
