@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>数据结构-哈希存储(hash) | kpsun</title>
-  <meta name="keywords" content=" 数据结构 ">
-  <meta name="description" content="数据结构-哈希存储(hash) | kpsun">
+  <title>QT(项目解析) | kpsun</title>
+  <meta name="keywords" content=" QT ">
+  <meta name="description" content="QT(项目解析) | kpsun">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介孙楷朋准大二计算机相关专业在读热爱编程,乐于合作,善于总结分享,有良好的的编程习惯目标BAT大厂联系方式 QQ: 1287923885 WeChat: code_cpp Email: &amp;#107;&amp;#112;&amp;#x73;&amp;#x75;&amp;#110;&amp;#64;&amp;#x66;&amp;#x6f;&amp;#120;&amp;#x6d;&amp;#97;&amp;#105;&amp;#x6c;&amp;#46;&amp;#99;&amp;#111;&amp;#109;">
 <meta property="og:type" content="website">
@@ -746,9 +746,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-数据结构-哈希存储(hash)" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-QT(入门)" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">数据结构-哈希存储(hash)</h1>
+        <h1 class="article-title">QT(项目解析)</h1>
     
     <div class="article-meta">
         
@@ -758,7 +758,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="数据结构">数据结构</a>
+            <a  data-rel="QT类库">QT类库</a>
             
         </span>
         
@@ -766,19 +766,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">数据结构</a>
+            <a class="color3">QT</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-09-04 16:10:23'>2022-07-05 17:12</time>
+            发布时间 : <time class="date" title='最后更新: 2022-10-12 18:53:59'>2022-10-12 09:25</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:686</span>
+        <span>字数:752</span>
         
         
         
@@ -786,7 +786,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D"><span class="toc-text">参考书籍:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90-%E9%BB%91%E7%9A%AE%E4%B9%A6"><span class="toc-text">数据结构与算法分析(黑皮书)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%9C%E8%80%85-Mark-Allen-Weiss"><span class="toc-text">作者:Mark Allen Weiss</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hash%E5%9F%BA%E7%A1%80-hash%E5%8F%AB%E5%81%9A%E5%93%88%E5%B8%8C-%E5%8F%88%E7%A7%B0%E4%B8%BA%E6%95%A3%E5%88%97"><span class="toc-text">Hash基础(hash叫做哈希,又称为散列)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0-%E7%94%A8%E6%9D%A5%E6%B1%82hash%E5%9C%B0%E5%9D%80%E7%9A%84-%E4%B8%8D%E6%98%AF%E6%8C%87%E9%92%88-%E4%BA%BA%E4%B8%BA%E7%9A%84%E5%9C%B0%E5%9D%80"><span class="toc-text">哈希构造函数(用来求hash地址的,不是指针),人为的地址</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%96%E4%BD%99%E6%B3%95-h-k-x3D-k-p"><span class="toc-text">取余法: h(k) &#x3D; k % p</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#h-key-x3D-key-p"><span class="toc-text">h(key) &#x3D; key % p</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#p-x3D-10-p%E7%94%B1%E8%87%AA%E5%B7%B1%E5%86%B3%E5%AE%9A"><span class="toc-text">p &#x3D; 10(p由自己决定)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#h-10-x3D-10-10-x3D-0"><span class="toc-text">h(10) &#x3D; 10 % 10 &#x3D; 0;</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#h-14-x3D-14-10-x3D-4"><span class="toc-text">h(14) &#x3D; 14 % 10 &#x3D; 4;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E5%AE%9A%E5%9D%80-h-k-x3D-k"><span class="toc-text">直接定址: h(k) &#x3D; k</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#array-12-x3D-12"><span class="toc-text">array[12] &#x3D; 12;</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#array-13-x3D-13"><span class="toc-text">array[13] &#x3D; 13</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E6%B3%95"><span class="toc-text">随机数法:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#rand"><span class="toc-text">rand();</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%E5%86%B2%E7%AA%81"><span class="toc-text">哈希冲突:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E7%9A%84%E5%85%83%E7%B4%A0%E4%BC%9A%E4%BA%A7%E7%94%9F%E7%9B%B8%E5%90%8C%E7%9A%84%E5%93%88%E5%B8%8C%E5%9C%B0%E5%9D%80"><span class="toc-text">不同的元素会产生相同的哈希地址</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E5%93%88%E5%B8%8C%E5%86%B2%E7%AA%81"><span class="toc-text">如何处理哈希冲突</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%80%E6%94%BE%E5%9C%B0%E5%9D%80%E6%B3%95"><span class="toc-text">开放地址法:</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BA%A7%E7%94%9F%E5%86%B2%E7%AA%81%E7%9A%84%E5%85%83%E7%B4%A0%E5%AD%98%E6%94%BE%E5%88%B0%E7%A9%BA%E7%9A%84%E7%A9%BA%E9%97%B4%E4%B8%AD"><span class="toc-text">产生冲突的元素存放到空的空间中</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%82%BB%E6%8E%A5%E8%A1%A8-gt-%E5%9B%BE"><span class="toc-text">邻接表-&gt;图:</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%9C%A8%E5%86%B2%E7%AA%81%E4%BD%8D%E7%BD%AE%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%93%BE%E8%A1%A8"><span class="toc-text">在冲突位置创建一个链表</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BB%BB%E4%BD%95%E6%9C%89%E5%86%B2%E7%AA%81%E7%9A%84%E5%85%83%E7%B4%A0%E9%83%BD%E5%AD%98%E5%88%B0%E6%AD%A4%E9%93%BE%E8%A1%A8%E4%B8%AD"><span class="toc-text">任何有冲突的元素都存到此链表中</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%8F%8F%E8%BF%B0Hash%E7%BB%93%E6%9E%84"><span class="toc-text">数组描述Hash结构:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E6%95%B0%E6%8D%AE%E6%9E%84%E5%BB%BA%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">为数据构建关键字:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hash%E7%BB%93%E6%9E%84"><span class="toc-text">Hash结构:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAHash%E8%A1%A8"><span class="toc-text">创建Hash表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96Hash%E5%9C%B0%E5%9D%80"><span class="toc-text">获取Hash地址:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91Hash%E8%A1%A8%E4%B8%AD%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-text">向Hash表中插入数据:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%81%8D%E5%8E%86Hash%E8%A1%A8%E4%B8%8E%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE"><span class="toc-text">遍历Hash表与测试数据:</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#CMakeLists-txt"><span class="toc-text">CMakeLists.txt</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6"><span class="toc-text">项目文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#main-cpp"><span class="toc-text">main.cpp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#widget-h"><span class="toc-text">widget.h</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#widget-cpp"><span class="toc-text">widget.cpp</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -802,131 +802,127 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><h1 id="参考书籍"><a href="#参考书籍" class="headerlink" title="参考书籍:"></a>参考书籍:</h1><ul>
-<li><h4 id="数据结构与算法分析-黑皮书"><a href="#数据结构与算法分析-黑皮书" class="headerlink" title="数据结构与算法分析(黑皮书)"></a><em>数据结构与算法分析(黑皮书)</em></h4></li>
-<li><h4 id="作者-Mark-Allen-Weiss"><a href="#作者-Mark-Allen-Weiss" class="headerlink" title="作者:Mark Allen Weiss"></a><em>作者:Mark Allen Weiss</em></h4></li>
-</ul>
-</li>
-</ul>
-<h1 id="Hash基础-hash叫做哈希-又称为散列"><a href="#Hash基础-hash叫做哈希-又称为散列" class="headerlink" title="Hash基础(hash叫做哈希,又称为散列)"></a>Hash基础(hash叫做哈希,又称为散列)</h1><h3 id="哈希构造函数-用来求hash地址的-不是指针-人为的地址"><a href="#哈希构造函数-用来求hash地址的-不是指针-人为的地址" class="headerlink" title="哈希构造函数(用来求hash地址的,不是指针),人为的地址"></a>哈希构造函数(用来求hash地址的,不是指针),人为的地址</h3><ul>
-<li><h4 id="取余法-h-k-x3D-k-p"><a href="#取余法-h-k-x3D-k-p" class="headerlink" title="取余法: h(k) &#x3D; k % p"></a>取余法: h(k) &#x3D; k % p</h4><ul>
-<li><h5 id="h-key-x3D-key-p"><a href="#h-key-x3D-key-p" class="headerlink" title="h(key) &#x3D; key % p"></a>h(key) &#x3D; key % p</h5></li>
-<li><h5 id="p-x3D-10-p由自己决定"><a href="#p-x3D-10-p由自己决定" class="headerlink" title="p &#x3D; 10(p由自己决定)"></a>p &#x3D; 10(p由自己决定)</h5></li>
-<li><h5 id="h-10-x3D-10-10-x3D-0"><a href="#h-10-x3D-10-10-x3D-0" class="headerlink" title="h(10) &#x3D; 10 % 10 &#x3D; 0;"></a>h(10) &#x3D; 10 % 10 &#x3D; 0;</h5></li>
-<li><h5 id="h-14-x3D-14-10-x3D-4"><a href="#h-14-x3D-14-10-x3D-4" class="headerlink" title="h(14) &#x3D; 14 % 10 &#x3D; 4;"></a>h(14) &#x3D; 14 % 10 &#x3D; 4;</h5></li>
-</ul>
-</li>
-<li><h3 id="直接定址-h-k-x3D-k"><a href="#直接定址-h-k-x3D-k" class="headerlink" title="直接定址: h(k) &#x3D; k"></a>直接定址: h(k) &#x3D; k</h3><ul>
-<li><h5 id="array-12-x3D-12"><a href="#array-12-x3D-12" class="headerlink" title="array[12] &#x3D; 12;"></a>array[12] &#x3D; 12;</h5></li>
-<li><h5 id="array-13-x3D-13"><a href="#array-13-x3D-13" class="headerlink" title="array[13] &#x3D; 13"></a>array[13] &#x3D; 13</h5></li>
-</ul>
-</li>
-<li><h4 id="随机数法"><a href="#随机数法" class="headerlink" title="随机数法:"></a>随机数法:</h4><ul>
-<li><h5 id="rand"><a href="#rand" class="headerlink" title="rand();"></a>rand();</h5></li>
-</ul>
-</li>
-<li><h4 id="哈希冲突"><a href="#哈希冲突" class="headerlink" title="哈希冲突:"></a>哈希冲突:</h4><ul>
-<li><h5 id="不同的元素会产生相同的哈希地址"><a href="#不同的元素会产生相同的哈希地址" class="headerlink" title="不同的元素会产生相同的哈希地址"></a>不同的元素会产生相同的哈希地址</h5></li>
-<li><h5 id="如何处理哈希冲突"><a href="#如何处理哈希冲突" class="headerlink" title="如何处理哈希冲突"></a>如何处理哈希冲突</h5><ul>
-<li><h5 id="开放地址法"><a href="#开放地址法" class="headerlink" title="开放地址法:"></a>开放地址法:</h5><ul>
-<li><h6 id="产生冲突的元素存放到空的空间中"><a href="#产生冲突的元素存放到空的空间中" class="headerlink" title="产生冲突的元素存放到空的空间中"></a>产生冲突的元素存放到空的空间中</h6></li>
-</ul>
-</li>
-<li><h5 id="邻接表-gt-图"><a href="#邻接表-gt-图" class="headerlink" title="邻接表-&gt;图:"></a>邻接表-&gt;图:</h5><ul>
-<li><h6 id="在冲突位置创建一个链表"><a href="#在冲突位置创建一个链表" class="headerlink" title="在冲突位置创建一个链表"></a>在冲突位置创建一个链表</h6></li>
-<li><h6 id="任何有冲突的元素都存到此链表中"><a href="#任何有冲突的元素都存到此链表中" class="headerlink" title="任何有冲突的元素都存到此链表中"></a>任何有冲突的元素都存到此链表中</h6></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="数组描述Hash结构"><a href="#数组描述Hash结构" class="headerlink" title="数组描述Hash结构:"></a>数组描述Hash结构:</h2><h4 id="为数据构建关键字"><a href="#为数据构建关键字" class="headerlink" title="为数据构建关键字:"></a>为数据构建关键字:</h4><pre><code class="c">typedef struct Pair &#123;
-    int hash_address;  //为数据构建一个关键字,用来产生hash地址
-    char element[20];
-&#125; DATA, *LPDATA;
+        <h3 id="CMakeLists-txt"><a href="#CMakeLists-txt" class="headerlink" title="CMakeLists.txt"></a>CMakeLists.txt</h3><blockquote>
+<p>Qt项目文件，注释需要用#号</p>
+</blockquote>
+<pre><code class="cmake">#CMake的最低版本，低于指定版本，无法生成
+cmake_minimum_required(VERSION 3.5)
+#指定项目名、项目版本、编程语言
+project(HelloQt VERSION 0.1 LANGUAGES CXX)
+#自动将当前源目录和构建目录添加到包含路径。
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+#自动UIC、MOC、RCC
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+#启用C++17标准
+set(CMAKE_CXX_STANDARD 17)
+#设置指定的C++标准是必须的(如果不支持C++17则无法生成)，如果不设置，或者为OFF，则指定版本不可用时，会使用上一版本。
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+#查找Qt库版本
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
+#查找当前Qt版本的Widgets模块
+find_package(Qt$&#123;QT_VERSION_MAJOR&#125; REQUIRED COMPONENTS Widgets)
+
+#项目中的源文件、头文件、资源文件
+set(PROJECT_SOURCES
+        main.cpp
+        mainwindow.cpp
+        mainwindow.h
+)
+#如果是Qt6及以上版本
+if($&#123;QT_VERSION_MAJOR&#125; GREATER_EQUAL 6)
+    qt_add_executable(HelloQt
+        MANUAL_FINALIZATION	#指示要手动终止可执行程序的生成
+        $&#123;PROJECT_SOURCES&#125;
+    )
+#安卓开发    
+# Define target properties for Android with Qt 6 as:
+#    set_property(TARGET HelloQt APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
+#                 $&#123;CMAKE_CURRENT_SOURCE_DIR&#125;/android)
+# For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
+else()
+    if(ANDROID)
+        add_library(HelloQt SHARED
+            $&#123;PROJECT_SOURCES&#125;
+        )
+# Define properties for Android with Qt 5 after find_package() calls as:
+#    set(ANDROID_PACKAGE_SOURCE_DIR &quot;$&#123;CMAKE_CURRENT_SOURCE_DIR&#125;/android&quot;)
+#其他Qt6以下版本使用这个
+    else()
+        add_executable(HelloQt
+            $&#123;PROJECT_SOURCES&#125;
+        )
+    endif()
+endif()
+#把Qt::Widgets模块的库连接到HelloQt
+target_link_libraries(HelloQt PRIVATE Qt$&#123;QT_VERSION_MAJOR&#125;::Widgets)
+
+set_target_properties(HelloQt PROPERTIES
+    MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
+    MACOSX_BUNDLE_BUNDLE_VERSION $&#123;PROJECT_VERSION&#125;
+    MACOSX_BUNDLE_SHORT_VERSION_STRING $&#123;PROJECT_VERSION_MAJOR&#125;.$&#123;PROJECT_VERSION_MINOR&#125;
+    MACOSX_BUNDLE TRUE		#在 macOS 或 iOS 上将可执行文件构建为应用程序包。
+    WIN32_EXECUTABLE TRUE	#在 Windows 上构建一个带有 WinMain 入口点的可执行文件。
+)
+#如果大于Qt6 则手动终止可执行程序的生成
+if(QT_VERSION_MAJOR EQUAL 6)
+    qt_finalize_executable(HelloQt)
+endif()
 </code></pre>
-<h3 id="Hash结构"><a href="#Hash结构" class="headerlink" title="Hash结构:"></a>Hash结构:</h3><pre><code class="c">typedef struct HashTable &#123;
-    LPDATA* table;  //注意这里是二级指针
-    int divisor;    //除数, 采用取余法   key%p, p就是divisor
-    int hash_size;  //当前元素个数
-&#125; HASH, *LPHASH;
-</code></pre>
-<h3 id="创建Hash表"><a href="#创建Hash表" class="headerlink" title="创建Hash表"></a>创建Hash表</h3><pre><code class="c">LPHASH CreateHash(int divisor) &#123;
-    LPHASH p_hash_table = (LPHASH)malloc(sizeof(HASH));
-    if (NULL == p_hash_table) &#123;
-        return NULL;
-    &#125;
-    //初始化hash表
-    p_hash_table-&gt;hash_size = 0;
-    p_hash_table-&gt;divisor = divisor;
-    //动态内存申请HashTable
-    p_hash_table-&gt;table = (LPDATA*)malloc(sizeof(LPDATA) * p_hash_table-&gt;divisor);
-    // p_hash_table[i]:一级指针
-    for (int i = 0; i &lt; p_hash_table-&gt;divisor; ++i) &#123;
-        p_hash_table-&gt;table[i] = NULL;
-    &#125;
-    return p_hash_table;
+<p>CMakeLists.txt是Qt的工程文件，这个文件是给CMake用来生成Makefile用的。</p>
+<h2 id="项目文件"><a href="#项目文件" class="headerlink" title="项目文件"></a>项目文件</h2><h3 id="main-cpp"><a href="#main-cpp" class="headerlink" title="main.cpp"></a>main.cpp</h3><blockquote>
+<p>主函数所在的文件</p>
+</blockquote>
+<pre><code class="cpp">#include &quot;widget.h&quot;				//生成的窗口类头文件
+#include &lt;QApplication&gt;			//引用程序类头文件
+
+int main(int argc, char *argv[])
+&#123;
+    //创建应用程序对象, 在一个Qt项目中实例对象有且仅有一个
+    // 类的作用: 检测触发的事件, 进行事件循环并处理
+    QApplication a(argc, argv);	
+    //创建窗口对象
+    Widget w;
+    //显示窗口
+    w.show();
+    //应用程序对象开始事件循环，保证应用程序不退出
+    return a.exec();
 &#125;
 </code></pre>
-<h3 id="获取Hash地址"><a href="#获取Hash地址" class="headerlink" title="获取Hash地址:"></a>获取Hash地址:</h3><pre><code class="c">int SearchHashAddress(LPHASH p_hash_table, int data_address) &#123;
-    //因为存在哈希地址,所以我这里单独封装一个函数做这个事情
-    int pos = data_address % p_hash_table-&gt;divisor;
-    int cur_pos = pos;  //查找结束的结果
-    do &#123;
-        //没有值就可以存到里面
-        if (p_hash_table-&gt;table[cur_pos] == NULL ||
-            p_hash_table-&gt;table[cur_pos]-&gt;hash_address == data_address) &#123;
-            return cur_pos;
-        &#125;
-        cur_pos = (cur_pos + 1) % p_hash_table-&gt;divisor;
-    &#125; while (cur_pos != pos);
-    return cur_pos;
-&#125;
+<h3 id="widget-h"><a href="#widget-h" class="headerlink" title="widget.h"></a>widget.h</h3><blockquote>
+<p>窗口类头文件</p>
+</blockquote>
+<pre><code class="cpp">#ifndef WIDGET_H
+#define WIDGET_H
+
+#include &lt;QWidget&gt;			//Qt标准窗口类头文件
+
+class Widget : public QWidget	//自己的类继承自Qwidget类
+&#123;
+    Q_OBJECT					//使用信号与槽机制，必须包含该宏
+
+public:
+    Widget(QWidget *parent = nullptr);
+    ~Widget();
+&#125;;
+#endif // WIDGET_H
 </code></pre>
-<h3 id="向Hash表中插入数据"><a href="#向Hash表中插入数据" class="headerlink" title="向Hash表中插入数据:"></a>向Hash表中插入数据:</h3><pre><code class="c">void InsertData(LPHASH p_hash_table, DATA data) &#123;
-    //求出哈希地址
-    int pos = SearchHashAddress(p_hash_table, data.hash_address);
-    if (p_hash_table-&gt;table[pos] == NULL) &#123;
-        p_hash_table-&gt;table[pos] = (LPDATA)malloc(sizeof(DATA));
-        memcpy(p_hash_table-&gt;table[pos], &amp;data, sizeof(DATA));
-        p_hash_table-&gt;hash_size++;
-    &#125; else &#123;
-        //有元素
-        if (p_hash_table-&gt;table[pos]-&gt;hash_address == data.hash_address) &#123;
-            //相同关键字采用覆盖方式
-            strcpy(p_hash_table-&gt;table[pos]-&gt;element, data.element);
-        &#125; else &#123;
-            printf(&quot;空间已满,无法插入\n&quot;);
-            return;
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<h3 id="遍历Hash表与测试数据"><a href="#遍历Hash表与测试数据" class="headerlink" title="遍历Hash表与测试数据:"></a>遍历Hash表与测试数据:</h3><pre><code class="c">void PrintHashTable(LPHASH p_hash_table) &#123;
-    for (int i = 0; i &lt; p_hash_table-&gt;divisor; ++i) &#123;
-        if (p_hash_table-&gt;table[i] == NULL) &#123;
-            printf(&quot;NULL\n&quot;);
-        &#125; else &#123;
-            printf(&quot;%d:%s\n&quot;, p_hash_table-&gt;table[i]-&gt;hash_address,
-                   p_hash_table-&gt;table[i]-&gt;element);
-        &#125;
-    &#125;
+<h3 id="widget-cpp"><a href="#widget-cpp" class="headerlink" title="widget.cpp"></a>widget.cpp</h3><blockquote>
+<p>窗口类源文件</p>
+</blockquote>
+<pre><code class="cpp">#include &quot;widget.h&quot;
+
+Widget::Widget(QWidget *parent)
+    : QWidget(parent)
+&#123;
 &#125;
 
-//测试数据
-int main(int argc, char** argv) &#123;
-    LPHASH p_hash_table = CreateHash(10);
-    DATA array[5] = &#123;1,&quot;刘亦菲&quot;,12,&quot;王菲&quot;, 11,&quot;王冰冰&quot;,15,&quot;Baby&quot;, 1,&quot;睿睿&quot;&#125;;
-    for (int i = 0; i &lt; 5; ++i) &#123;
-        InsertData(p_hash_table, array[i]);
-    &#125;
-    PrintHashTable(p_hash_table);
-    return 0;
+Widget::~Widget()
+&#123;
 &#125;
 </code></pre>
+<p>如果了解makefile的人应该知道，Makefile的三个关键点就是<code>目标</code>，<code>依赖</code>，<code>命令</code>。这里也很类似。pro文件中可以指明这个Qt项目的<code>头文件</code>，<code>源文件</code>，<code>链接的外部库</code>，<code>目标文件名</code>，<code>模板(生成什么样的Makefile)</code>，<code>版本配置(debug/release)</code>等。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。邮件至kpsun@foxmail.com </span>
@@ -936,12 +932,12 @@ int main(int argc, char** argv) &#123;
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>数据结构-哈希存储(hash)</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">686</span></p>
+    <p><span class="copy-title">文章标题:</span>QT(项目解析)</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">752</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="kpsun">kpsun</a></p>
-    <p><span class="copy-title">发布时间:</span>2022-07-05, 17:12:58</p>
-    <p><span class="copy-title">最后更新:</span>2022-09-04, 16:10:23</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/07/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%93%88%E5%B8%8C%E5%AD%98%E5%82%A8(hash)/" title="数据结构-哈希存储(hash)">http://goskp.github.io/2022/07/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%93%88%E5%B8%8C%E5%AD%98%E5%82%A8(hash)/</a>
+    <p><span class="copy-title">发布时间:</span>2022-10-12, 09:25:22</p>
+    <p><span class="copy-title">最后更新:</span>2022-10-12, 18:53:59</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/10/12/QT(%E5%85%A5%E9%97%A8)/" title="QT(项目解析)">http://goskp.github.io/2022/10/12/QT(%E5%85%A5%E9%97%A8)/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
