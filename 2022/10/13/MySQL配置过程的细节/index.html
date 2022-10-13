@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>kpsun</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="kpsun">
+  <title>MySQL配置过程的细节 | kpsun</title>
+  <meta name="keywords" content=" MySQL ">
+  <meta name="description" content="MySQL配置过程的细节 | kpsun">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介孙楷朋准大二计算机相关专业在读热爱编程,乐于合作,善于总结分享,有良好的的编程习惯目标BAT大厂联系方式 QQ: 1287923885 WeChat: code_cpp Email: &amp;#x6b;&amp;#112;&amp;#115;&amp;#x75;&amp;#110;&amp;#x40;&amp;#x66;&amp;#111;&amp;#x78;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -771,12 +771,49 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-MySQL配置过程的细节" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E"><span class="toc-text">关于</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B3%E5%8F%B0"><span class="toc-text">平台</span></a></li></ol>
+        <h1 class="article-title">MySQL配置过程的细节</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="数据库">数据库</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">MySQL</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2022-10-13 21:05:45'>2022-10-13 21:05</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:250</span>
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%A5%BD%E5%85%A8%E5%9C%A8%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90%E4%B8%8B%E8%BF%90%E8%A1%8C"><span class="toc-text">最好全在管理员权限下运行</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -789,18 +826,64 @@
     }
 </style>
 </div>
-            <h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="平台"><a href="#平台" class="headerlink" title="平台"></a>平台</h2><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>主题 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad&#x2F;手机等移动端适配</li>
-</ul>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="最好全在管理员权限下运行"><a href="#最好全在管理员权限下运行" class="headerlink" title="最好全在管理员权限下运行"></a>最好全在管理员权限下运行</h2><p>管理员打开bin,转到D盘, cd bin目录</p>
+<p>安装MySQL , mysqld –install     —&gt;Service successfully Installed</p>
+<p>mysqld –initalize –console		—&gt;初始化mysqld服务</p>
+<p>net start mysql							 —&gt;启动服务</p>
+<p>mysql -uroot -p默认密码			 —&gt;登录mysql</p>
+<p>show databases;						  —&gt;查看数据库</p>
+<p>set password for ‘root‘@’localhost’&#x3D;’123456’;	—&gt;修改密码 —&gt;Query OK</p>
+<p>quit;											—&gt;退出数据库</p>
+<p>mysql -uroot -p123456			—&gt;重新登录mysql</p>
+<p>停止MySQL服务</p>
+<p>删除注册表</p>
+<blockquote>
+<p>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Eventlog\Application\MySQL</p>
+</blockquote>
+<blockquote>
+<p>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\Eventlog\Application\MySQL</p>
+</blockquote>
+<blockquote>
+<p>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application\MySQL<br>默认路径C盘：C:\Program Files\MySQL\MySQL Server 5.7</p>
+</blockquote>
+<p>mysql 服务路径:<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MySql</p>
+<p>mysql\mysql-5.6.26-winx64\bin\mysqld.exe</p>
+<p>控制面板-&gt;卸载MySQL Server </p>
+<p>删除MySQL安装的位置</p>
+<p>删除C:\Program Files (x86)\MySQL</p>
+<p>删除隐藏的ProgramData</p>
+<p>忘记密码:<br>先关闭mysql服务<br>net stop mysql</p>
+<p>mysqld –console –skip-grant-tables –shared-memory<br>在打开一个cmd窗口(管理员),上面的不要关了<br>mysql<br>show databases;<br>use mysql;<br>更新权限:flush privileges;<br>alter user root@localhost identified by ‘123456’;<br>quit<br>Bye</p>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。邮件至kpsun@foxmail.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>MySQL配置过程的细节</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">250</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="kpsun">kpsun</a></p>
+    <p><span class="copy-title">发布时间:</span>2022-10-13, 21:05:13</p>
+    <p><span class="copy-title">最后更新:</span>2022-10-13, 21:05:45</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/10/13/MySQL%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B%E7%9A%84%E7%BB%86%E8%8A%82/" title="MySQL配置过程的细节">http://goskp.github.io/2022/10/13/MySQL%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B%E7%9A%84%E7%BB%86%E8%8A%82/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -809,11 +892,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 
