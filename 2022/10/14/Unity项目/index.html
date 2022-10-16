@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>数据结构-分而治之 | kpsun</title>
-  <meta name="keywords" content=" 数据结构 ">
-  <meta name="description" content="数据结构-分而治之 | kpsun">
+  <title>Unity项目 | kpsun</title>
+  <meta name="keywords" content=" Unity ">
+  <meta name="description" content="Unity项目 | kpsun">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="category">
@@ -798,9 +798,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-数据结构-分而治之" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Unity项目" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">数据结构-分而治之</h1>
+        <h1 class="article-title">Unity项目</h1>
     
     <div class="article-meta">
         
@@ -810,7 +810,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="数据结构">数据结构</a>
+            <a  data-rel="Unity">Unity</a>
             
         </span>
         
@@ -818,19 +818,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">数据结构</a>
+            <a class="color1">Unity</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-09-04 16:28:30'>2022-07-17 16:18</time>
+            发布时间 : <time class="date" title='最后更新: 2022-10-16 09:59:29'>2022-10-14 22:37</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:0</span>
+        <span>字数:545</span>
         
         
         
@@ -838,7 +838,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PlayerMovement-cs"><span class="toc-text">PlayerMovement.cs:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4-System-Collections-Generic"><span class="toc-text">命名空间 System.Collections.Generic</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8C%85%E5%90%AB%E4%BA%86%E4%B8%80%E4%BA%9B%E5%9F%BA%E4%BA%8E%E6%B3%9B%E5%9E%8B%E7%9A%84%E9%9B%86%E5%90%88%E7%B1%BB%EF%BC%8C%E4%BD%BF%E7%94%A8%E6%B3%9B%E5%9E%8B%E9%9B%86%E5%90%88%E7%B1%BB%E5%8F%AF%E4%BB%A5%E6%8F%90%E4%BE%9B%E6%9B%B4%E9%AB%98%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-text">包含了一些基于泛型的集合类，使用泛型集合类可以提供更高的类型安全性,</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E8%AE%A4%E4%B8%BA%E7%B1%BB%E4%BC%BC%E4%BA%8EC-%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93-%E5%B0%81%E8%A3%85%E4%BA%86list-stack-vector%E7%AD%89"><span class="toc-text">个人认为类似于C++标准模板库,封装了list, stack, vector等.</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%BE%E5%90%8D%E6%80%9D%E4%B9%89-%E4%BD%BF%E7%94%A8-Unity%E5%BC%95%E6%93%8E"><span class="toc-text">顾名思义,使用 Unity引擎</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E8%A6%81%E7%9A%84%E7%B1%BB-MonoBehaviour"><span class="toc-text">重要的类 - MonoBehaviour</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#MonoBehaviour-%E7%B1%BB%E6%98%AF%E4%B8%80%E4%B8%AA%E5%9F%BA%E7%B1%BB%EF%BC%8C%E6%89%80%E6%9C%89-Unity-%E8%84%9A%E6%9C%AC%E9%83%BD%E9%BB%98%E8%AE%A4%E6%B4%BE%E7%94%9F%E8%87%AA%E8%AF%A5%E7%B1%BB"><span class="toc-text">MonoBehaviour 类是一个基类，所有 Unity 脚本都默认派生自该类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AA%E8%A6%81%E4%BB%8EUnity%E9%A1%B9%E7%9B%AE%E7%AA%97%E5%8F%A3%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAC-%E8%84%9A%E6%9C%AC-%E5%B0%B1%E4%BC%9A%E8%87%AA%E5%8A%A8%E7%BB%A7%E6%89%BFMonoBehaviour%E7%B1%BB"><span class="toc-text">只要从Unity项目窗口创建一个C#脚本,就会自动继承MonoBehaviour类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9C%89%E5%85%B3%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B%E7%82%B9%E5%87%BB-MonoBehaviour"><span class="toc-text">有关代码示例点击:MonoBehaviour</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Unity3D%E4%B8%AD-SerializeField-%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">Unity3D中[SerializeField]特性的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6-Unity-%E5%AF%B9%E7%A7%81%E6%9C%89%E5%AD%97%E6%AE%B5%E8%BF%9B%E8%A1%8C%E5%BA%8F%E5%88%97%E5%8C%96"><span class="toc-text">强制 Unity 对私有字段进行序列化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BD%93-Unity-%E5%AF%B9%E8%84%9A%E6%9C%AC%E8%BF%9B%E8%A1%8C%E5%BA%8F%E5%88%97%E5%8C%96%E6%97%B6%EF%BC%8C%E4%BB%85%E5%AF%B9%E5%85%AC%E5%85%B1%E5%AD%97%E6%AE%B5%E8%BF%9B%E8%A1%8C%E5%BA%8F%E5%88%97%E5%8C%96%E3%80%82-%E5%A6%82%E6%9E%9C%E8%BF%98%E9%9C%80%E8%A6%81-Unity-%E5%AF%B9%E7%A7%81%E6%9C%89%E5%AD%97%E6%AE%B5%E8%BF%9B%E8%A1%8C%E5%BA%8F%E5%88%97%E5%8C%96%EF%BC%8C-%E5%8F%AF%E4%BB%A5%E5%B0%86-SerializeField-%E5%B1%9E%E6%80%A7%E6%B7%BB%E5%8A%A0%E5%88%B0%E8%BF%99%E4%BA%9B%E5%AD%97%E6%AE%B5"><span class="toc-text">当 Unity 对脚本进行序列化时，仅对公共字段进行序列化。 如果还需要 Unity 对私有字段进行序列化， 可以将 SerializeField 属性添加到这些字段</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Unity-%E4%B8%8D%E4%BC%9A%E5%BA%8F%E5%88%97%E5%8C%96-Dictionary%EF%BC%8C%E4%BD%86%E6%82%A8%E5%8F%AF%E4%BB%A5%E4%B8%BA%E9%94%AE%E5%AD%98%E5%82%A8%E4%B8%80%E4%B8%AA-List-lt-gt-%E5%92%8C%E4%B8%BA%E5%80%BC%E5%AD%98%E5%82%A8%E4%B8%80%E4%B8%AA-List-lt-gt-%EF%BC%8C%E7%84%B6%E5%90%8E%E5%9C%A8-Awake-%E4%B8%8A%E5%B0%86%E5%AE%83%E4%BB%AC%E7%BB%84%E5%90%88%E5%9C%A8%E9%9D%9E%E5%BA%8F%E5%88%97%E5%8C%96%E5%AD%97%E5%85%B8%E4%B8%AD%E3%80%82%E8%BF%99%E4%B8%8D%E8%83%BD%E8%A7%A3%E5%86%B3%E6%82%A8%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9%E5%AD%97%E5%85%B8-%E5%B9%B6%E5%B0%86%E5%85%B6%E2%80%9C%E4%BF%9D%E5%AD%98%E2%80%9D%E5%9B%9E%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%8C%E4%BD%86%E5%9C%A8%E8%AE%B8%E5%A4%9A%E5%85%B6%E4%BB%96%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8C%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%96%B9%E4%BE%BF%E7%9A%84%E6%8A%80%E5%B7%A7"><span class="toc-text">Unity 不会序列化 Dictionary，但您可以为键存储一个 List&lt;&gt; 和为值存储一个 List&lt;&gt;，然后在 Awake() 上将它们组合在非序列化字典中。这不能解决您需要修改字典 并将其“保存”回时出现的问题，但在许多其他情况下，这是一个方便的技巧</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PlayerMovement%E7%B1%BB%E7%9A%84%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98"><span class="toc-text">PlayerMovement类的数据成员:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Vecotr3%E4%B8%89%E7%BB%B4%E5%90%91%E9%87%8F"><span class="toc-text">使用Vecotr3三维向量</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%AE%B0%E5%BD%95%E7%8E%A9%E5%AE%B6%E5%87%BA%E7%94%9F%E7%82%B9"><span class="toc-text">记录玩家出生点</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%AE%B0%E5%BD%95%E7%8E%A9%E5%AE%B6%E5%9C%A8%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E4%B8%8A%E7%9A%84%E9%80%9F%E5%BA%A6-%E8%B5%B7%E8%B7%B3%E9%80%9F%E5%BA%A6"><span class="toc-text">记录玩家在垂直方向上的速度(起跳速度)</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8float%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%82%A8%E7%8E%A9%E5%AE%B6%E5%A5%94%E8%B7%91-%E5%B7%A6%E5%8F%B3%E7%A7%BB%E5%8A%A8-%E8%B7%B3%E8%B7%83%E7%9A%84%E9%AB%98%E5%BA%A6"><span class="toc-text">使用float数据类型存储玩家奔跑,左右移动,跳跃的高度</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%8E%A9%E5%AE%B6%E5%88%9D%E5%A7%8B%E5%8C%96%E7%8A%B6%E6%80%81%E8%AE%BE%E7%BD%AE%E4%B8%BAfalse"><span class="toc-text">玩家初始化状态设置为false</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -854,7 +854,99 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="PlayerMovement-cs"><a href="#PlayerMovement-cs" class="headerlink" title="PlayerMovement.cs:"></a><em>PlayerMovement.cs:</em></h1><ul>
+<li><h4 id="命名空间-System-Collections-Generic"><a href="#命名空间-System-Collections-Generic" class="headerlink" title="命名空间 System.Collections.Generic"></a>命名空间 System.Collections.Generic</h4><ul>
+<li><h5 id="包含了一些基于泛型的集合类，使用泛型集合类可以提供更高的类型安全性"><a href="#包含了一些基于泛型的集合类，使用泛型集合类可以提供更高的类型安全性" class="headerlink" title="包含了一些基于泛型的集合类，使用泛型集合类可以提供更高的类型安全性,"></a>包含了一些基于泛型的集合类，使用泛型集合类可以提供更高的类型安全性,</h5></li>
+<li><h5 id="个人认为类似于C-标准模板库-封装了list-stack-vector等"><a href="#个人认为类似于C-标准模板库-封装了list-stack-vector等" class="headerlink" title="个人认为类似于C++标准模板库,封装了list, stack, vector等."></a>个人认为类似于C++标准模板库,封装了list, stack, vector等.</h5></li>
+</ul>
+</li>
+</ul>
+<pre><code class="c#">using System.Collections.Generic;
+using System.Collections;
+</code></pre>
+<ul>
+<li><h4 id="顾名思义-使用-Unity引擎"><a href="#顾名思义-使用-Unity引擎" class="headerlink" title="顾名思义,使用 Unity引擎"></a>顾名思义,使用 Unity引擎</h4></li>
+</ul>
+<pre><code class="c#">using UnityEngine;
+</code></pre>
+<ul>
+<li><h4 id="重要的类-MonoBehaviour"><a href="#重要的类-MonoBehaviour" class="headerlink" title="重要的类 - MonoBehaviour"></a>重要的类 - MonoBehaviour</h4><ul>
+<li><h5 id="MonoBehaviour-类是一个基类，所有-Unity-脚本都默认派生自该类"><a href="#MonoBehaviour-类是一个基类，所有-Unity-脚本都默认派生自该类" class="headerlink" title="MonoBehaviour 类是一个基类，所有 Unity 脚本都默认派生自该类"></a>MonoBehaviour 类是一个基类，所有 Unity 脚本都默认派生自该类</h5></li>
+<li><h5 id="只要从Unity项目窗口创建一个C-脚本-就会自动继承MonoBehaviour类"><a href="#只要从Unity项目窗口创建一个C-脚本-就会自动继承MonoBehaviour类" class="headerlink" title="只要从Unity项目窗口创建一个C#脚本,就会自动继承MonoBehaviour类"></a>只要从Unity项目窗口创建一个C#脚本,就会自动继承MonoBehaviour类</h5></li>
+<li><h5 id="有关代码示例点击-MonoBehaviour"><a href="#有关代码示例点击-MonoBehaviour" class="headerlink" title="有关代码示例点击:MonoBehaviour"></a>有关代码示例点击:<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.1/ScriptReference/MonoBehaviour.html">MonoBehaviour</a></h5></li>
+</ul>
+</li>
+</ul>
+<pre><code class="c#">public class PlayerMovement : MonoBehaviour &#123;&#125;
+</code></pre>
+<ul>
+<li><h4 id="Unity3D中-SerializeField-特性的使用"><a href="#Unity3D中-SerializeField-特性的使用" class="headerlink" title="Unity3D中[SerializeField]特性的使用"></a>Unity3D中[SerializeField]特性的使用</h4><ul>
+<li><h5 id="强制-Unity-对私有字段进行序列化"><a href="#强制-Unity-对私有字段进行序列化" class="headerlink" title="强制 Unity 对私有字段进行序列化"></a>强制 Unity 对私有字段进行序列化</h5></li>
+<li><h5 id="当-Unity-对脚本进行序列化时，仅对公共字段进行序列化。-如果还需要-Unity-对私有字段进行序列化，-可以将-SerializeField-属性添加到这些字段"><a href="#当-Unity-对脚本进行序列化时，仅对公共字段进行序列化。-如果还需要-Unity-对私有字段进行序列化，-可以将-SerializeField-属性添加到这些字段" class="headerlink" title="当 Unity 对脚本进行序列化时，仅对公共字段进行序列化。 如果还需要 Unity 对私有字段进行序列化， 可以将 SerializeField 属性添加到这些字段"></a>当 Unity 对脚本进行序列化时，仅对公共字段进行序列化。 如果还需要 Unity 对私有字段进行序列化， 可以将 SerializeField 属性添加到这些字段</h5></li>
+<li><h5 id="Unity-不会序列化-Dictionary，但您可以为键存储一个-List-lt-gt-和为值存储一个-List-lt-gt-，然后在-Awake-上将它们组合在非序列化字典中。这不能解决您需要修改字典-并将其“保存”回时出现的问题，但在许多其他情况下，这是一个方便的技巧"><a href="#Unity-不会序列化-Dictionary，但您可以为键存储一个-List-lt-gt-和为值存储一个-List-lt-gt-，然后在-Awake-上将它们组合在非序列化字典中。这不能解决您需要修改字典-并将其“保存”回时出现的问题，但在许多其他情况下，这是一个方便的技巧" class="headerlink" title="Unity 不会序列化 Dictionary，但您可以为键存储一个 List&lt;&gt; 和为值存储一个 List&lt;&gt;，然后在 Awake() 上将它们组合在非序列化字典中。这不能解决您需要修改字典 并将其“保存”回时出现的问题，但在许多其他情况下，这是一个方便的技巧"></a>Unity 不会序列化 Dictionary，但您可以为键存储一个 List&lt;&gt; 和为值存储一个 List&lt;&gt;，然后在 Awake() 上将它们组合在非序列化字典中。这不能解决您需要修改字典 并将其“保存”回时出现的问题，但在许多其他情况下，这是一个方便的技巧</h5></li>
+<li><pre><code class="c#">using UnityEngine;
+
+public class SomePerson : MonoBehaviour &#123;
+    //这个字段被序列化，因为它是公共的
+    public string firstName = &quot;John&quot;;
+
+    //这个字段不会被序列化，因为它是私有的。
+    private int age = 40;
+
+    //这个字段即使是私有的也会被序列化
+    //因为它应用了SerializeField属性。
+    [SerializeField]
+    private bool hasHealthPotion = true;
+
+    void Start() &#123;
+        if (hasHealthPotion) &#123;
+            Debug.Log(&quot;Person&#39;s first name: &quot; + firstName + &quot; Person&#39;s age: &quot; + age);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><h4 id="PlayerMovement类的数据成员"><a href="#PlayerMovement类的数据成员" class="headerlink" title="PlayerMovement类的数据成员:"></a>PlayerMovement类的数据成员:</h4><ul>
+<li><h5 id="使用Vecotr3三维向量"><a href="#使用Vecotr3三维向量" class="headerlink" title="使用Vecotr3三维向量"></a>使用Vecotr3三维向量</h5><ul>
+<li><h6 id="记录玩家出生点"><a href="#记录玩家出生点" class="headerlink" title="记录玩家出生点"></a>记录玩家出生点</h6></li>
+</ul>
+<pre><code class="c#">public Vector3 spownPosition;
+</code></pre>
+<ul>
+<li><h6 id="记录玩家在垂直方向上的速度-起跳速度"><a href="#记录玩家在垂直方向上的速度-起跳速度" class="headerlink" title="记录玩家在垂直方向上的速度(起跳速度)"></a>记录玩家在垂直方向上的速度(起跳速度)</h6></li>
+</ul>
+<pre><code class="c#">private Vector3 jumpVelocity;  
+</code></pre>
+</li>
+<li><h5 id="使用float数据类型存储玩家奔跑-左右移动-跳跃的高度"><a href="#使用float数据类型存储玩家奔跑-左右移动-跳跃的高度" class="headerlink" title="使用float数据类型存储玩家奔跑,左右移动,跳跃的高度"></a>使用float数据类型存储玩家奔跑,左右移动,跳跃的高度</h5><pre><code class="c#">[SerializeField]
+private float runForwardSpeed = 3f;
+
+[SerializeField]
+private float moveHorizonSpeed = 2f;
+
+[SerializeField]
+private float jumpHeight = 2f;         
+</code></pre>
+</li>
+<li><h5 id="玩家初始化状态设置为false"><a href="#玩家初始化状态设置为false" class="headerlink" title="玩家初始化状态设置为false"></a>玩家初始化状态设置为false</h5><pre><code class="c#">//玩家向左移动
+private bool moveLeft = false;
+//玩家向右移动
+private bool moveRight = false;
+//玩家是否起跳
+private bool jumpable = false;
+//玩家是否接触地面
+private bool isGrounded = true;	
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="c#">
+    private Rigidbody m_rigidbody;
+</code></pre>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。邮件至kpsun@foxmail.com </span>
     </div>
@@ -863,12 +955,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>数据结构-分而治之</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">0</span></p>
+    <p><span class="copy-title">文章标题:</span>Unity项目</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">545</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="kpsun">kpsun</a></p>
-    <p><span class="copy-title">发布时间:</span>2022-07-17, 16:18:25</p>
-    <p><span class="copy-title">最后更新:</span>2022-09-04, 16:28:30</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/07/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B/" title="数据结构-分而治之">http://goskp.github.io/2022/07/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B/</a>
+    <p><span class="copy-title">发布时间:</span>2022-10-14, 22:37:13</p>
+    <p><span class="copy-title">最后更新:</span>2022-10-16, 09:59:29</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/10/14/Unity%E9%A1%B9%E7%9B%AE/" title="Unity项目">http://goskp.github.io/2022/10/14/Unity%E9%A1%B9%E7%9B%AE/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
