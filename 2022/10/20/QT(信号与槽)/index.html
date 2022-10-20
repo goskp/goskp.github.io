@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>数据结构-二叉树(tree) | kpsun</title>
-  <meta name="keywords" content=" 数据结构 ">
-  <meta name="description" content="数据结构-二叉树(tree) | kpsun">
+  <title>QT(信号与槽) | kpsun</title>
+  <meta name="keywords" content=" QT ">
+  <meta name="description" content="QT(信号与槽) | kpsun">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介孙楷朋准大二计算机相关专业在读热爱编程,乐于合作,善于总结分享,有良好的的编程习惯目标BAT大厂联系方式 QQ: 1287923885 WeChat: code_cpp Email: &amp;#x6b;&amp;#x70;&amp;#x73;&amp;#117;&amp;#110;&amp;#64;&amp;#x66;&amp;#x6f;&amp;#x78;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#x6d;">
 <meta property="og:type" content="website">
@@ -782,9 +782,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-数据结构-二叉树(tree)" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-QT(信号与槽)" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">数据结构-二叉树(tree)</h1>
+        <h1 class="article-title">QT(信号与槽)</h1>
     
     <div class="article-meta">
         
@@ -794,7 +794,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="数据结构">数据结构</a>
+            <a  data-rel="QT">QT</a>
             
         </span>
         
@@ -802,19 +802,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">数据结构</a>
+            <a class="color3">QT</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-09-04 16:10:38'>2022-07-07 08:26</time>
+            发布时间 : <time class="date" title='最后更新: 2022-10-20 22:46:06'>2022-10-20 22:40</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1.3k</span>
+        <span>字数:1.6k</span>
         
         
         
@@ -822,7 +822,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D"><span class="toc-text">参考书籍:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90-%E9%BB%91%E7%9A%AE%E4%B9%A6"><span class="toc-text">数据结构与算法分析(黑皮书)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%9C%E8%80%85-Mark-Allen-Weiss"><span class="toc-text">作者:Mark Allen Weiss</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%AE%B9%E6%98%93%E6%83%B3%E5%88%B0%E7%9A%84%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95"><span class="toc-text">最容易想到的创建方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E6%B3%95%E5%88%9B%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-text">递归法创建二叉树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86"><span class="toc-text">层次遍历:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%9E%E9%80%92%E5%BD%92%E9%81%8D%E5%8E%86-%E9%80%9A%E8%BF%87%E6%A0%88%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-text">非递归遍历(通过栈的方式):</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#QtWindowCut"><span class="toc-text">_QtWindowCut:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#QBasic"><span class="toc-text">QBasic:</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -838,310 +838,357 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><h1 id="参考书籍"><a href="#参考书籍" class="headerlink" title="参考书籍:"></a>参考书籍:</h1><ul>
-<li><h4 id="数据结构与算法分析-黑皮书"><a href="#数据结构与算法分析-黑皮书" class="headerlink" title="数据结构与算法分析(黑皮书)"></a><em>数据结构与算法分析(黑皮书)</em></h4></li>
-<li><h4 id="作者-Mark-Allen-Weiss"><a href="#作者-Mark-Allen-Weiss" class="headerlink" title="作者:Mark Allen Weiss"></a><em>作者:Mark Allen Weiss</em></h4></li>
-</ul>
-</li>
-</ul>
-<h2 id="最容易想到的创建方法"><a href="#最容易想到的创建方法" class="headerlink" title="最容易想到的创建方法"></a>最容易想到的创建方法</h2><ul>
-<li>先创建结点,在根据树结构链接树结点</li>
-</ul>
-<pre><code class="c">//结构体描述
-typedef struct TreeNode &#123;
-    char data;
-    struct TreeNode* p_left_child;
-    struct TreeNode* p_right_child;
-&#125; TREE, *LPTREE;
+        <h1 id="QtWindowCut"><a href="#QtWindowCut" class="headerlink" title="_QtWindowCut:"></a>_QtWindowCut:</h1><p>CMakeLists.txt:</p>
+<pre><code class="cmake">#请求CMake的版本
+cmake_minimum_required(VERSION 3.8)
 
-//暴力创建法
-LPTREE CreateTreeNode(char data) &#123;
-    LPTREE p_tree_node = (LPTREE)malloc(sizeof(TREE));
-    p_tree_node-&gt;data = data;
-    p_tree_node-&gt;p_left_child = NULL;
-    p_tree_node-&gt;p_right_child = NULL;
-    return p_tree_node;
-&#125;
+#指定项目名称
+project(QtPro)
 
-//插入树
-void InsertTreeNode(LPTREE p_parent, LPTREE p_left_child, LPTREE p_right_child) &#123;
-    p_parent-&gt;p_left_child = p_left_child;
-    p_parent-&gt;p_right_child = p_right_child;
-&#125;
+set(CMAKE_AUTOMOC ON)
 
-int main(int argc, char** argv) &#123;
-    LPTREE A = CreateTreeNode(&#39;A&#39;);
-    LPTREE B = CreateTreeNode(&#39;B&#39;);
-    LPTREE C = CreateTreeNode(&#39;C&#39;);
-    LPTREE D = CreateTreeNode(&#39;D&#39;);
-    LPTREE E = CreateTreeNode(&#39;E&#39;);
-    LPTREE F = CreateTreeNode(&#39;F&#39;);
-    LPTREE G = CreateTreeNode(&#39;G&#39;);
-    InsertTreeNode(A, B, C);
-    InsertTreeNode(B, D, NULL);
-    InsertTreeNode(C, E, F);
-    InsertTreeNode(D, NULL, G);
-    printf(&quot;先序遍历:&quot;);
-    PreOrderTree(A);
-    putchar(&#39;\n&#39;);
-    printf(&quot;中序遍历:&quot;);
-    MidOrderTree(A);
-    putchar(&#39;\n&#39;);
-    printf(&quot;后序遍历:&quot;);
-    LastOrderTree(A);
-    putchar(&#39;\n&#39;);
-    return 0;
+#指定C++标准为17
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+#在MSVC上必须指定 /Zc:__cplusplus 选项
+if(MSVC)
+    add_compile_options(/Zc:__cplusplus)
+endif()
+
+#指定头文件包含目录
+include_directories(&quot;D:/MysoftWare/Qt/6.2.4/msvc2019_64/include&quot;)
+
+#查找指定的模块
+find_package(Qt6 COMPONENTS Widgets REQUIRED)
+
+#指定目标生成位置
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY  $&#123;CMAKE_CURRENT_LIST_DIR&#125;/bin)
+
+#添加宏定义 #QT_NO_DEBUG_OUTPUT
+add_compile_definitions( QT_DISABLE_DEPRECATED_BEFORE=0x060000)
+
+#根据指定的文件生成可执行程序
+add_executable(QtPro &quot;main.cpp&quot; &quot;Widget.h&quot; &quot;Widget.cpp&quot; &quot;SubWidget.h&quot; &quot;SubWidget.cpp&quot;)
+
+#给目标连接库文件
+target_link_libraries(QtPro Qt6::Widgets)
+</code></pre>
+<p>SubWidget.h:</p>
+<pre><code class="cpp">#ifndef _SUBWIDGET_H_
+#define _SUBWIDGET_H_
+
+#include&lt;QWidget&gt;
+class SubWidget : public QWidget
+&#123;
+    Q_OBJECT
+public:
+    SubWidget(QWidget* parent = nullptr);
+    //自定义信号
+    //1,返回类型必须是void
+    //2,参数必须等于(或多于)槽函数的参数
+    //3,信号只有函数的声明，不需要自己定义
+    //4,信号必须定义在signals下面
+    //5,发送信号使用emit宏
+signals:
+    void cutMainWindow();
+    void cutMainWindow(int);
+
+    void cutMainWindow1(const QString&amp;);
+&#125;;
+
+#endif
+</code></pre>
+<p>SubWidget.cpp:</p>
+<pre><code class="cpp">#include&quot;SubWidget.h&quot;
+#include&lt;QPushButton&gt;
+SubWidget::SubWidget(QWidget* parent)
+    :QWidget(parent)
+&#123;
+    resize(640, 480);
+    setWindowTitle(&quot;子窗口&quot;);
+
+    auto btn = new QPushButton(&quot;切换到主窗口&quot;, this);
+    //信号可以关联信号
+    //connect(btn, &amp;QPushButton::clicked, this, &amp;SubWidget::cutMainWindow);
+    connect(btn, &amp;QPushButton::clicked, this, [=]()
+        &#123;
+            emit this-&gt;cutMainWindow();
+            emit this-&gt;cutMainWindow1(&quot;我还想再显示会儿&quot;);
+            emit cutMainWindow(1314520);
+        &#125;);
 &#125;
 </code></pre>
-<p>递归遍历:</p>
-<pre><code class="c">//先序遍历
-void PreOrderTree(LPTREE p_root) &#123;
-    if (p_root == NULL) &#123;
-        return;
-    &#125; else &#123;
-        printf(&quot;%c\t&quot;, p_root-&gt;data);
-        PreOrderTree(p_root-&gt;p_left_child);
-        PreOrderTree(p_root-&gt;p_right_child);
-    &#125;
+<p>Widget.h:</p>
+<pre><code class="cpp">#ifndef _WIDGET_H_
+#define _WIDGET_H_
+
+#include&lt;QWidget&gt;
+class SubWidget;
+class Widget : public QWidget
+&#123;
+    Q_OBJECT
+public:
+    Widget(QWidget* parent = nullptr);
+public slots:
+    void onCutMainWindow();
+    void onCutMainWindow(int);
+private:
+    SubWidget* subWidget = nullptr;
+&#125;;
+
+#endif
+</code></pre>
+<p>Widget.cpp:</p>
+<pre><code class="cpp">#include&quot;Widget.h&quot;
+#include&lt;QPushButton&gt;
+#include&quot;SubWidget.h&quot;
+#include&lt;QDebug&gt;
+Widget::Widget(QWidget* parent)
+    :QWidget(parent)
+    ,subWidget(new SubWidget)
+&#123;
+    //subWidget-&gt;show();
+    resize(640, 480);
+    setWindowTitle(&quot;主窗口&quot;);
+    auto btn = new QPushButton(&quot;切换到子窗口&quot;, this);
+    connect(btn, &amp;QPushButton::clicked, subWidget,&amp;QWidget::show);
+    connect(btn, &amp;QPushButton::clicked, this, &amp;QWidget::hide);
+
+    //切换到主窗口
+    //cutMainWindow有重载，connect不知道你要关联哪个信号，二义性问题
+    //connect(subWidget, &amp;SubWidget::cutMainWindow, this, &amp;Widget::onCutMainWindow);
+    //1,通过函数指针解决
+    void (SubWidget:: *cutOne)() = &amp;SubWidget::cutMainWindow; //void SubWidget::cutMainWindow();
+    void (SubWidget:: * cutTwo)(int) = &amp;SubWidget::cutMainWindow; //void SubWidget::cutMainWindow(int);
+
+    //connect(subWidget, cutOne, this, &amp;Widget::onCutMainWindow);
+    //connect(subWidget, cutTwo, this, &amp;Widget::onCutMainWindow);
+
+    //2,通过QOverload类解决  推荐使用这一种
+    //connect(subWidget,QOverload&lt;&gt;::of(&amp; SubWidget::cutMainWindow), this,QOverload&lt;&gt;::of(&amp; Widget::onCutMainWindow));
+    connect(subWidget, QOverload&lt;int&gt;::of(&amp;SubWidget::cutMainWindow), this, QOverload&lt;int&gt;::of( &amp; Widget::onCutMainWindow));
+
+    //3,可以使用Qt4的方式解决 通过宏进行转换
+    //不安全，因为是使用宏来转换的，会把函数转换成字符串，不会进行安全检查
+    //函数名写错了也不会报错，只有再运行的时候，才会给你提示
+    connect(subWidget,SIGNAL(cutMainWindow()), this, SLOT(onCutMainWindow()));
+    connect(subWidget, SIGNAL(cutMainWindow(int)), this, SLOT(onCutMainWindow(int)));
+
+    //connect(subWidget, &amp;SubWidget::cutMainWindow1, this, [=](const QString&amp; str)
+    //	&#123;
+    //		qInfo() &lt;&lt; str;
+    //		subWidget-&gt;hide();	//子窗口隐藏
+    //		this-&gt;show();		//主窗口显示
+    //	&#125;);
 &#125;
 
-//中序
-void MidOrderTree(LPTREE p_root) &#123;
-    if (p_root == NULL) &#123;
-        return;
-    &#125; else &#123;
-        MidOrderTree(p_root-&gt;p_left_child);
-        printf(&quot;%c\t&quot;, p_root-&gt;data);
-        MidOrderTree(p_root-&gt;p_right_child);
-    &#125;
+void Widget::onCutMainWindow()
+&#123;
+    subWidget-&gt;hide();	//子窗口隐藏
+    this-&gt;show();		//主窗口显示
 &#125;
 
-//后序
-void LastOrderTree(LPTREE p_root) &#123;
-    if (p_root == NULL) &#123; 
-        return;
-    &#125; else &#123;
-         LastOrderTree(p_root-&gt;p_left_child);
-         LastOrderTree(p_root-&gt;p_right_child);
-         printf(&quot;%c\t&quot;, p_root-&gt;data);
-    &#125;
+void Widget::onCutMainWindow(int val)
+&#123;
+    onCutMainWindow();
+    qInfo() &lt;&lt; val;
 &#125;
 </code></pre>
-<h2 id="递归法创建二叉树"><a href="#递归法创建二叉树" class="headerlink" title="递归法创建二叉树"></a>递归法创建二叉树</h2><pre><code class="c">//递归创建
-void CreateTree(LPTREE* p_tree) &#123;
-    char user_key = &#39;\0&#39;;
-    scanf(&quot;%c&quot;, &amp;user_key);
-    if (user_key == &#39;#&#39;) &#123;
-        *p_tree = NULL;
-    &#125; else &#123;
-        *p_tree = (TREE*)malloc(sizeof(TREE));
-        (*p_tree)-&gt;data = user_key;
-        CreateTree(&amp;(*p_tree)-&gt;p_left_child);
-        CreateTree(&amp;(*p_tree)-&gt;p_right_child);
-    &#125;
+<p>main.cpp:</p>
+<pre><code class="cpp">#include&lt;QApplication&gt;
+#include&quot;Widget.h&quot;
+//创建两个窗口，每个窗口都给一个按钮，点击按钮切换窗口
+
+int main(int argc,char* argv[])
+&#123;
+    QApplication a(argc, argv);
+    Widget w;
+    w.show();
+    return a.exec();
+&#125;
+</code></pre>
+<h1 id="QBasic"><a href="#QBasic" class="headerlink" title="QBasic:"></a>QBasic:</h1><p>CMakeLists.txt:</p>
+<pre><code class="cmake">#请求CMake的版本
+cmake_minimum_required(VERSION 3.8)
+
+#指定项目名称
+project(QtPro)
+
+#自动moc
+set(CMAKE_AUTOMOC ON)
+
+#指定C++标准为17
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+#在MSVC上必须指定 /Zc:__cplusplus 选项
+if(MSVC)
+    add_compile_options(/Zc:__cplusplus)
+endif()
+
+#指定头文件包含目录
+include_directories(&quot;D:/MysoftWare/Qt/6.2.4/msvc2019_64/include&quot;)
+
+#查找指定的模块
+find_package(Qt6 COMPONENTS Widgets REQUIRED)
+
+#指定目标生成位置
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY  $&#123;CMAKE_CURRENT_LIST_DIR&#125;/bin)
+
+#添加宏定义 #QT_NO_DEBUG_OUTPUT
+add_compile_definitions( QT_DISABLE_DEPRECATED_BEFORE=0x060000)
+
+#根据指定的文件生成可执行程序
+add_executable(QtPro &quot;main1.cpp&quot; &quot;Widget.h&quot; &quot;Widget.cpp&quot;)
+
+#给目标连接库文件
+target_link_libraries(QtPro Qt6::Widgets)
+
+</code></pre>
+<p>Widget.h:</p>
+<pre><code class="cpp">#ifndef _WIDGET_H_
+#define _WIDGET_H_
+
+#include&lt;QWidget&gt;
+class Widget :public QWidget
+&#123;
+    Q_OBJECT
+public:
+    Widget(QWidget* parent = nullptr);
+    //槽函数，一般写在 public slots:下
+    //Qt5以上可以不用写slots
+public slots:	
+    //响应按钮的pressed信号
+    void onButtonPressed();
+public:
+    static void onButtonReleased();
+&#125;;
+
+#endif // !_WIDGET_H_
+</code></pre>
+<p>Widget.cpp:</p>
+<pre><code class="cpp">#include&quot;Widget.h&quot;
+#include&lt;QPushButton&gt;
+#include&lt;QDebug&gt;
+
+void globalOnClicked()
+&#123;
+    qInfo() &lt;&lt; __FUNCTION__;
 &#125;
 
-int main(int argc, char** argv) &#123;
-       //测试数据:ABD#G###CE##F##
-    LPTREE A = NULL;
-    CreateTree(&amp;A);
-    printf(&quot;先序遍历:&quot;);
-    PreOrderTree(A);
-    putchar(&#39;\n&#39;);
-    printf(&quot;中序遍历:&quot;);
-    MidOrderTree(A);
-    putchar(&#39;\n&#39;);
-    printf(&quot;后序遍历:&quot;);
-    LastOrderTree(A);
-    putchar(&#39;\n&#39;);
-    return 0;
+Widget::Widget(QWidget* parent)
+    :QWidget(parent)
+&#123;
+    auto btn = new QPushButton(&quot;f**k me&quot;,this);
+    //自定义的槽函数
+    //1,槽函数返回类型为void
+    //2,槽函数的参数不能多于信号的参数(只能等于或少于信号的参数)
+
+    //关联信号与槽 这里会导致循环，禁止
+    //connect(btn, &amp;QPushButton::clicked, btn, &amp;QPushButton::click);
+    //1，关联成员函数
+    connect(btn, &amp;QPushButton::pressed, this, &amp;Widget::onButtonPressed);
+    //2，关联静态函数
+    connect(btn, &amp;QPushButton::released, this, &amp;Widget::onButtonReleased);
+    //3，关联全局函数
+    connect(btn, &amp;QPushButton::clicked, this, globalOnClicked);
+    connect(btn, &amp;QPushButton::clicked,  globalOnClicked);
+    //4，关联lambda表达式
+    connect(btn, &amp;QPushButton::clicked, this, [=]()
+        &#123;
+            qInfo() &lt;&lt; __FUNCTION__;
+            btn-&gt;setText(&quot;我是kpsun&quot;);
+        &#125;);
+
+    //lambda表示式使用注意事项
+    //int cnt = 0;	//栈区的临时变量，构造函数结束，会自动释放
+    //connect(btn, &amp;QPushButton::clicked, this, [=,&amp;cnt]()
+        //&#123;
+        //	qInfo() &lt;&lt; __FUNCTION__&lt;&lt;cnt++;
+        //&#125;);
+
+    ////在这里呢，禁止引用捕获，否则会出错
+    //connect(btn, &amp;QPushButton::clicked, this, [&amp;]()
+    //	&#123;
+    //		qInfo() &lt;&lt; __FUNCTION__;
+    //		static int i = 0;
+    //		btn-&gt;setText(&quot;我是kpsun&quot; + QString::number(i++));
+    //	&#125;);
+
 &#125;
 
-先序遍历:A      B       D       G       C       E       F
-中序遍历:D      G       B       A       E       C       F
-后序遍历:G      D       B       E       F       C       A
-</code></pre>
-<h3 id="层次遍历"><a href="#层次遍历" class="headerlink" title="层次遍历:"></a>层次遍历:</h3><pre><code class="c">//层次遍历,(队列)
-void LayerOrder(LPTREE p_root) &#123;
-    //准备一个移动结点
-    LPTREE p_move = p_root;
-    //准备一个队列
-    LPTREE p_queue[1024];
-    int front = 0;
-    int tail = 0;
-    p_queue[tail++] = p_move;
-    printf(&quot;%c\t&quot;, p_move-&gt;data);
-    while (front != tail) &#123;
-        //出队
-        p_move = p_queue[front++];
-        //如果有左子树,左子树入队,右子树同理
-        if (p_move-&gt;p_left_child != NULL) &#123;
-            p_queue[tail++] = p_move-&gt;p_left_child;
-            printf(&quot;%c\t&quot;,p_move-&gt;p_left_child-&gt;data);
-        &#125;
-        if (p_move-&gt;p_right_child != NULL) &#123;
-            p_queue[tail++] = p_move-&gt;p_right_child;
-            printf(&quot;%c\t&quot;,p_move-&gt;p_right_child-&gt;data);
-        &#125;
-    &#125;
+void Widget::onButtonReleased()
+&#123;
+    qInfo() &lt;&lt; __FUNCTION__;
 &#125;
 
-//测试数据
-int main(int argc, char** argv) &#123;
-    LPTREE A = CreateTreeNode(&#39;A&#39;);
-    LPTREE B = CreateTreeNode(&#39;B&#39;);
-    LPTREE C = CreateTreeNode(&#39;C&#39;);
-    LPTREE D = CreateTreeNode(&#39;D&#39;);
-    LPTREE E = CreateTreeNode(&#39;E&#39;);
-    LPTREE F = CreateTreeNode(&#39;F&#39;);
-    LPTREE G = CreateTreeNode(&#39;G&#39;);
-    InsertTreeNode(A, B, C);
-    InsertTreeNode(B, D, NULL);
-    InsertTreeNode(C, E, F);
-    InsertTreeNode(D, NULL, G);
-    // printf(&quot;先序遍历:&quot;);
-    // PreOrderTree(A);
-    // putchar(&#39;\n&#39;);
-    // printf(&quot;中序遍历:&quot;);
-    // MidOrderTree(A);
-    // putchar(&#39;\n&#39;);
-    // printf(&quot;后序遍历:&quot;);
-    // LastOrderTree(A);
-    // putchar(&#39;\n&#39;);
-    // LPTREE A = NULL;
-    // CreateTree(&amp;A);
-    // printf(&quot;先序遍历:&quot;);
-    // PreOrderTree(A);
-    // putchar(&#39;\n&#39;);
-    // printf(&quot;中序遍历:&quot;);
-    // MidOrderTree(A);
-    // putchar(&#39;\n&#39;);
-    // printf(&quot;后序遍历:&quot;);
-    // LastOrderTree(A);
-    // putchar(&#39;\n&#39;);
-    printf(&quot;层次遍历:&quot;);
-    LayerOrder(A);
-    
-    return 0;
+void Widget::onButtonPressed()
+&#123;
+    qInfo() &lt;&lt; __FUNCTION__;
 &#125;
 </code></pre>
-<h2 id="非递归遍历-通过栈的方式"><a href="#非递归遍历-通过栈的方式" class="headerlink" title="非递归遍历(通过栈的方式):"></a>非递归遍历(通过栈的方式):</h2><ul>
-<li>先序:</li>
-</ul>
-<pre><code class="c">//非递归遍历
-//先序遍历
-// 1.一直走走左子树,边走边打印相关结点数据,ABD,把走过的结点入栈,不然回退不了,当前栈里元素:DBA
-// 2.p_move = D, 栈里还剩下BA, 出栈后,p_move走右边,做同样的事情
-void PreOrderTreeByStack(LPTREE p_root) &#123;
-    if (p_root == NULL) &#123;
-        return;
+<p>main.cpp:</p>
+<pre><code class="cpp">#include&lt;QApplication&gt;
+#include&lt;QWidget&gt;		//窗口
+#include&lt;QPushButton&gt;
+class Widget : public QWidget
+&#123;
+    Q_OBJECT		//使用信号与槽，必须包含此宏
+public:
+    Widget(QWidget* parent = nullptr)
+    &#123;
+        resize(640, 480);
+        auto* btn = new QPushButton(&quot;关闭窗口&quot;, this);
+
+        //绑定信号与槽
+        //信号发送者:btn
+        //发送什么信号:clicked
+        //信号接收者:this
+        //槽函数: &amp;Widget::close
+        QObject::connect(btn, &amp;QPushButton::clicked, this,&amp;Widget::close);
+        auto con = connect(btn, &amp;QPushButton::clicked, btn, &amp;QPushButton::close);
+
+        //断开信号和槽的连接
+        //disconnect(btn, &amp;QPushButton::pressed, btn, &amp;QPushButton::close);
+        //disconnect(con);
     &#125;
-    LPTREE p_move = p_root;
-    LPTREE p_stack[1000];
-    int stack_top = -1;
-    while (stack_top != -1 || NULL != p_move) &#123;
-        //往左边走,边走边打印,走过的路入栈
-        while (p_move) &#123;
-            printf(&quot;%c\t&quot;, p_move-&gt;data);
-            p_stack[++stack_top] = p_move;  //走过的地方入栈
-            p_move = p_move-&gt;p_left_child;
-        &#125;
-        //出栈
-        if (stack_top != -1) &#123;
-            p_move = p_stack[stack_top--];
-            //出站后往右面走
-            p_move = p_move-&gt;p_right_child;
-        &#125;
+    void button()
+    &#123;
+        //先玩一个简单的按钮
+        auto button = new QPushButton;
+        //显示按钮
+        button-&gt;show();
+        //按钮需要显示在主窗口上面,通过这个设置父对象，按钮会出现在主窗口的中心(父窗口会变得很大)
+        button-&gt;setParent(this);
+        //给按钮设置文本
+        button-&gt;setText(&quot;Button&quot;);
+
+
+        auto btn = new QPushButton(&quot;主要靠骚&quot;, this);
+        button-&gt;move(btn-&gt;x() + btn-&gt;width(), 0);
+        btn-&gt;resize(150, 50);
+
+        //为什么要new?
+        QPushButton btn2(&quot;我是按钮&quot;, this);
+
     &#125;
+&#125;;
+
+int main(int argc,char* argv[])
+&#123;
+    QApplication a(argc, argv);
+
+    Widget w;
+    w.show();
+
+    return a.exec();
 &#125;
-</code></pre>
-<ul>
-<li>中序:</li>
-</ul>
-<pre><code class="c">//中序遍历的非递归方式
-//左边一直走,不做打印,入栈即可
-//出栈的时候,打印结点,再去找右边
-void MidOrderTreeByStack(LPTREE p_root) &#123;
-    if (NULL == p_root) &#123;
-        return;
-    &#125;
-    LPTREE p_move = p_root;
-    LPTREE p_stack[1000];
-    int stack_top = -1;
-    while (NULL != p_move || stack_top != -1) &#123;
-        while (p_move) &#123;
-            //入栈
-            p_stack[++stack_top] = p_move;
-            p_move = p_move-&gt;p_left_child;
-        &#125;
-        if (stack_top != -1) &#123;
-            //出栈
-            p_move = p_stack[stack_top--];
-            printf(&quot;%c\t&quot;, p_move-&gt;data);
-            //往右面走
-            p_move = p_move-&gt;p_right_child;
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<ul>
-<li>后序:</li>
-</ul>
-<pre><code class="c">//后续非递归遍历
-//把最后一次访问过的结点标注
-void LastOrderTreeByStack(LPTREE p_root) &#123;
-    if (NULL == p_root) &#123;
-        return NULL;
-    &#125;
-    LPTREE p_stack[1000];
-    int stack_top = -1;
-    LPTREE p_move = p_root;
-    LPTREE p_last_visit = NULL;
-    while (p_move) &#123;
-        p_stack[++stack_top] = p_move;
-        p_move = p_move-&gt;p_left_child;
-    &#125;
-    while (stack_top != -1) &#123;
-        p_move = p_stack[stack_top--];  // D
-        if (p_move-&gt;p_right_child == NULL ||
-            p_move-&gt;p_right_child == p_last_visit) &#123;
-            printf(&quot;%c\t&quot;, p_move-&gt;data);
-            p_last_visit = p_move;
-        &#125; else &#123;
-            p_stack[++stack_top] = p_move;
-            p_move = p_move-&gt;p_right_child;
-            while (p_move) &#123;
-                p_stack[++stack_top] = p_move;
-                p_move = p_move-&gt;p_left_child;
-            &#125;
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<p>测试数据:</p>
-<pre><code class="c">int main(int argc, char** argv) &#123;
-    LPTREE A = CreateTreeNode(&#39;A&#39;);
-    LPTREE B = CreateTreeNode(&#39;B&#39;);
-    LPTREE C = CreateTreeNode(&#39;C&#39;);
-    LPTREE D = CreateTreeNode(&#39;D&#39;);
-    LPTREE E = CreateTreeNode(&#39;E&#39;);
-    LPTREE F = CreateTreeNode(&#39;F&#39;);
-    LPTREE G = CreateTreeNode(&#39;G&#39;);
-    InsertTreeNode(A, B, C);
-    InsertTreeNode(B, D, NULL);
-    InsertTreeNode(C, E, F);
-    InsertTreeNode(D, NULL, G);
-    printf(&quot;非递归前序遍历:&quot;);
-    PreOrderTreeByStack(A);
-    putchar(&#39;\n&#39;);
-    printf(&quot;非递归中序遍历:&quot;);
-    MidOrderTreeByStack(A);
-    putchar(&#39;\n&#39;);
-    printf(&quot;非递归后序遍历:&quot;);
-    LastOrderTreeByStack(A);
-    return 0;
-&#125;
+
+//当我们把类的声明和定义放在一个源文件里面的时候，才需要告诉moc
+//显示的告诉moc我这个源文件，需要元编译
+//#include&lt;空格&gt;&quot;文件名.moc&quot; 
+#include &quot;main.moc&quot;
 </code></pre>
 
       
@@ -1152,12 +1199,12 @@ void LastOrderTreeByStack(LPTREE p_root) &#123;
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>数据结构-二叉树(tree)</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">1.3k</span></p>
+    <p><span class="copy-title">文章标题:</span>QT(信号与槽)</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">1.6k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="kpsun">kpsun</a></p>
-    <p><span class="copy-title">发布时间:</span>2022-07-07, 08:26:46</p>
-    <p><span class="copy-title">最后更新:</span>2022-09-04, 16:10:38</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/07/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91(tree)/" title="数据结构-二叉树(tree)">http://goskp.github.io/2022/07/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91(tree)/</a>
+    <p><span class="copy-title">发布时间:</span>2022-10-20, 22:40:59</p>
+    <p><span class="copy-title">最后更新:</span>2022-10-20, 22:46:06</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/10/20/QT(%E4%BF%A1%E5%8F%B7%E4%B8%8E%E6%A7%BD)/" title="QT(信号与槽)">http://goskp.github.io/2022/10/20/QT(%E4%BF%A1%E5%8F%B7%E4%B8%8E%E6%A7%BD)/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
