@@ -117,6 +117,56 @@
     
     
     <entry>
+      <title>数据结构-回溯法(DP,Queen)</title>
+      <link href="/2022/07/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%9E%E6%BA%AF%E6%B3%95(DP,Queen)/"/>
+      <url>/2022/07/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%9E%E6%BA%AF%E6%B3%95(DP,Queen)/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构-动态规划(DP)</title>
+      <link href="/2022/07/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92(DP)/"/>
+      <url>/2022/07/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92(DP)/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据结构-排序算法(sort)</title>
       <link href="/2022/07/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95(sort)/"/>
       <url>/2022/07/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95(sort)/</url>
@@ -142,11 +192,136 @@
     
     
     <entry>
+      <title>数据结构-分而治之</title>
+      <link href="/2022/07/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B/"/>
+      <url>/2022/07/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构-贪心算法(graph)</title>
+      <link href="/2022/07/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95(graph)/"/>
+      <url>/2022/07/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95(graph)/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构-深度/广度优先(DFS,BFS)</title>
+      <link href="/2022/07/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%B7%B1%E5%BA%A6%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88(DFS,BFS)/"/>
+      <url>/2022/07/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%B7%B1%E5%BA%A6%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88(DFS,BFS)/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据结构-图(graph)</title>
       <link href="/2022/07/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%BE(graph)/"/>
       <url>/2022/07/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%BE(graph)/</url>
       
         <content type="html"><![CDATA[<ul><li><h1 id="参考书籍"><a href="#参考书籍" class="headerlink" title="参考书籍:"></a>参考书籍:</h1><ul><li><h4 id="数据结构与算法分析-黑皮书"><a href="#数据结构与算法分析-黑皮书" class="headerlink" title="数据结构与算法分析(黑皮书)"></a><em>数据结构与算法分析(黑皮书)</em></h4></li><li><h4 id="作者-Mark-Allen-Weiss"><a href="#作者-Mark-Allen-Weiss" class="headerlink" title="作者:Mark Allen Weiss"></a><em>作者:Mark Allen Weiss</em></h4></li></ul></li></ul><h2 id="边和顶点关系"><a href="#边和顶点关系" class="headerlink" title="边和顶点关系:"></a>边和顶点关系:</h2><ul><li><pre><code>设n为顶点数,e为边或弧的条数</code></pre><ul><li><pre><code>对无向图: 0 &lt;= e &lt;= n(n - 1)/2</code></pre><ul><li><pre><code>有向图: 0 &lt;= e &lt;= n(n - 1)</code></pre><ul><li><pre><code>对于有向图,每个顶点至多有n - 1条边与其他的n - 1个顶点相连,则n个顶点至多有n(n - 1)条边,但对于无向图,每条边连接2个顶点,故最多n(n - 1) / 2</code></pre></li></ul></li></ul></li></ul></li></ul><p>矩阵法存储:</p><pre><code class="c">//矩阵法存储有向带权图#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;string.h&gt;const int MAX = 10;typedef char VertexType[8];  //顶点类型typedef int VRType;          //权值描述typedef struct Graph &#123;    int arc_num;              //边数    int vex_num;              //顶点数    VertexType vertex[MAX];   //顶点数组    VRType matrix[MAX][MAX];  //权值&#125; GRAPH, *LPGRAPH;//找顶点的序号int SearchIndex(LPGRAPH p_graph, VertexType x) &#123;    for (int i = 0; i &lt; p_graph-&gt;vex_num; ++i) &#123;        if (strcmp(p_graph-&gt;vertex[i], x) == 0) &#123;            return i;        &#125;    &#125;    return -1;&#125;LPGRAPH CreateGraph() &#123;    LPGRAPH p_graph = (LPGRAPH)malloc(sizeof(GRAPH));    printf(&quot;input arc_num,ver_num:&quot;);    scanf(&quot;%d%d&quot;, &amp;p_graph-&gt;arc_num, p_graph-&gt;vex_num);    printf(&quot;input %d vex:&quot;, p_graph-&gt;vertex);    //顶点数组    for (int i = 0; i &lt; p_graph-&gt;vex_num; ++i) &#123;        scanf(&quot;%s&quot;, p_graph-&gt;vertex[i]);    &#125;    memset(p_graph-&gt;matrix, 0, sizeof(int) * 100);    printf(&quot;input arc:&quot;);    VertexType v1, v2;    VRType vrt;  //权值    for (int i = 0; i &lt; p_graph-&gt;arc_num; ++i) &#123;        scanf(&quot;%s%s%d&quot;, v1, v2, &amp;vrt);        //定位,找到在矩阵中的行列        int pos_row = SearchIndex(p_graph, v1);        int pos_col = SearchIndex(p_graph, v2);        p_graph-&gt;matrix[pos_row][pos_col] = vrt;    &#125;    return p_graph;&#125;//遍历图void PrintGraph(LPGRAPH p_graph) &#123;    for (int i = 0; i &lt; p_graph-&gt;vex_num; ++i) &#123;        printf(&quot;\t%s&quot;, p_graph-&gt;vertex[i]);    &#125;    printf(&quot;\n&quot;);    for (int i = 0; i &lt; p_graph-&gt;vex_num; ++i) &#123;        printf(&quot;%s\t&quot;, p_graph-&gt;vertex[i]);        for (int j = 0; j &lt; p_graph-&gt;vex_num; ++j) &#123;            printf(&quot;%d\t&quot;, p_graph-&gt;matrix[i][j]);        &#125;        printf(&quot;\n&quot;);    &#125;&#125;LPGRAPH CreateGraphByFile(const char* file_name) &#123;    LPGRAPH p_graph = (LPGRAPH)malloc(sizeof(GRAPH));    FILE* read = fopen(file_name, &quot;r&quot;);    fscanf(read, &quot;%d\t%d\n&quot;, &amp;p_graph-&gt;arc_num, &amp;p_graph-&gt;vex_num);    for (int i = 0; i &lt; p_graph-&gt;vex_num; ++i) &#123;        fscanf(read, &quot;%s&quot;, p_graph-&gt;vertex[i]);    &#125;    fscanf(read, &quot;\n&quot;);    memset(p_graph-&gt;matrix, 0, sizeof(int) * 100);    VertexType v1, v2;    VRType vrt;  //权值    for (int i = 0; i &lt; p_graph-&gt;arc_num; ++i) &#123;        fscanf(read, &quot;%s\t%s\t%d\n&quot;, v1, v2, &amp;vrt);        //定位,找到在矩阵中的行列        int pos_row = SearchIndex(p_graph, v1);        int pos_col = SearchIndex(p_graph, v2);        p_graph-&gt;matrix[pos_row][pos_col] = vrt;    &#125;    fclose(read);    return p_graph;&#125;int main(void) &#123;    LPGRAPH p_graph = CreateGraphByFile(&quot;graph.txt&quot;);    PrintGraph(p_graph);    return 0;&#125;</code></pre><p>graph.txt:</p><pre><code class="tcl">55ABCDEAB1AC2BC3CD4DE5</code></pre><p>邻接表存储:</p><pre><code class="c">#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;string.h&gt;const int MAX = 10;typedef char VertexType[8];typedef struct ArcNode &#123;    int ver_index;    struct ArcNode* p_next;&#125; NODE, *LPNODE;LPNODE CreateNode(int ver_index) &#123;    LPNODE p_new_node = (LPNODE)malloc(sizeof(NODE));    p_new_node-&gt;ver_index = ver_index;    p_new_node-&gt;p_next = NULL;    return p_new_node;&#125;void MyPushFront(NODE** p_head_node, int ver_index) &#123;    LPNODE p_new_node = CreateNode(ver_index);    p_new_node-&gt;p_next = (*p_head_node);    (*p_head_node) = p_new_node;&#125;//顶点信息typedef struct VNode &#123;    VertexType data;    LPNODE first_node;&#125; VNODE, *LPVNODE, ARRAY[MAX];//图typedef struct graph &#123;    int arc_num;    int vex_num;    ARRAY vertex;  //结构体数组&#125; GRAPH, *LPGRAPH;//定位int SearchByVextex(LPGRAPH p_graph, VertexType x) &#123;    for (int i = 0; i &lt; p_graph-&gt;vex_num; ++i) &#123;        if (strcmp(p_graph-&gt;vertex[i].data, x) == 0) &#123;            return i;        &#125;    &#125;    return -1;&#125;LPGRAPH CreateGraph() &#123;    LPGRAPH p_graph = (LPGRAPH)malloc(sizeof(GRAPH));    printf(&quot;input arc_num,ver_num:&quot;);    scanf(&quot;%d%d&quot;, &amp;p_graph-&gt;arc_num, &amp;p_graph-&gt;vex_num);    printf(&quot;input %d vex:\n&quot;, p_graph-&gt;vex_num);    for (int i = 0; i &lt; p_graph-&gt;vex_num; ++i) &#123;        scanf(&quot;%s&quot;, p_graph-&gt;vertex[i].data);        p_graph-&gt;vertex[i].first_node = NULL;    &#125;    VertexType v1, v2;    int pos_v1;    int pos_v2;    printf(&quot;input arc:\n&quot;);    for (int i = 0; i &lt; p_graph-&gt;arc_num; ++i) &#123;        scanf(&quot;%s%s&quot;, v1, v2);        pos_v1 = SearchByVextex(p_graph, v1);        pos_v2 = SearchByVextex(p_graph, v2);        MyPushFront(&amp;p_graph-&gt;vertex[pos_v1].first_node, pos_v2);        MyPushFront(&amp;p_graph-&gt;vertex[pos_v2].first_node, pos_v1);    &#125;    return p_graph;&#125;void PrintGraph(LPGRAPH p_graph) &#123;    for (int i = 0; i &lt; p_graph-&gt;vex_num; ++i) &#123;        printf(&quot;%s\t&quot;, p_graph-&gt;vertex[i].data);        LPNODE p_move = p_graph-&gt;vertex[i].first_node;        while (p_move) &#123;            printf(&quot;%s--&gt;&quot;, p_graph-&gt;vertex[p_move-&gt;ver_index].data);            p_move = p_move-&gt;p_next;        &#125;        printf(&quot;\n&quot;);    &#125;&#125;int main(void) &#123;    LPGRAPH p_graph = CreateGraph();    PrintGraph(p_graph);    return 0;&#125;/*    input arc_num,ver_num:7 5    input 5 vex:    A B C D E    input arc:    A B    A D    D C    C B    C E    D E    B E*/</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构-红黑树(RB)</title>
+      <link href="/2022/07/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%A2%E9%BB%91%E6%A0%91(RB)/"/>
+      <url>/2022/07/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%A2%E9%BB%91%E6%A0%91(RB)/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构-平衡二叉树(AVL)</title>
+      <link href="/2022/07/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91(AVL)/"/>
+      <url>/2022/07/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91(AVL)/</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
       
       <categories>
@@ -571,7 +746,7 @@
       <link href="/2022/06/24/C++%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
       <url>/2022/06/24/C++%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
       
-        <content type="html"><![CDATA[<ul><li><h1 id="参考书籍"><a href="#参考书籍" class="headerlink" title="参考书籍:"></a>参考书籍:</h1><ul><li><h4 id="C-Primer"><a href="#C-Primer" class="headerlink" title="C++ Primer"></a><em>C++ Primer</em></h4></li><li><h4 id="Essential-C"><a href="#Essential-C" class="headerlink" title="Essential C++"></a><em>Essential C++</em></h4></li></ul></li><li><h1 id="编译器"><a href="#编译器" class="headerlink" title="编译器:"></a>编译器:</h1><ul><li><h4 id="gcc-x2F-g"><a href="#gcc-x2F-g" class="headerlink" title="gcc &#x2F; g++"></a><em>gcc &#x2F; g++</em></h4></li></ul></li><li><h2 id="不定期进行更新"><a href="#不定期进行更新" class="headerlink" title="不定期进行更新"></a><em>不定期进行更新</em></h2></li></ul><h1 id="C-正则库"><a href="#C-正则库" class="headerlink" title="C++正则库"></a>C++正则库</h1><p>正则指的是一种规则，用来匹配，捕获，替换字符串(字符串处理方案)</p><h3 id="特殊含义元字符"><a href="#特殊含义元字符" class="headerlink" title="特殊含义元字符"></a>特殊含义元字符</h3><p>^: 以字符作为字符串开的头,  ^ 表示单个字符</p><p>$:以字符结尾  ，\$表示单个字符</p><p>():分组     <a href="mailto:&#x79;&#x64;&#112;&#x61;&#106;&#106;&#x40;&#49;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#x64;&#112;&#x61;&#106;&#106;&#x40;&#49;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;</a></p><p>\b: 字符串的边界</p><p>.: 除了\n意外的任意一个字符</p><p>|:a|b  a或者b</p><p>[abc]: abc任意一个字符 </p><p>[^abc]: abc之外的任意一个字符</p><p>[a-z]:任意一个小写字母</p><p>\w: 任意字母数字下划线  [(0-9)(a-z)(A-Z)(_)]</p><p>\W: 字母数字下划线之外的字符</p><p>\d: 任意一个数字</p><p>\D:数字之外的任意一个字符</p><p>\s: 空白符</p><h3 id="量词元字符"><a href="#量词元字符" class="headerlink" title="量词元字符"></a>量词元字符</h3><p>*:0次或者多次    [a-z]*    {0,}</p><p>+:1次或者多次    {1,}</p><p>?:0次或者1次  {0,1}</p><p>{n}:   出现n次</p><p>{n,}:  至少出现n次</p><p>{n,m}: 至少有n到m个之间的字符</p><p>注意的问题: C&#x2F;C++中带\的元字符一定改为\\</p><pre><code class="cpp">#include &lt;iostream&gt;#include &lt;regex&gt;#include &lt;string&gt;using namespace std;// No.1 匹配void testMatch() &#123;    // 1.1 先构造正则对象    // 1.2 调用 regex_match  返回true匹配，返回false不匹配#if 0    while (1) &#123;        string userName;        cin &gt;&gt; userName;        regex reg(&quot;^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$&quot;);        bool result = regex_match(userName, reg);        if (result == true) &#123;            cout &lt;&lt; &quot;匹配&quot; &lt;&lt; endl;        &#125; else &#123;            cout &lt;&lt; &quot;不匹配&quot; &lt;&lt; endl;        &#125;    &#125;#endif    //正则匹配一定完全匹配    string str = &quot;ILoveyou1314&quot;;    regex reg(&quot;[a-z0-9]+&quot;);    if (regex_match(str, reg)) &#123;        cout &lt;&lt; &quot;匹配&quot; &lt;&lt; endl;    &#125; else &#123;        cout &lt;&lt; &quot;不匹配&quot; &lt;&lt; endl;    &#125;    regex reg2(&quot;[a-z0-9]+&quot;, regex_constants::icase);  //忽略大小写    if (regex_match(str, reg2)) &#123;        cout &lt;&lt; &quot;匹配&quot; &lt;&lt; endl;    &#125; else &#123;        cout &lt;&lt; &quot;不匹配&quot; &lt;&lt; endl;    &#125;    regex reg3(&quot;ILoveyou[0-9]+&quot;);    if (regex_match(str, reg3)) &#123;        cout &lt;&lt; &quot;匹配&quot; &lt;&lt; endl;    &#125; else &#123;        cout &lt;&lt; &quot;不匹配&quot; &lt;&lt; endl;    &#125;&#125;// No.2 截取void testGetString() &#123;    string str = &quot;ILoveyou1314IMiss520you999dsdsd999sds23234&quot;;    // regex_search(string str,smatch result,regex reg);    smatch result;    //只要找到就结束    bool flag = regex_search(str, result, regex(&quot;\\d+&quot;));    if (flag) &#123;        cout &lt;&lt; &quot;size:&quot; &lt;&lt; result.size() &lt;&lt; endl;        for (int i = 0; i &lt; result.size(); i++) &#123;            cout &lt;&lt; result.str() &lt;&lt; &quot; &quot;;        &#125;        cout &lt;&lt; endl;        cout &lt;&lt; &quot;前缀:&quot; &lt;&lt; result.prefix() &lt;&lt; endl;        cout &lt;&lt; &quot;后缀:&quot; &lt;&lt; result.suffix() &lt;&lt; endl;    &#125;    //捕获所有满足的条件字符串    // sregex_iterator    regex reg(&quot;\\d+&quot;);    //得到满足条件    sregex_iterator pos(str.begin(), str.end(), reg);    sregex_iterator end;  //无参构造是结束流    while (pos != end) &#123;        cout &lt;&lt; pos-&gt;str() &lt;&lt; &quot;\t&quot;;        pos++;    &#125;    cout &lt;&lt; endl;    str = &quot;10,12,32,,,34,,34,34,6566,67,,67&quot;;    // 0: 表示匹配    //-1:不匹配    regex reg2(&quot;,&quot;);    sregex_token_iterator tpos(str.begin(), str.end(), reg2, -1);    sregex_token_iterator tend;    while (tpos != tend) &#123;        cout &lt;&lt; tpos-&gt;str() &lt;&lt; &quot; &quot;;        tpos++;    &#125;    cout &lt;&lt; endl;&#125;// No.3 替换void testReplace() &#123;    string str = &quot;ILoveyou******IMiss*******y*****o***u&quot;;    regex reg(&quot;\\*+&quot;);    // regex_replace(string str,regex regx,string content)    //返回值是处理后的字符串    cout &lt;&lt; &quot;888:&quot; &lt;&lt; regex_replace(str, reg, &quot;*&quot;) &lt;&lt; endl;    //控制替换    cout &lt;&lt; &quot;only one:&quot;         &lt;&lt; regex_replace(str, reg, &quot;*&quot;, regex_constants::format_first_only)         &lt;&lt; endl;    cout &lt;&lt; &quot;no copy:&quot;         &lt;&lt; regex_replace(str, reg, &quot;*&quot;, regex_constants::format_no_copy)         &lt;&lt; endl;    cout &lt;&lt; &quot;sed:&quot; &lt;&lt; regex_replace(str, reg, &quot;*&quot;, regex_constants::format_sed)         &lt;&lt; endl;&#125;int main(int argc, char** argv) &#123;    // testMatch();    // testGetString();    testReplace();    return 0;&#125;</code></pre><h1 id="C-日期时间库"><a href="#C-日期时间库" class="headerlink" title="C++日期时间库"></a>C++日期时间库</h1><pre><code class="cpp">using nanoseconds  = duration&lt;long long, nano&gt;;//纳秒using microseconds = duration&lt;long long, micro&gt;;//微妙using milliseconds = duration&lt;long long, milli&gt;;//毫秒using seconds      = duration&lt;long long&gt;;//秒using minutes      = duration&lt;int, ratio&lt;60&gt;&gt;;    //分钟using hours        = duration&lt;int, ratio&lt;3600&gt;&gt;;        //小时</code></pre><pre><code class="cpp">#include &lt;chrono&gt;#include &lt;iostream&gt;#include &lt;thread&gt;using namespace std;int main(int argc, char** argv) &#123;    chrono::seconds one(1);    // C++延时函数 thread    //延时1秒钟    this_thread::sleep_for(chrono::seconds(1));    cout &lt;&lt; &quot;延时1秒钟&quot; &lt;&lt; endl;    this_thread::sleep_for(1s);    cout &lt;&lt; &quot;延时1秒钟&quot; &lt;&lt; endl;    this_thread::sleep_for(1000ms);    cout &lt;&lt; &quot;延时1000毫秒&quot; &lt;&lt; endl;    return 0;&#125;</code></pre><h3 id="时钟"><a href="#时钟" class="headerlink" title="时钟"></a>时钟</h3><ul><li>system_clock:系统时钟</li><li>steady_clock:  计时</li><li>high_resoulution_clock: 高精度时钟</li></ul><h3 id="时间点"><a href="#时间点" class="headerlink" title="时间点"></a>时间点</h3><ul><li>time_point:时间点<ul><li>from_time_t:  time_t 的时间转换为time_point</li><li>to_time_t: time_piont 转换为time_t</li></ul></li></ul><pre><code class="cpp">#include &lt;chrono&gt;#include &lt;ctime&gt;#include &lt;iomanip&gt;#include &lt;iostream&gt;#include &lt;thread&gt;using namespace std;void GetTime() &#123;    //获取当前系统时间    chrono::system_clock::time_point curTime = chrono::system_clock::now();    //用的时候: auto curTime=chrono::system_clock::now();    time_t tm_t = chrono::system_clock::to_time_t(curTime);    cout &lt;&lt; &quot;日期:&quot; &lt;&lt; ctime(&amp;tm_t) &lt;&lt; endl;    //格式化输出时间    tm* pCurTime = localtime(&amp;tm_t);    cout &lt;&lt; put_time(pCurTime, &quot;%F %X&quot;) &lt;&lt; endl;    cout &lt;&lt; &quot;时间戳:&quot; &lt;&lt; curTime.time_since_epoch().count() &lt;&lt; endl;&#125;void CountTime() &#123;    chrono::steady_clock::time_point start = chrono::steady_clock::now();    cout &lt;&lt; &quot;start:&quot; &lt;&lt; endl;    for (int i = 0; i &lt; 1000; i++) &#123;        // cout &lt;&lt; &quot;运行中...&quot; &lt;&lt; endl;    &#125;    chrono::steady_clock::time_point end = chrono::steady_clock::now();    // auto dt = end - start;//纳秒    chrono::duration&lt;double, ratio&lt;1, 1000&gt;&gt; dt = end - start;    cout &lt;&lt; &quot;耗时&quot; &lt;&lt; dt.count() &lt;&lt; &quot;s&quot; &lt;&lt; endl;&#125;void HightClock() &#123;    auto start = chrono::high_resolution_clock::now();    cout &lt;&lt; &quot;start:&quot; &lt;&lt; endl;    for (int i = 0; i &lt; 1000; i++) &#123;        // cout &lt;&lt; &quot;运行中...&quot; &lt;&lt; endl;    &#125;    auto end = chrono::high_resolution_clock::now();    // auto dt = end - start;//纳秒    chrono::duration&lt;double, ratio&lt;1, 1000&gt;&gt; dt = end - start;    cout &lt;&lt; &quot;耗时&quot; &lt;&lt; dt.count() &lt;&lt; &quot;s&quot; &lt;&lt; endl;&#125;int main(int argc, char** argv) &#123;#if 0    chrono::seconds one(1);    //C++延时函数 thread    //延时1秒钟    this_thread::sleep_for(chrono::seconds(1));    cout &lt;&lt; &quot;延时1秒钟&quot; &lt;&lt; endl;    this_thread::sleep_for(1s);    cout &lt;&lt; &quot;延时1秒钟&quot; &lt;&lt; endl;    this_thread::sleep_for(1000ms);    cout &lt;&lt; &quot;延时1000毫秒&quot; &lt;&lt; endl;#endif    GetTime();    CountTime();    HightClock();    return 0;&#125;</code></pre><h1 id="C-文件目录库"><a href="#C-文件目录库" class="headerlink" title="C+文件目录库"></a>C+文件目录库</h1><p>C++17标准才有的东西，C++文件目录库分为三部分</p><ul><li>file_status类: 文件状态</li><li>path类:  处理目录</li><li>directory_entry类： 访问遍历目录</li></ul><pre><code class="cpp">#include &lt;filesystem&gt;#include &lt;fstream&gt;#include &lt;iostream&gt;#include &lt;set&gt;#include &lt;string&gt;using namespace std;void TestPath() &#123;    error_code temp;    filesystem::create_directory(&quot;xxx&quot;, temp);  //创建一个目录(文件夹)    filesystem::create_directories(&quot;a/b&quot;);      //创建多级目录    cout &lt;&lt; temp.message() &lt;&lt; endl;    filesystem::create_directory(&quot;xxx/bbb&quot;);  //创建一个目录(文件夹)    // filesystem::path url(&quot;my_box&quot;);   //构建一个path    filesystem::path url = filesystem::current_path();    cout &lt;&lt; &quot;当前路径:&quot; &lt;&lt; url &lt;&lt; endl;    cout &lt;&lt; &quot;当前路径:&quot; &lt;&lt; url.string() &lt;&lt; endl;    cout &lt;&lt; &quot;根目录:&quot; &lt;&lt; url.root_directory() &lt;&lt; endl;    cout &lt;&lt; &quot;相对路径:&quot; &lt;&lt; url.relative_path() &lt;&lt; endl;    cout &lt;&lt; &quot;根名：&quot; &lt;&lt; url.root_name() &lt;&lt; endl;    cout &lt;&lt; &quot;根路径:&quot; &lt;&lt; url.root_path() &lt;&lt; endl;&#125;void DemoStatus(filesystem::file_status object) &#123;    switch (object.type()) &#123;        case filesystem::file_type::regular:            cout &lt;&lt; &quot;磁盘文件&quot; &lt;&lt; endl;            break;        case filesystem::file_type::directory:            cout &lt;&lt; &quot;目录文件&quot; &lt;&lt; endl;            break;        case filesystem::file_type::not_found:            cout &lt;&lt; &quot;目录不存在&quot; &lt;&lt; endl;            break;        case filesystem::file_type::unknown:            cout &lt;&lt; &quot;无法识别文件&quot; &lt;&lt; endl;            break;    &#125;&#125;void TestStatus() &#123;    filesystem::create_directory(&quot;fileBox&quot;);    DemoStatus(filesystem::status(&quot;fileBox&quot;));    fstream file(&quot;fileBox/file&quot;, ios::out | ios::trunc);    DemoStatus(filesystem::status(&quot;fileBox/file&quot;));&#125;// directory_entry// directory_iterator// 1.遍历当前目录下所有文件夹(一层)void tarverseDirectory() &#123;    filesystem::path url(&quot;./test&quot;);    if (!filesystem::exists(url)) &#123;        cout &lt;&lt; &quot;目录不存在&quot; &lt;&lt; endl;        return;    &#125;    filesystem::directory_iterator list(url);    for (auto v : list) &#123;        cout &lt;&lt; v.path().filename() &lt;&lt; endl;    &#125;&#125;// 2.遍历文件夹中的所有文件(一层)void travserDirectoryAllFile() &#123;    filesystem::path url(&quot;./test&quot;);    set&lt;string&gt; dirset;    for (filesystem::directory_iterator end, begin(url); begin != end;         ++begin) &#123;        if (!filesystem::is_directory(begin-&gt;path())) &#123;            dirset.insert(begin-&gt;path().filename().string());        &#125;    &#125;    for (auto v : dirset) &#123;        cout &lt;&lt; v &lt;&lt; endl;    &#125;&#125;// 3.所有文件夹中的文件void traverseAllDirectoryAllFile() &#123;    filesystem::path url(&quot;./test&quot;);    multiset&lt;string&gt; dirset;    for (filesystem::recursive_directory_iterator end, begin(url); begin != end;         ++begin) &#123;        if (!filesystem::is_directory(begin-&gt;path())) &#123;            dirset.insert(begin-&gt;path().filename().string());        &#125;    &#125;    for (auto v : dirset) &#123;        cout &lt;&lt; v &lt;&lt; endl;    &#125;    remove_all(url / &quot;b&quot;);  //删除当前url下面b文件夹&#125;// remove_allint main(int argc, char** argv) &#123;    TestPath();    TestStatus();    tarverseDirectory();    travserDirectoryAllFile();    traverseAllDirectoryAllFile();    return 0;&#125;</code></pre>]]></content>
+        <content type="html"><![CDATA[<ul><li><h1 id="参考书籍"><a href="#参考书籍" class="headerlink" title="参考书籍:"></a>参考书籍:</h1><ul><li><h4 id="C-Primer"><a href="#C-Primer" class="headerlink" title="C++ Primer"></a><em>C++ Primer</em></h4></li><li><h4 id="Essential-C"><a href="#Essential-C" class="headerlink" title="Essential C++"></a><em>Essential C++</em></h4></li></ul></li><li><h1 id="编译器"><a href="#编译器" class="headerlink" title="编译器:"></a>编译器:</h1><ul><li><h4 id="gcc-x2F-g"><a href="#gcc-x2F-g" class="headerlink" title="gcc &#x2F; g++"></a><em>gcc &#x2F; g++</em></h4></li></ul></li><li><h2 id="不定期进行更新"><a href="#不定期进行更新" class="headerlink" title="不定期进行更新"></a><em>不定期进行更新</em></h2></li></ul><h1 id="C-正则库"><a href="#C-正则库" class="headerlink" title="C++正则库"></a>C++正则库</h1><p>正则指的是一种规则，用来匹配，捕获，替换字符串(字符串处理方案)</p><h3 id="特殊含义元字符"><a href="#特殊含义元字符" class="headerlink" title="特殊含义元字符"></a>特殊含义元字符</h3><p>^: 以字符作为字符串开的头,  ^ 表示单个字符</p><p>$:以字符结尾  ，\$表示单个字符</p><p>():分组     <a href="mailto:&#121;&#x64;&#112;&#x61;&#x6a;&#106;&#x40;&#49;&#54;&#x33;&#x2e;&#99;&#x6f;&#109;">&#121;&#x64;&#112;&#x61;&#x6a;&#106;&#x40;&#49;&#54;&#x33;&#x2e;&#99;&#x6f;&#109;</a></p><p>\b: 字符串的边界</p><p>.: 除了\n意外的任意一个字符</p><p>|:a|b  a或者b</p><p>[abc]: abc任意一个字符 </p><p>[^abc]: abc之外的任意一个字符</p><p>[a-z]:任意一个小写字母</p><p>\w: 任意字母数字下划线  [(0-9)(a-z)(A-Z)(_)]</p><p>\W: 字母数字下划线之外的字符</p><p>\d: 任意一个数字</p><p>\D:数字之外的任意一个字符</p><p>\s: 空白符</p><h3 id="量词元字符"><a href="#量词元字符" class="headerlink" title="量词元字符"></a>量词元字符</h3><p>*:0次或者多次    [a-z]*    {0,}</p><p>+:1次或者多次    {1,}</p><p>?:0次或者1次  {0,1}</p><p>{n}:   出现n次</p><p>{n,}:  至少出现n次</p><p>{n,m}: 至少有n到m个之间的字符</p><p>注意的问题: C&#x2F;C++中带\的元字符一定改为\\</p><pre><code class="cpp">#include &lt;iostream&gt;#include &lt;regex&gt;#include &lt;string&gt;using namespace std;// No.1 匹配void testMatch() &#123;    // 1.1 先构造正则对象    // 1.2 调用 regex_match  返回true匹配，返回false不匹配#if 0    while (1) &#123;        string userName;        cin &gt;&gt; userName;        regex reg(&quot;^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$&quot;);        bool result = regex_match(userName, reg);        if (result == true) &#123;            cout &lt;&lt; &quot;匹配&quot; &lt;&lt; endl;        &#125; else &#123;            cout &lt;&lt; &quot;不匹配&quot; &lt;&lt; endl;        &#125;    &#125;#endif    //正则匹配一定完全匹配    string str = &quot;ILoveyou1314&quot;;    regex reg(&quot;[a-z0-9]+&quot;);    if (regex_match(str, reg)) &#123;        cout &lt;&lt; &quot;匹配&quot; &lt;&lt; endl;    &#125; else &#123;        cout &lt;&lt; &quot;不匹配&quot; &lt;&lt; endl;    &#125;    regex reg2(&quot;[a-z0-9]+&quot;, regex_constants::icase);  //忽略大小写    if (regex_match(str, reg2)) &#123;        cout &lt;&lt; &quot;匹配&quot; &lt;&lt; endl;    &#125; else &#123;        cout &lt;&lt; &quot;不匹配&quot; &lt;&lt; endl;    &#125;    regex reg3(&quot;ILoveyou[0-9]+&quot;);    if (regex_match(str, reg3)) &#123;        cout &lt;&lt; &quot;匹配&quot; &lt;&lt; endl;    &#125; else &#123;        cout &lt;&lt; &quot;不匹配&quot; &lt;&lt; endl;    &#125;&#125;// No.2 截取void testGetString() &#123;    string str = &quot;ILoveyou1314IMiss520you999dsdsd999sds23234&quot;;    // regex_search(string str,smatch result,regex reg);    smatch result;    //只要找到就结束    bool flag = regex_search(str, result, regex(&quot;\\d+&quot;));    if (flag) &#123;        cout &lt;&lt; &quot;size:&quot; &lt;&lt; result.size() &lt;&lt; endl;        for (int i = 0; i &lt; result.size(); i++) &#123;            cout &lt;&lt; result.str() &lt;&lt; &quot; &quot;;        &#125;        cout &lt;&lt; endl;        cout &lt;&lt; &quot;前缀:&quot; &lt;&lt; result.prefix() &lt;&lt; endl;        cout &lt;&lt; &quot;后缀:&quot; &lt;&lt; result.suffix() &lt;&lt; endl;    &#125;    //捕获所有满足的条件字符串    // sregex_iterator    regex reg(&quot;\\d+&quot;);    //得到满足条件    sregex_iterator pos(str.begin(), str.end(), reg);    sregex_iterator end;  //无参构造是结束流    while (pos != end) &#123;        cout &lt;&lt; pos-&gt;str() &lt;&lt; &quot;\t&quot;;        pos++;    &#125;    cout &lt;&lt; endl;    str = &quot;10,12,32,,,34,,34,34,6566,67,,67&quot;;    // 0: 表示匹配    //-1:不匹配    regex reg2(&quot;,&quot;);    sregex_token_iterator tpos(str.begin(), str.end(), reg2, -1);    sregex_token_iterator tend;    while (tpos != tend) &#123;        cout &lt;&lt; tpos-&gt;str() &lt;&lt; &quot; &quot;;        tpos++;    &#125;    cout &lt;&lt; endl;&#125;// No.3 替换void testReplace() &#123;    string str = &quot;ILoveyou******IMiss*******y*****o***u&quot;;    regex reg(&quot;\\*+&quot;);    // regex_replace(string str,regex regx,string content)    //返回值是处理后的字符串    cout &lt;&lt; &quot;888:&quot; &lt;&lt; regex_replace(str, reg, &quot;*&quot;) &lt;&lt; endl;    //控制替换    cout &lt;&lt; &quot;only one:&quot;         &lt;&lt; regex_replace(str, reg, &quot;*&quot;, regex_constants::format_first_only)         &lt;&lt; endl;    cout &lt;&lt; &quot;no copy:&quot;         &lt;&lt; regex_replace(str, reg, &quot;*&quot;, regex_constants::format_no_copy)         &lt;&lt; endl;    cout &lt;&lt; &quot;sed:&quot; &lt;&lt; regex_replace(str, reg, &quot;*&quot;, regex_constants::format_sed)         &lt;&lt; endl;&#125;int main(int argc, char** argv) &#123;    // testMatch();    // testGetString();    testReplace();    return 0;&#125;</code></pre><h1 id="C-日期时间库"><a href="#C-日期时间库" class="headerlink" title="C++日期时间库"></a>C++日期时间库</h1><pre><code class="cpp">using nanoseconds  = duration&lt;long long, nano&gt;;//纳秒using microseconds = duration&lt;long long, micro&gt;;//微妙using milliseconds = duration&lt;long long, milli&gt;;//毫秒using seconds      = duration&lt;long long&gt;;//秒using minutes      = duration&lt;int, ratio&lt;60&gt;&gt;;    //分钟using hours        = duration&lt;int, ratio&lt;3600&gt;&gt;;        //小时</code></pre><pre><code class="cpp">#include &lt;chrono&gt;#include &lt;iostream&gt;#include &lt;thread&gt;using namespace std;int main(int argc, char** argv) &#123;    chrono::seconds one(1);    // C++延时函数 thread    //延时1秒钟    this_thread::sleep_for(chrono::seconds(1));    cout &lt;&lt; &quot;延时1秒钟&quot; &lt;&lt; endl;    this_thread::sleep_for(1s);    cout &lt;&lt; &quot;延时1秒钟&quot; &lt;&lt; endl;    this_thread::sleep_for(1000ms);    cout &lt;&lt; &quot;延时1000毫秒&quot; &lt;&lt; endl;    return 0;&#125;</code></pre><h3 id="时钟"><a href="#时钟" class="headerlink" title="时钟"></a>时钟</h3><ul><li>system_clock:系统时钟</li><li>steady_clock:  计时</li><li>high_resoulution_clock: 高精度时钟</li></ul><h3 id="时间点"><a href="#时间点" class="headerlink" title="时间点"></a>时间点</h3><ul><li>time_point:时间点<ul><li>from_time_t:  time_t 的时间转换为time_point</li><li>to_time_t: time_piont 转换为time_t</li></ul></li></ul><pre><code class="cpp">#include &lt;chrono&gt;#include &lt;ctime&gt;#include &lt;iomanip&gt;#include &lt;iostream&gt;#include &lt;thread&gt;using namespace std;void GetTime() &#123;    //获取当前系统时间    chrono::system_clock::time_point curTime = chrono::system_clock::now();    //用的时候: auto curTime=chrono::system_clock::now();    time_t tm_t = chrono::system_clock::to_time_t(curTime);    cout &lt;&lt; &quot;日期:&quot; &lt;&lt; ctime(&amp;tm_t) &lt;&lt; endl;    //格式化输出时间    tm* pCurTime = localtime(&amp;tm_t);    cout &lt;&lt; put_time(pCurTime, &quot;%F %X&quot;) &lt;&lt; endl;    cout &lt;&lt; &quot;时间戳:&quot; &lt;&lt; curTime.time_since_epoch().count() &lt;&lt; endl;&#125;void CountTime() &#123;    chrono::steady_clock::time_point start = chrono::steady_clock::now();    cout &lt;&lt; &quot;start:&quot; &lt;&lt; endl;    for (int i = 0; i &lt; 1000; i++) &#123;        // cout &lt;&lt; &quot;运行中...&quot; &lt;&lt; endl;    &#125;    chrono::steady_clock::time_point end = chrono::steady_clock::now();    // auto dt = end - start;//纳秒    chrono::duration&lt;double, ratio&lt;1, 1000&gt;&gt; dt = end - start;    cout &lt;&lt; &quot;耗时&quot; &lt;&lt; dt.count() &lt;&lt; &quot;s&quot; &lt;&lt; endl;&#125;void HightClock() &#123;    auto start = chrono::high_resolution_clock::now();    cout &lt;&lt; &quot;start:&quot; &lt;&lt; endl;    for (int i = 0; i &lt; 1000; i++) &#123;        // cout &lt;&lt; &quot;运行中...&quot; &lt;&lt; endl;    &#125;    auto end = chrono::high_resolution_clock::now();    // auto dt = end - start;//纳秒    chrono::duration&lt;double, ratio&lt;1, 1000&gt;&gt; dt = end - start;    cout &lt;&lt; &quot;耗时&quot; &lt;&lt; dt.count() &lt;&lt; &quot;s&quot; &lt;&lt; endl;&#125;int main(int argc, char** argv) &#123;#if 0    chrono::seconds one(1);    //C++延时函数 thread    //延时1秒钟    this_thread::sleep_for(chrono::seconds(1));    cout &lt;&lt; &quot;延时1秒钟&quot; &lt;&lt; endl;    this_thread::sleep_for(1s);    cout &lt;&lt; &quot;延时1秒钟&quot; &lt;&lt; endl;    this_thread::sleep_for(1000ms);    cout &lt;&lt; &quot;延时1000毫秒&quot; &lt;&lt; endl;#endif    GetTime();    CountTime();    HightClock();    return 0;&#125;</code></pre><h1 id="C-文件目录库"><a href="#C-文件目录库" class="headerlink" title="C+文件目录库"></a>C+文件目录库</h1><p>C++17标准才有的东西，C++文件目录库分为三部分</p><ul><li>file_status类: 文件状态</li><li>path类:  处理目录</li><li>directory_entry类： 访问遍历目录</li></ul><pre><code class="cpp">#include &lt;filesystem&gt;#include &lt;fstream&gt;#include &lt;iostream&gt;#include &lt;set&gt;#include &lt;string&gt;using namespace std;void TestPath() &#123;    error_code temp;    filesystem::create_directory(&quot;xxx&quot;, temp);  //创建一个目录(文件夹)    filesystem::create_directories(&quot;a/b&quot;);      //创建多级目录    cout &lt;&lt; temp.message() &lt;&lt; endl;    filesystem::create_directory(&quot;xxx/bbb&quot;);  //创建一个目录(文件夹)    // filesystem::path url(&quot;my_box&quot;);   //构建一个path    filesystem::path url = filesystem::current_path();    cout &lt;&lt; &quot;当前路径:&quot; &lt;&lt; url &lt;&lt; endl;    cout &lt;&lt; &quot;当前路径:&quot; &lt;&lt; url.string() &lt;&lt; endl;    cout &lt;&lt; &quot;根目录:&quot; &lt;&lt; url.root_directory() &lt;&lt; endl;    cout &lt;&lt; &quot;相对路径:&quot; &lt;&lt; url.relative_path() &lt;&lt; endl;    cout &lt;&lt; &quot;根名：&quot; &lt;&lt; url.root_name() &lt;&lt; endl;    cout &lt;&lt; &quot;根路径:&quot; &lt;&lt; url.root_path() &lt;&lt; endl;&#125;void DemoStatus(filesystem::file_status object) &#123;    switch (object.type()) &#123;        case filesystem::file_type::regular:            cout &lt;&lt; &quot;磁盘文件&quot; &lt;&lt; endl;            break;        case filesystem::file_type::directory:            cout &lt;&lt; &quot;目录文件&quot; &lt;&lt; endl;            break;        case filesystem::file_type::not_found:            cout &lt;&lt; &quot;目录不存在&quot; &lt;&lt; endl;            break;        case filesystem::file_type::unknown:            cout &lt;&lt; &quot;无法识别文件&quot; &lt;&lt; endl;            break;    &#125;&#125;void TestStatus() &#123;    filesystem::create_directory(&quot;fileBox&quot;);    DemoStatus(filesystem::status(&quot;fileBox&quot;));    fstream file(&quot;fileBox/file&quot;, ios::out | ios::trunc);    DemoStatus(filesystem::status(&quot;fileBox/file&quot;));&#125;// directory_entry// directory_iterator// 1.遍历当前目录下所有文件夹(一层)void tarverseDirectory() &#123;    filesystem::path url(&quot;./test&quot;);    if (!filesystem::exists(url)) &#123;        cout &lt;&lt; &quot;目录不存在&quot; &lt;&lt; endl;        return;    &#125;    filesystem::directory_iterator list(url);    for (auto v : list) &#123;        cout &lt;&lt; v.path().filename() &lt;&lt; endl;    &#125;&#125;// 2.遍历文件夹中的所有文件(一层)void travserDirectoryAllFile() &#123;    filesystem::path url(&quot;./test&quot;);    set&lt;string&gt; dirset;    for (filesystem::directory_iterator end, begin(url); begin != end;         ++begin) &#123;        if (!filesystem::is_directory(begin-&gt;path())) &#123;            dirset.insert(begin-&gt;path().filename().string());        &#125;    &#125;    for (auto v : dirset) &#123;        cout &lt;&lt; v &lt;&lt; endl;    &#125;&#125;// 3.所有文件夹中的文件void traverseAllDirectoryAllFile() &#123;    filesystem::path url(&quot;./test&quot;);    multiset&lt;string&gt; dirset;    for (filesystem::recursive_directory_iterator end, begin(url); begin != end;         ++begin) &#123;        if (!filesystem::is_directory(begin-&gt;path())) &#123;            dirset.insert(begin-&gt;path().filename().string());        &#125;    &#125;    for (auto v : dirset) &#123;        cout &lt;&lt; v &lt;&lt; endl;    &#125;    remove_all(url / &quot;b&quot;);  //删除当前url下面b文件夹&#125;// remove_allint main(int argc, char** argv) &#123;    TestPath();    TestStatus();    tarverseDirectory();    travserDirectoryAllFile();    traverseAllDirectoryAllFile();    return 0;&#125;</code></pre>]]></content>
       
       
       <categories>
