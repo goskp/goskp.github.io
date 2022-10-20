@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>数据结构-二叉搜索树(tree) | kpsun</title>
-  <meta name="keywords" content=" 数据结构 ">
-  <meta name="description" content="数据结构-二叉搜索树(tree) | kpsun">
+  <title>算法-C/C++常用刷题技巧 | kpsun</title>
+  <meta name="keywords" content=" Algorithm ">
+  <meta name="description" content="算法-C/C++常用刷题技巧 | kpsun">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介孙楷朋准大二计算机相关专业在读热爱编程,乐于合作,善于总结分享,有良好的的编程习惯目标BAT大厂联系方式 QQ: 1287923885 WeChat: code_cpp Email: &amp;#x6b;&amp;#x70;&amp;#115;&amp;#x75;&amp;#x6e;&amp;#x40;&amp;#x66;&amp;#x6f;&amp;#120;&amp;#109;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#109;">
 <meta property="og:type" content="website">
@@ -791,9 +791,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-数据结构-二叉搜索树(tree)" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-算法-CC++常用刷题技巧" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">数据结构-二叉搜索树(tree)</h1>
+        <h1 class="article-title">算法-C/C++常用刷题技巧</h1>
     
     <div class="article-meta">
         
@@ -803,7 +803,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="数据结构">数据结构</a>
+            <a  data-rel="算法">算法</a>
             
         </span>
         
@@ -811,19 +811,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">数据结构</a>
+            <a class="color5">Algorithm</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-10-17 11:42:54'>2022-07-08 19:34</time>
+            发布时间 : <time class="date" title='最后更新: 2022-10-20 22:56:46'>2022-09-30 15:36</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1.1k</span>
+        <span>字数:4k</span>
         
         
         
@@ -831,7 +831,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D"><span class="toc-text">参考书籍:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90-%E9%BB%91%E7%9A%AE%E4%B9%A6"><span class="toc-text">数据结构与算法分析(黑皮书)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%9C%E8%80%85-Mark-Allen-Weiss"><span class="toc-text">作者:Mark Allen Weiss</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E5%8D%95%E4%B8%80%E7%B1%BB%E5%9E%8B"><span class="toc-text">描述二叉搜索树单一类型:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%BB%93%E7%82%B9"><span class="toc-text">创建结点:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E6%9C%80%E5%88%9D%E7%8A%B6%E6%80%81"><span class="toc-text">描述二叉搜索树最初状态:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%87%E9%87%91%E6%B2%B9"><span class="toc-text">万金油:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%8F%92%E5%85%A5"><span class="toc-text">二叉搜索树的插入:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-text">二叉搜索树的遍历:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E6%A0%91%E7%BB%93%E7%82%B9"><span class="toc-text">查找树结点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE"><span class="toc-text">测试数据:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%88%A0%E9%99%A4"><span class="toc-text">二叉搜索树的删除:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE-1"><span class="toc-text">测试数据:</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-x2F-C-%E5%B8%B8%E7%94%A8%E5%88%B7%E9%A2%98%E6%8A%80%E5%B7%A7"><span class="toc-text">C&#x2F;C++常用刷题技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%87%E8%83%BD%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="toc-text">万能头文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vector"><span class="toc-text">vector</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">二维数组初始化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%83%A8%E5%88%86"><span class="toc-text">字符串部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%88"><span class="toc-text">栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%9F%E5%88%97"><span class="toc-text">队列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#set"><span class="toc-text">set</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#map"><span class="toc-text">map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#unordered-map"><span class="toc-text">unordered_map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ACM%E6%A8%A1%E5%BC%8F%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%8F%82%E8%80%83%E4%B9%A6%E7%A8%8B%E5%BA%8F"><span class="toc-text">ACM模式输入输出参考书程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%B8%A6%E7%9A%84%E5%AE%8F%E5%B8%B8%E9%87%8F"><span class="toc-text">自带的宏常量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%A4%E6%96%AD%E5%87%BD%E6%95%B0"><span class="toc-text">字符串判断函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%80%BC%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-text">字符串和数值间的转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E4%BA%8C%E5%88%86"><span class="toc-text">迭代器的二分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%B0%8F%E5%86%99"><span class="toc-text">字符串转为小写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%A0%B9%E5%A0%86"><span class="toc-text">小根堆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%88%9D%E5%A7%8B%E5%8C%96%E6%95%B0%E7%BB%84"><span class="toc-text">快速初始化数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-11%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-text">C++11的特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bitset"><span class="toc-text">bitset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2"><span class="toc-text">字符串分割</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E8%88%8D%E4%BA%94%E5%85%A5%E4%BF%9D%E7%95%99%E5%B0%8F%E6%95%B0"><span class="toc-text">四舍五入保留小数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8C%89%E6%A0%BC%E5%BC%8F%E6%8B%86%E5%88%86"><span class="toc-text">字符串按格式拆分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">相同字符的字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93%E6%8E%92%E5%BA%8F"><span class="toc-text">结构体排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F"><span class="toc-text">优先队列自定义排序</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -847,287 +847,575 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><h1 id="参考书籍"><a href="#参考书籍" class="headerlink" title="参考书籍:"></a>参考书籍:</h1><ul>
-<li><h4 id="数据结构与算法分析-黑皮书"><a href="#数据结构与算法分析-黑皮书" class="headerlink" title="数据结构与算法分析(黑皮书)"></a><em>数据结构与算法分析(黑皮书)</em></h4><ul>
-<li><h4 id="作者-Mark-Allen-Weiss"><a href="#作者-Mark-Allen-Weiss" class="headerlink" title="作者:Mark Allen Weiss"></a><em>作者:Mark Allen Weiss</em></h4></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="描述二叉搜索树单一类型"><a href="#描述二叉搜索树单一类型" class="headerlink" title="描述二叉搜索树单一类型:"></a>描述二叉搜索树单一类型:</h3><pre><code class="c">//处理二叉搜索树的数据
-typedef struct DataPair 
-&#123;
-  int first;        //比较准则
-  char second[20];  //字符串数据为例
-&#125; DATA, *LPDATA;
+        <h1 id="C-x2F-C-常用刷题技巧"><a href="#C-x2F-C-常用刷题技巧" class="headerlink" title="C&#x2F;C++常用刷题技巧"></a>C&#x2F;C++常用刷题技巧</h1><h2 id="万能头文件"><a href="#万能头文件" class="headerlink" title="万能头文件"></a>万能头文件</h2><blockquote>
+<p>万能头文件</p>
+<p>基本包括了大部分的STL库函数，使用方便快捷</p>
+</blockquote>
+<pre><code class="c++">#include &lt;bits/stdc++.h&gt;
+</code></pre>
+<h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><pre><code class="c++">vector&lt;int&gt; first; // 空的vector，只是一个列表的头，里面没有元素
+vector&lt;int&gt; second (4, 100); // 初始化一个具有4个元素的vector，每个元素的值都是100
+vector&lt;int&gt; third (second.begin(), second.end()); // 通过其他vector的迭代器的方式，进行拷贝复制初始化
+vector&lt;int&gt; fourth (third); // 直接对其他vector的拷贝复制
 
-//二叉树的结点
-typedef struct TreeNode 
-&#123;
-  DATA data;
-  struct TreeNode* p_left_child_node;
-  struct TreeNode* p_right_child_node;
-&#125; TREENODE, *LPTREENODE;
+int myints[] = &#123;16, 2, 77&#125;;
+vector&lt;int&gt; fifth (myints, myints+sizeof(myints) / sizeof(int)); // 将数组转化成vector，需要提供的是数组的首地址和地址偏移。
 
-//二叉搜索树
-typedef struct BinarySearchTree 
-&#123;
-  LPTREENODE p_root;  //根节点
-  int tree_size;
-&#125; BST, *LPBST;
+vector&lt;int&gt; sixth = &#123;1,5,4,6&#125;; // 指定内容进行构造，内容为1,5,4,6的vector
+
+vector&lt; vector&lt;int&gt; &gt; vars;
+// 二维vector的初始化
+int size = 10;
+vector&lt;vector&lt;int&gt;&gt; vars(size, vector&lt;int&gt;(size, 0)); // （size,size）的矩阵，元素全部是0
 </code></pre>
-<h3 id="创建结点"><a href="#创建结点" class="headerlink" title="创建结点:"></a>创建结点:</h3><pre><code class="c">//创建结点
-LPTREENODE CreateTreeNode(DATA new_data) 
-&#123;
-  LPTREENODE p_new_node = (LPTREENODE)malloc(sizeof(TREENODE));
-  if (NULL == p_new_node) 
-  &#123;
-    return NULL;
+<pre><code class="c++">#include&lt;vector&gt;
+vector&lt;int&gt; test;//建立一个vector
+
+test.push_back(1);
+test.push_back(2);//把1和2压入vector，这样test[0]就是1,test[1]就是2
+cout&lt;&lt;vec[0]&lt;&lt;endl;//使用下标访问元素
+//使用迭代器访问元素.
+vector&lt;int&gt;::iterator it;
+for(it=vec.begin();it!=vec.end();it++)&#123;
+     cout&lt;&lt;*it&lt;&lt;endl;
+&#125;
+vec.insert(vec.begin()+i,a);//在第i+1个元素前面插入a;
+vec.erase(vec.begin()+2);//删除第3个元素
+vec.erase(vec.begin()+i,vec.end()+j);//删除区间[i,j-1];区间从0开始
+cout&lt;&lt;vec.size()&lt;&lt;endl;//向量大小
+vec.clear();//清空
+</code></pre>
+<pre><code class="c++">sort(v.begin(),v.end());              //用sort()函数从小到大进行排序
+reverse(v.begin(),v.end());          // 用reverse()函数翻转数组
+v.size()                             // 返回容器的大小
+v.empty()                             //判断容器是否为空，为空返回0，不为空则为1
+cout&lt;&lt;v[0];                          // 打印第一个元素
+cout&lt;&lt;v[v.size()]                     //打印最后一个元素
+lower_bound(v.begin(),v.end(),a)      //在有序数组中返回第一个大于等于a的元素的下标,返回值的是地址
+upper_bound(v.begin(),v.end(),a)-v.begin()	  //在有序数组中返回第一个大于a的元素的下标,这里通过减去首地址，得到了下标位置
+vector&lt;int&gt;::iterator it;			  //定义迭代器方便得到元素值，相当于指针
+it=upper_bound(v.begin,v.end(),a)    
+cout&lt;&lt;(*it)                          //这里返回的是第一个大于a的元素的值
+</code></pre>
+<h3 id="二维数组初始化"><a href="#二维数组初始化" class="headerlink" title="二维数组初始化"></a>二维数组初始化</h3><pre><code class="c++">vector&lt;vector &lt;int&gt; &gt; a(3);//初始化的是3*3的矩阵,注意我们所申请的矩阵行数和列数默认相等的
+
+//如果我们需要行数和列数不相等的二维数组，那么我们可以对每一行所包含的元素个数加以限制；
+
+for(int i=0;i&lt;a.size();i++)//利用resize函数将每一行的元素个数设置为5个，即5列 
+    a[i].resize(5);//此时我们得到的就是一个3行5列的二维数组
+</code></pre>
+<p>如果我们采用size函数来得到数组规模，那么我们所得到的结果是矩阵的行数，如果需要得到列数可以使用<code>a[0].size()</code></p>
+<pre><code class="c++">vector&lt;vector &lt;int&gt; &gt; a(3);//初始化的是3*3的矩阵 
+for(int i=0;i&lt;a.size();i++)//利用resize函数将每一行的元素个数设置为5个，即5列 
+    a[i].resize(5);
+cout&lt;&lt;a.size()&lt;&lt;endl;//打印的是vector的行数
+</code></pre>
+<p><strong>除上述初始化行列数不同的二维数组之外，我们也可以直接定义</strong>，结果也是3行5列的二维数组</p>
+<pre><code class="c++">vector&lt;vector&lt;int&gt; &gt; Array(3, vector&lt;int&gt;(5));
+    cout&lt;&lt;Array[0].size()&lt;&lt;endl;
+
+//以下也可以
+vector&lt;vector&lt;int&gt; &gt;num =
+    &#123; &#123; 1, 1, 1, 0, 1, 1 &#125;, 
+     &#123; 1, 0, 1, 1, 1, 1 &#125;, 
+     &#123; 1, 1, 1, 0, 0, 1 &#125;, 
+     &#123; 1, 0, 1, 0, 0, 1 &#125;,
+     &#123; 1, 1, 1, 1, 1, 1 &#125; &#125;;
+</code></pre>
+<h2 id="字符串部分"><a href="#字符串部分" class="headerlink" title="字符串部分"></a>字符串部分</h2><pre><code class="c++">string s;
+string t=&quot;m&quot;;
+cin&gt;&gt;s;//不包括空格
+getline(cin,s);//读取一行，可以包含空格
+s.append(t);//将字符t添加到s  
+cout&lt;&lt;s+t;  //同上述效果一样
+//find(“字符串”) / find(&quot;字符串&quot;,postion)   ---找不到就返回很大很大的数,可以与-1比较
+if(s1.find(s2)==-1)&#123;
+    cout&lt;&lt;&quot;在s1中未找到s2&quot;&lt;&lt;endl;
   &#125;
-  p_new_node-&gt;data = new_data;
-  p_new_node-&gt;p_left_child_node = NULL;
-  p_new_node-&gt;p_right_child_node = NULL;
-  return p_new_node;
-&#125;
+cout&lt;&lt;s.find(t)&lt;&lt;endl; //找子序列t在s中出现的首次位置
+cout&lt;&lt;s.find(t,2)&lt;&lt;endl; //从第二个位置开始找，找子序列t在s中出现的首次位置
+int len = s.size();//字符串s的⻓度
+int len = s.length();//字符串s的⻓度
+cout&lt;&lt;*s1.begin()&lt;&lt;endl;//指向字符串的第一个元素
+cout&lt;&lt;*(s1.end()-1)&lt;&lt;endl;//指向字符串的最后一个元素
+reverse(s.begin(), s.end());//字符串反转
+string s1 = &quot;hello&quot;;
+string sTemp=s1.substr(1);//下标1开始到结束
+//截取substr（pos,num） ----在哪个位置截取，截取多少字符
+string sTemp2 = s1.substr(1,3);//下标1开始，截取3个字符
+cout&lt;&lt;sTemp&lt;&lt;&quot;----&quot;&lt;&lt;sTemp2&lt;&lt;endl;
+cout&lt;&lt;s1[0]&lt;&lt;endl; //访问字符串的0处的位置
+string s1,s2;
+cin&gt;&gt;s1&gt;&gt;s2;
+//两个字符串之间的大小关系
+ cout&lt;&lt;(s1==s2)&lt;&lt;endl;
+ cout&lt;&lt;(s1&gt;s2)&lt;&lt;endl;
+ cout&lt;&lt;(s1&lt;s2)&lt;&lt;endl;
+//插入insert(position,&quot;字符串&quot;)
+s1.insert(1,&quot;b&quot;);
+cout&lt;&lt;s1;
+//删除 erase(pos,num)----在哪个位置删除多少字符
+s1.earse(1,2);
+//将123456转为字符串
+s1 = to_string(123456);
+cout&lt;&lt;s1;
+//将字符型1234转为int类型   ---string to int
+int x=stoi(&quot;1234&quot;);
+ cout&lt;&lt;x&lt;&lt;endl;
+
 </code></pre>
-<h3 id="描述二叉搜索树最初状态"><a href="#描述二叉搜索树最初状态" class="headerlink" title="描述二叉搜索树最初状态:"></a>描述二叉搜索树最初状态:</h3><pre><code class="c">//创建树,就是描述树的最初状态
-LPBST CreateBST() 
-&#123;
-  LPBST p_new_bst = (LPBST)malloc(sizeof(BST));
-  if (NULL == p_new_bst) 
-  &#123;
-    return NULL;
-  &#125;
-  p_new_bst-&gt;p_root = NULL;
-  p_new_bst-&gt;tree_size = 0;
-  return p_new_bst;
-&#125;
-</code></pre>
-<h3 id="万金油"><a href="#万金油" class="headerlink" title="万金油:"></a>万金油:</h3><pre><code class="c">//万金油
-int Size(LPBST p_tree) 
-&#123; 
-  return p_tree-&gt;tree_size; 
-&#125;
-int Empty(LPBST p_tree) 
-&#123;
-  return p_tree-&gt;tree_size == 0; 
-&#125;
-</code></pre>
-<h3 id="二叉搜索树的插入"><a href="#二叉搜索树的插入" class="headerlink" title="二叉搜索树的插入:"></a>二叉搜索树的插入:</h3><pre><code class="c">void InsertNode(LPBST p_tree, DATA new_data) 
-&#123;
-  //插入的数据变成一个结点
-  LPTREENODE p_new_node = CreateTreeNode(new_data);
-  //找合适的位置
-  LPTREENODE p_move = p_tree-&gt;p_root;
-  LPTREENODE p_move_parent = NULL;  // p_move的父结点
-  while (NULL != p_move) 
-  &#123;
-    p_move_parent = p_move;
-    if (new_data.first &lt; p_move-&gt;data.first) 
-    &#123;
-      //新数据小于p_move里的数据,往左走
-      p_move = p_move-&gt;p_left_child_node;
-    &#125; 
-    else if (new_data.first &gt; p_move-&gt;data.first) 
-    &#123;
-      //新数据大于p_move里的数据
-      p_move = p_move-&gt;p_right_child_node;
-    &#125; 
-    else 
-    &#123;
-      //如果新数据等于p_move里的数据,
-      //采用覆盖的方式
-      strcpy(p_move-&gt;data.second, new_data.second);
-      return;
+<h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><pre><code class="c++">  #include&lt;stack&gt;  //要引入库函数
+  stack&lt;int&gt; s ;
+    for(int i=0;i&lt;6;i++)&#123;
+        s.push(i);//入栈操作
     &#125;
-  &#125;
-  //分析查找的结果
-  if (p_tree-&gt;p_root == NULL) 
-  &#123;
-    //如果根节点为空
-    p_tree-&gt;p_root = p_new_node;
-  &#125; 
-  else 
-  &#123;
-    //如果不为空,要考虑插在父结点的左边还是右边
-    if (p_move_parent-&gt;data.first &gt; new_data.first) 
-    &#123;
-      //父结点的数据大于新结点的数据,插在父结点的左边
-      p_move_parent-&gt;p_left_child_node = p_new_node;
-    &#125; 
-    else 
-    &#123;
-      //反之,插在父结点的右边
-      p_move_parent-&gt;p_right_child_node = p_new_node;
-    &#125;
-  &#125;
-&#125;
+    cout&lt;&lt;s.top()&lt;&lt;endl;  //访问s的栈顶元素
+    cout&lt;&lt;s.size()&lt;&lt;endl;  输出s的元素个数
+     s.pop(); // 删除栈顶元素但不返回其值
+    cout&lt;&lt;s.empty()&lt;&lt;endl; //非空返回0，是空返回1
 </code></pre>
-<h3 id="二叉搜索树的遍历"><a href="#二叉搜索树的遍历" class="headerlink" title="二叉搜索树的遍历:"></a>二叉搜索树的遍历:</h3><pre><code class="c">void PrintCurNode(LPTREENODE p_cur_node) 
+<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><pre><code class="c++">#include&lt;queue&gt;//要引入库函数
+   queue&lt;int&gt; s ;
+    for(int i=0;i&lt;6;i++)&#123;
+        s.push(i);//将i元素接到队列的末端；
+    &#125;
+    cout&lt;&lt;&quot;首元素为：&quot;&lt;&lt;s.front()&lt;&lt;endl;  //访问队首元素
+    cout&lt;&lt;&quot;队尾元素：&quot;&lt;&lt;s.back()&lt;&lt;endl;  访问队尾元素
+     s.pop(); // 弹出队列的第一个元素，并不会返回元素的值；
+    cout&lt;&lt;s.empty()&lt;&lt;endl; //非空返回0，是空返回1
+</code></pre>
+<h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><blockquote>
+<p>⼀个<code>set</code>⾥⾯的各元素是各不相同的（重复元素自动删除），⽽且<code>set</code>会按照元素进⾏从⼩到⼤排序</p>
+</blockquote>
+<pre><code class="c++">#include&lt;set&gt;
+set&lt;int&gt; s;
+  s.insert(2);//插入元素
+
+  s.insert(100);//插入元素
+  for(int i=0;i&lt;6;i++)&#123;
+    s.insert(i);//插入元素
+  &#125;
+//迭代变量set&lt;int&gt;::iterator it
+  for(set&lt;int&gt;::iterator it=s.begin();it!=s.end();it++)&#123;
+    cout &lt;&lt; *it &lt;&lt; &quot; &quot;;//集合的遍历，it是一个迭代的指针
+  &#125;
+//方法二：
+ for(auto v: s)  cout&lt;&lt;v&lt;&lt;&quot; &quot;;
+//输入结果：0 1 2 3 4 5 100
+//按照从小到大排序，且删除相同元素
+
+s.erase(3);//删除元素为3的
+s.clear();//清空
+s.size();//长度
+s.empty();//判空
+cout&lt;&lt;*s.find(2)&lt;&lt;endl; //查找某一个num值，返回的是迭代器，因此需要*来输出
+</code></pre>
+<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><pre><code class="c++">  map&lt;int,int&gt; mp;
+  int n;
+  cin&gt;&gt;n;
+  for(int i=1;i&lt;=n;i++)&#123;
+    int x;
+    cin&gt;&gt;x;
+    mp[x] =i;
+  &#125;
+  for(auto v: mp) cout&lt;&lt;v.first&lt;&lt;&quot; ： &quot;&lt;&lt;v.second&lt;&lt;endl;
+</code></pre>
+<h2 id="unordered-map"><a href="#unordered-map" class="headerlink" title="unordered_map"></a>unordered_map</h2><pre><code class="c++">//1. 头文件
+#include &lt;unordered_map&gt;
+//2. 初始化
+unordered_map&lt;char, int&gt; map;
+
+//3. 插入元素
+//3.1 数组形式
+map[&#39;a&#39;] = 1;
+//3.2 直接插入
+map.insert( &#123; &#123;&#39;b&#39;,2&#125; , &#123;&#39;c&#39;,3&#125; &#125; );
+
+//4. 修改元素
+map[&#39;a&#39;] = 0;
+
+//5. 删除元素
+//5.1 删除key为&#39;a&#39;的元素
+map.erase(&#39;a&#39;); 
+//5.2删除第一个元素
+map.erase(map.begin());
+
+//6. 判断元素是否存在
+//6.1 如果元素存在
+if(map.find(&#39;a&#39;)!=map.end())
+if(map.count(&#39;a&#39;)!=0)
+
+//7. 清空所有元素    
+map.clear();
+
+//8. 遍历取值并取出键和值
+//方法一
+for( auto&amp; a : map)
 &#123;
-  printf(&quot;%d:%s\n&quot;, p_cur_node-&gt;data.first, p_cur_node-&gt;data.second);
+    char key= a.first;
+    int  value= a.second;
+&#125;
+ 
+//方法二
+for (auto it = map.begin(); it != map.end(); it++) 
+&#123;
+        char key = it-&gt;first;
+        int  value = it-&gt;second;
 &#125;
 
-//中序遍历
-void InorderTraversal(LPTREENODE p_root) 
-&#123;
-  if (NULL != p_root) &#123;
-    InorderTraversal(p_root-&gt;p_left_child_node);
-    PrintCurNode(p_root);
-    InorderTraversal(p_root-&gt;p_right_child_node);
-  &#125;
-&#125;
+//9. 判断是否为空
+if( map.empty() )
+    
+//10. 求元素个数
+map.size();
 </code></pre>
-<h3 id="查找树结点"><a href="#查找树结点" class="headerlink" title="查找树结点"></a>查找树结点</h3><pre><code class="c">LPTREENODE SearchBST(LPBST p_tree, int first) 
-&#123;
-  LPTREENODE p_move = p_tree-&gt;p_root;
-  if (NULL == p_move) 
-  &#123;
-    return p_move;
-  &#125; 
-  else 
-  &#123;
-    while (NULL != p_move &amp;&amp; p_move-&gt;data.first != first) 
-    &#123;
-      if (p_move-&gt;data.first &gt; first) 
-      &#123;
-        p_move = p_move-&gt;p_left_child_node;
-      &#125; 
-      else 
-      &#123;
-        p_move = p_move-&gt;p_right_child_node;
-      &#125;
-    &#125;
-    return p_move;
-  &#125;
-&#125;
-</code></pre>
-<h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据:"></a>测试数据:</h3><pre><code class="c">int main(int argc, char* argv[]) 
-&#123;
-  LPBST p_tree = CreateBST();
-  DATA data[8] = &#123;10,   &quot;物理&quot;, 18,      &quot;大力&quot;, 3,     &quot;菜鸟&quot;, 12,
-                  &quot;hh&quot;, 2,      &quot;C语言&quot;, 7,      &quot;C++&quot;, 4,      &quot;Py&quot;&#125;;
-  for (int i = 0; i &lt; 8; ++i) 
-  &#123;
-    InsertNode(p_tree, data[i]);
-  &#125;
-  InorderTraversal(p_tree-&gt;p_root);
+<h2 id="ACM模式输入输出参考书程序"><a href="#ACM模式输入输出参考书程序" class="headerlink" title="ACM模式输入输出参考书程序"></a>ACM模式输入输出参考书程序</h2><pre><code class="c++">#include&lt;iostream&gt;
+#include&lt;sstream&gt;
+#include&lt;string&gt;
+#include&lt;vector&gt;
+#include&lt;algorithm&gt;
+#include&lt;limits.h&gt;  //INT_MIN 和 INT_MAX的头文件  
 
-  LPTREENODE p_result = SearchBST(p_tree, 100);
-  if (NULL == p_result) 
-  &#123;
-    printf(&quot;未找到相关信息\n&quot;);
-  &#125;
-  printf(&quot;查找18: %s\n&quot;, SearchBST(p_tree, 18)-&gt;data.second);
-  return 0;
+using namespace std;
+
+struct stu &#123;
+    string name;
+    int num;
+&#125;;
+
+
+// 1. 直接输入一个数
+int main() &#123;
+    int n = 0;
+    while (cin &gt;&gt; n) &#123; 
+        cout &lt;&lt; n &lt;&lt; endl;
+    &#125;
+    return -1;
+&#125;
+
+// 2. 直接输入一个字符串
+int main() &#123;
+    string str;
+    while (cin &gt;&gt; str) &#123;
+        cout &lt;&lt; str &lt;&lt; endl;
+    &#125;
+    return -1;
+&#125;
+
+// 3. 只读取一个字符 
+int main() &#123;
+    char ch;
+    //方式1
+    while (cin &gt;&gt; ch) &#123;
+        cout &lt;&lt; ch &lt;&lt; endl;
+    &#125;
+    //方式2： cin.get(ch) 或者 ch = cin.get() 或者 cin.get()
+    while (cin.get(ch)) &#123;   
+        cout &lt;&lt; ch &lt;&lt; endl;
+    &#125;
+    //方式3 ：ch = getchar()  
+    while (getchar()) &#123;
+        cout &lt;&lt; ch &lt;&lt; endl;
+    &#125;
+    return -1;
+&#125;
+
+
+// 3.1给定一个数，表示有多少组数（可能是数字和字符串的组合），然后读取
+int main() &#123;
+    int n = 0; 
+    while (cin &gt;&gt; n) &#123;   //每次读取1 + n 个数，即一个样例有n+1个数 
+        vector&lt;int&gt; nums(n);
+        for (int i = 0; i &lt; n; i++) &#123;
+            cin &gt;&gt; nums[i];
+        &#125;
+        //处理这组数/字符串
+        for (int i = 0; i &lt; n; i++) &#123;
+            cout &lt;&lt; nums[i] &lt;&lt; endl;
+        &#125;
+    &#125;
+    return -1;
+&#125;
+
+//3.2 首先给一个数字，表示需读取n个字符，然后顺序读取n个字符
+int main() &#123;
+    int n = 0;
+    while (cin &gt;&gt; n) &#123;  //输入数量
+        vector&lt;string&gt; strs;
+        for (int i = 0; i &lt; n; i++) &#123;
+            string temp;
+            cin &gt;&gt; temp;
+            strs.push_back(temp);
+        &#125;
+        //处理这组字符串
+        sort(strs.begin(), strs.end());
+        for (auto&amp; str : strs) &#123;
+            cout &lt;&lt; str &lt;&lt; &#39; &#39;;
+        &#125;
+    &#125;
+    return 0;
+&#125;
+
+
+//4.未给定数据个数，但是每一行代表一组数据，每个数据之间用空格隔开
+//4.1使用getchar() 或者 cin.get() 读取判断是否是换行符，若是的话，则表示该组数（样例）结束了，需进行处理
+int main() &#123;
+    int ele;
+    while (cin &gt;&gt; ele) &#123;
+        int sum = ele;
+        // getchar()   //读取单个字符
+        /*while (cin.get() != &#39;\n&#39;) &#123;*/   //判断换行符号
+        while (getchar() != &#39;\n&#39;) &#123;  //如果不是换行符号的话，读到的是数字后面的空格或者table
+            int num;
+            cin &gt;&gt; num;
+            sum += num;
+        &#125;
+        cout &lt;&lt; sum &lt;&lt; endl;
+    &#125;
+    return 0;
+&#125;
+
+//4.2 给定一行字符串，每个字符串用空格间隔，一个样例为一行
+int main() &#123;
+    string str;
+    vector&lt;string&gt; strs;
+    while (cin &gt;&gt; str) &#123;
+        strs.push_back(str);
+        if (getchar() == &#39;\n&#39;) &#123;  //控制测试样例
+            sort(strs.begin(), strs.end());
+            for (auto&amp; str : strs) &#123;
+                cout &lt;&lt; str &lt;&lt; &quot; &quot;;
+            &#125;
+            cout &lt;&lt; endl;
+            strs.clear();
+        &#125;
+    &#125;
+    return 0;
+&#125;
+
+
+//4.3 使用getline 读取一整行数字到字符串input中，然后使用字符串流stringstream，读取单个数字或者字符。
+int main() &#123;
+    string input;
+    while (getline(cin, input)) &#123;  //读取一行
+        stringstream data(input);  //使用字符串流
+        int num = 0, sum = 0;
+        while (data &gt;&gt; num) &#123;
+            sum += num;
+        &#125;
+        cout &lt;&lt; sum &lt;&lt; endl;
+    &#125;
+    return 0;
+&#125;
+
+
+//4.4 使用getline 读取一整行字符串到字符串input中，然后使用字符串流stringstream，读取单个数字或者字符。
+int main() &#123;
+    string words;
+    while (getline(cin, words)) &#123;
+        stringstream data(words);
+        vector&lt;string&gt; strs;
+        string str;
+        while (data &gt;&gt; str) &#123;
+            strs.push_back(str);
+        &#125;
+        sort(strs.begin(), strs.end());
+        for (auto&amp; str : strs) &#123;
+            cout &lt;&lt; str &lt;&lt; &quot; &quot;;
+        &#125;
+    &#125;
+&#125;
+
+//4.5 使用getline 读取一整行字符串到字符串input中，然后使用字符串流stringstream，读取单个数字或者字符。每个字符中间用&#39;,&#39;间隔
+int main() &#123;
+    string line;
+    
+    //while (cin &gt;&gt; line) &#123;  //因为加了“，”所以可以看出一个字符串读取
+    while(getline(cin, line))&#123;
+        vector&lt;string&gt; strs;
+        stringstream ss(line);
+        string str;
+        while (getline(ss, str, &#39;,&#39;)) &#123;
+            strs.push_back(str);
+        &#125;
+        //
+        sort(strs.begin(), strs.end());
+        for (auto&amp; str : strs) &#123;
+            cout &lt;&lt; str &lt;&lt; &quot; &quot;;
+        &#125;
+        cout &lt;&lt; endl;
+    &#125;
+    return 0;
+&#125;
+
+
+
+int main() &#123;
+    string str;
+
+    
+    //C语言读取字符、数字
+    int a;
+    char c;
+    string s;
+
+    scanf_s(&quot;%d&quot;, &amp;a);
+    scanf(&quot;%c&quot;, &amp;c);
+    scanf(&quot;%s&quot;, &amp;s);
+    printf(&quot;%d&quot;, a);
+
+
+    //读取字符
+    char ch;
+    cin &gt;&gt; ch;
+    ch = getchar();
+    while (cin.get(ch)) &#123; //获得单个字符
+        ;
+    &#125;
+    
+    //读取字符串
+    cin &gt;&gt; str;  //遇到空白停止
+    getline(cin, str);  //读入一行字符串
+
 &#125;
 </code></pre>
-<h3 id="二叉搜索树的删除"><a href="#二叉搜索树的删除" class="headerlink" title="二叉搜索树的删除:"></a>二叉搜索树的删除:</h3><pre><code class="c">//删除结点
-// 1.从当前结点左子树中找最右边放上去
-// 2.从当前结点右子树中找最左边放上去
-//创建一个结点替换要删除的结点
-//再去删除拿上来的哪个结点
-//二叉搜索树的删除
-void DeleteNode(LPBST p_tree, int first) 
-&#123;
-  LPTREENODE p_move = p_tree-&gt;p_root;
-  LPTREENODE p_move_parent = NULL;
-  while (NULL != p_move &amp;&amp; p_move-&gt;data.first != first) 
-  &#123;
-    p_move_parent = p_move;
-    if (first &lt; p_move-&gt;data.first) 
-    &#123;
-      p_move = p_move-&gt;p_left_child_node;
-    &#125; 
-    else if (first &gt; p_move-&gt;data.first) 
-    &#123;
-      p_move = p_move-&gt;p_right_child_node;
-    &#125; 
-    else 
-    &#123;
-      break;
-    &#125;
-  &#125;
-  //分析结果
-  if (NULL == p_move) 
-  &#123;
-    printf(&quot;无此处,删除失败\n&quot;);
-    return;
-  &#125; 
-  else if (p_move-&gt;p_left_child_node != NULL &amp;&amp; p_move-&gt;p_right_child_node != NULL) 
-  &#123;
-    //左右子树都健在的情况
-    LPTREENODE p_move_node = p_move-&gt;p_left_child_node;
-    LPTREENODE p_move_node_parent = p_move;
-    while (NULL != p_move_node-&gt;p_right_child_node) 
-    &#123;
-      p_move_node_parent = p_move_node;
-      p_move_node = p_move_node-&gt;p_right_child_node;
-    &#125;
-    LPTREENODE p_new_node = CreateTreeNode(p_move_node-&gt;data);
-    p_new_node-&gt;p_left_child_node = p_move-&gt;p_left_child_node;
-    p_new_node-&gt;p_left_child_node = p_move-&gt;p_right_child_node;
-    //分类讨论父节点是否存在
-    if (NULL == p_move_parent) 
-    &#123;
-      p_tree-&gt;p_root = p_new_node;
-    &#125; 
-    else if (p_move == p_move_parent-&gt;p_left_child_node) 
-    &#123;
-      p_move_parent-&gt;p_left_child_node = p_new_node;
-    &#125; 
-    else 
-    &#123;
-      p_move_parent-&gt;p_right_child_node = p_new_node;
-    &#125;
-    //调整二叉树
-    //改变删除指针的位置
-    if (p_move_node_parent == p_move) 
-    &#123;  //调整的结点在左边
-      p_move_parent = p_new_node;
-    &#125; 
-    else 
-    &#123;
-      p_move_parent = p_move_node_parent;
-    &#125;
-    free(p_move);          //原来的结点干掉
-    p_move = p_move_node;  //删除指针调整到要调节的位置
-  &#125;
-  //只有一边的情况的删除
-  LPTREENODE p_side_node = NULL;
-  if (NULL != p_move-&gt;p_left_child_node) 
-  &#123;
-    p_side_node = p_move-&gt;p_left_child_node;
-  &#125; 
-  else 
-  &#123;
-    p_side_node = p_move-&gt;p_right_child_node;
-  &#125;
-  if (p_tree-&gt;p_root == p_move) 
-  &#123;
-    p_tree-&gt;p_root = p_side_node;
-  &#125; 
-  else 
-  &#123;
-    if (p_move == p_move_parent-&gt;p_left_child_node) 
-    &#123;
-      p_move_parent-&gt;p_left_child_node = p_side_node;
-    &#125; 
-    else 
-    &#123;
-      p_move_parent-&gt;p_right_child_node = p_side_node;
-    &#125;
-  &#125;
-  free(p_move);
-  p_tree-&gt;tree_size--;
+<h2 id="自带的宏常量"><a href="#自带的宏常量" class="headerlink" title="自带的宏常量"></a>自带的宏常量</h2><pre><code class="c++">int N = INT_MIN;
+int N = INT_MAX;
+const int INF = 0x3f3f3f3f; //通常用来代替最大值，防止运算过程中溢出  0x16进制
+</code></pre>
+<h2 id="字符串判断函数"><a href="#字符串判断函数" class="headerlink" title="字符串判断函数"></a>字符串判断函数</h2><pre><code class="c++">isdigit(c)  //判断c字符是不是数字
+isalpha(c)  //判断c字符是不是字母
+isalnum(c)  //判断c字符是不是数字或者字母
+tolower(c)  //转为小写
+toupper(c)  //转为大写
+</code></pre>
+<h2 id="字符串和数值间的转换"><a href="#字符串和数值间的转换" class="headerlink" title="字符串和数值间的转换"></a>字符串和数值间的转换</h2><pre><code class="c++">int num = 100;
+string str = to_string(num); //整形转字符串
+int number = stoi(str);  //字符串转为整形 stol()是字符串转为长整形
+</code></pre>
+<h2 id="迭代器的二分"><a href="#迭代器的二分" class="headerlink" title="迭代器的二分"></a>迭代器的二分</h2><pre><code class="c++">vector&lt;int&gt; nums&#123;1,2,34,44,99&#125;;
+int k = lower_bound(nums.begin(), nums.end(), 56) - nums.begin(); //第一个大于等于目标值的迭代器位置
+int k = upper_bound(nums.begin(), nums.end(), 56) - nums.begin(); // 找到第一个大于目标值的迭代器位置
+</code></pre>
+<h2 id="字符串转为小写"><a href="#字符串转为小写" class="headerlink" title="字符串转为小写"></a>字符串转为小写</h2><pre><code class="c++">/**op作用的范围[str1.begin(), str1.end], 作用完成后，存储位置的开头为：str2.begin()，op为toupper/tolower*/
+transform(str1.begin(), str1.end(), str2.begin(), ::toupper);
+transform(str1.begin(), str1.end(), str2.begin(), ::tolower);
+</code></pre>
+<h2 id="小根堆"><a href="#小根堆" class="headerlink" title="小根堆"></a>小根堆</h2><pre><code class="c++">priority_queue&lt;int&gt; pq; //默认是大根堆
+priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; pq; //小根堆
+</code></pre>
+<h2 id="快速初始化数组"><a href="#快速初始化数组" class="headerlink" title="快速初始化数组"></a>快速初始化数组</h2><pre><code class="c++">// 注意：这个函数是按字节初始化的
+memset(nums, 0, sizeof nums);
+memset(nums, -1, sizeof nums);
+memset(nums, 0x3f, sizeof nums);
+</code></pre>
+<h2 id="C-11的特性"><a href="#C-11的特性" class="headerlink" title="C++11的特性"></a>C++11的特性</h2><pre><code class="c++">auto p = new ListNode(); // auto 关键字
+Node* pre = nullptr   // nullptr代替NULL
+unordered_map&lt;int,int&gt; mp; //哈希表 内部是无序的
+unordered_set&lt;int&gt; st; //无序集合
+</code></pre>
+<h2 id="bitset"><a href="#bitset" class="headerlink" title="bitset"></a>bitset</h2><pre><code class="c++">uint32_t reverseBits(uint32_t n) &#123;
+    string s = bitset&lt;32&gt;(n).to_string();
+    reverse(s.begin(), s.end());
+    return bitset&lt;32&gt;(s).to_ulong();
 &#125;
 </code></pre>
-<h3 id="测试数据-1"><a href="#测试数据-1" class="headerlink" title="测试数据:"></a>测试数据:</h3><pre><code class="c">printf(&quot;删除结点3\n&quot;);
-DeleteNode(p_tree, 3);
-InorderTraversal(p_tree-&gt;p_root);
+<h2 id="字符串分割"><a href="#字符串分割" class="headerlink" title="字符串分割"></a>字符串分割</h2><p>将字符串按照空格分割</p>
+<pre><code class="c++">string s = &quot;hello world my name is yao jun&quot;;
+stringstream ss(s);
+string str;
+int cnt = 0;
+while(ss &gt;&gt; str)&#123;
+    cnt++;
+    cout&lt;&lt;str&lt;&lt;endl;
+&#125;
+cout&lt;&lt;cnt&lt;&lt;endl;
 </code></pre>
+<blockquote>
+<p>执行结果：</p>
+<p>hello</p>
+<p>world</p>
+<p>my</p>
+<p>name</p>
+<p>is</p>
+<p>yao</p>
+<p>jun</p>
+<p>7</p>
+</blockquote>
+<h2 id="四舍五入保留小数"><a href="#四舍五入保留小数" class="headerlink" title="四舍五入保留小数"></a>四舍五入保留小数</h2><pre><code class="c++">char str[10];
+double num = 22.23434;
+sprintf(str, &quot;%.2f&quot;, num);
+string s = str;
+cout&lt;&lt;s&lt;&lt;endl;
+</code></pre>
+<h2 id="字符串按格式拆分"><a href="#字符串按格式拆分" class="headerlink" title="字符串按格式拆分"></a>字符串按格式拆分</h2><pre><code class="c++">string a = &quot;12:59:36&quot;;
+char str2[100];
+memcpy(str2, a.c_str(), strlen(a.c_str()));
+int u, v, w;
+sscanf(str2, &quot;%d:%d:%d&quot;, &amp;u, &amp;v, &amp;w);
+cout&lt;&lt;u&lt;&lt;&quot; &quot;&lt;&lt;v&lt;&lt;&quot; &quot;&lt;&lt;w&lt;&lt;endl;
+</code></pre>
+<blockquote>
+<p>执行结果：</p>
+<p>12 59 36</p>
+</blockquote>
+<h2 id="相同字符的字符串"><a href="#相同字符的字符串" class="headerlink" title="相同字符的字符串"></a>相同字符的字符串</h2><pre><code class="c++">string s(10, &#39;a&#39;);
+cout&lt;&lt;s&lt;&lt;endl;
+</code></pre>
+<blockquote>
+<p>执行结果:</p>
+<p>aaaaaaaaaa</p>
+</blockquote>
+<h2 id="结构体排序"><a href="#结构体排序" class="headerlink" title="结构体排序"></a>结构体排序</h2><pre><code class="c++">struct node&#123;
+    int a, b;
+    // 从小到大排序
+    bool operator &lt; (const node&amp; node_)const&#123;
+        if(a != node_.a) return a &lt; node_.a;
+        return b &lt; node_.b;
+    &#125;
+&#125;;
+int main()&#123;
+    vector&lt;node&gt; tt;
+    tt.push_back(&#123;1,5&#125;);
+    tt.push_back(&#123;2,3&#125;);
+    sort(tt.begin(), tt.end());
+    for(auto &amp;node: tt)&#123;
+        cout&lt;&lt;node.a&lt;&lt;&quot; &quot;&lt;&lt;node.b&lt;&lt;endl;
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+<blockquote>
+<p>执行结果：</p>
+<p>1 5</p>
+<p>2 3</p>
+</blockquote>
+<h2 id="优先队列自定义排序"><a href="#优先队列自定义排序" class="headerlink" title="优先队列自定义排序"></a>优先队列自定义排序</h2><pre><code class="c++">struct node&#123;
+    int a, b;
+    // 在优先队列中，跟排序的规则是反的，这里是指a大的排在前面，a相同时，b大的排在前面
+    bool operator &lt; (const node&amp; node_)const&#123;
+        if(a != node_.a) return a &lt; node_.a;
+        return b &lt; node_.b;
+    &#125;
+&#125;;
+int main()&#123;
+    priority_queue&lt;node&gt; pq;
+    pq.push(&#123;1,5&#125;);
+    pq.push(&#123;2,3&#125;);
+    pq.push(&#123;2,5&#125;);
+    while(!pq.empty()) &#123;
+        cout&lt;&lt;pq.top().a&lt;&lt;&quot; &quot;&lt;&lt;pq.top().b&lt;&lt;endl;
+        pq.pop();
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+<blockquote>
+<p>执行结果</p>
+<p>2 5</p>
+<p>2 3</p>
+<p>1 5</p>
+</blockquote>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。邮件至kpsun@foxmail.com </span>
@@ -1137,12 +1425,12 @@ InorderTraversal(p_tree-&gt;p_root);
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>数据结构-二叉搜索树(tree)</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">1.1k</span></p>
+    <p><span class="copy-title">文章标题:</span>算法-C/C++常用刷题技巧</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">4k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="kpsun">kpsun</a></p>
-    <p><span class="copy-title">发布时间:</span>2022-07-08, 19:34:11</p>
-    <p><span class="copy-title">最后更新:</span>2022-10-17, 11:42:54</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/07/08/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91(tree)/" title="数据结构-二叉搜索树(tree)">http://goskp.github.io/2022/07/08/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91(tree)/</a>
+    <p><span class="copy-title">发布时间:</span>2022-09-30, 15:36:35</p>
+    <p><span class="copy-title">最后更新:</span>2022-10-20, 22:56:46</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/09/30/%E7%AE%97%E6%B3%95-CC++%E5%B8%B8%E7%94%A8%E5%88%B7%E9%A2%98%E6%8A%80%E5%B7%A7/" title="算法-C/C++常用刷题技巧">http://goskp.github.io/2022/09/30/%E7%AE%97%E6%B3%95-CC++%E5%B8%B8%E7%94%A8%E5%88%B7%E9%A2%98%E6%8A%80%E5%B7%A7/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
