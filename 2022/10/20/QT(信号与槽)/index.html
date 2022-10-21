@@ -816,7 +816,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-10-20 22:46:06'>2022-10-20 22:40</time>
+            发布时间 : <time class="date" title='最后更新: 2022-10-21 22:19:45'>2022-10-20 22:40</time>
         
     </div>
     <div class="article-meta">
@@ -885,7 +885,7 @@ target_link_libraries(QtPro Qt6::Widgets)
 <pre><code class="cpp">#ifndef _SUBWIDGET_H_
 #define _SUBWIDGET_H_
 
-#include&lt;QWidget&gt;
+#include &lt;QWidget&gt;
 class SubWidget : public QWidget
 &#123;
     Q_OBJECT
@@ -907,8 +907,8 @@ signals:
 #endif
 </code></pre>
 <p>SubWidget.cpp:</p>
-<pre><code class="cpp">#include&quot;SubWidget.h&quot;
-#include&lt;QPushButton&gt;
+<pre><code class="cpp">#include &quot;SubWidget.h&quot;
+#include &lt;QPushButton&gt;
 SubWidget::SubWidget(QWidget* parent)
     :QWidget(parent)
 &#123;
@@ -930,7 +930,7 @@ SubWidget::SubWidget(QWidget* parent)
 <pre><code class="cpp">#ifndef _WIDGET_H_
 #define _WIDGET_H_
 
-#include&lt;QWidget&gt;
+#include &lt;QWidget&gt;
 class SubWidget;
 class Widget : public QWidget
 &#123;
@@ -947,10 +947,10 @@ private:
 #endif
 </code></pre>
 <p>Widget.cpp:</p>
-<pre><code class="cpp">#include&quot;Widget.h&quot;
-#include&lt;QPushButton&gt;
-#include&quot;SubWidget.h&quot;
-#include&lt;QDebug&gt;
+<pre><code class="cpp">#include &quot;Widget.h&quot;
+#include &lt;QPushButton&gt;
+#include &quot;SubWidget.h&quot;
+#include &lt;QDebug&gt;
 Widget::Widget(QWidget* parent)
     :QWidget(parent)
     ,subWidget(new SubWidget)
@@ -1003,8 +1003,8 @@ void Widget::onCutMainWindow(int val)
 &#125;
 </code></pre>
 <p>main.cpp:</p>
-<pre><code class="cpp">#include&lt;QApplication&gt;
-#include&quot;Widget.h&quot;
+<pre><code class="cpp">#include &lt;QApplication&gt;
+#include &quot;Widget.h&quot;
 //创建两个窗口，每个窗口都给一个按钮，点击按钮切换窗口
 
 int main(int argc,char* argv[])
@@ -1057,7 +1057,7 @@ target_link_libraries(QtPro Qt6::Widgets)
 <pre><code class="cpp">#ifndef _WIDGET_H_
 #define _WIDGET_H_
 
-#include&lt;QWidget&gt;
+#include &lt;QWidget&gt;
 class Widget :public QWidget
 &#123;
     Q_OBJECT
@@ -1075,9 +1075,9 @@ public:
 #endif // !_WIDGET_H_
 </code></pre>
 <p>Widget.cpp:</p>
-<pre><code class="cpp">#include&quot;Widget.h&quot;
-#include&lt;QPushButton&gt;
-#include&lt;QDebug&gt;
+<pre><code class="cpp">#include &quot;Widget.h&quot;
+#include &lt;QPushButton&gt;
+#include &lt;QDebug&gt;
 
 void globalOnClicked()
 &#123;
@@ -1136,9 +1136,9 @@ void Widget::onButtonPressed()
 &#125;
 </code></pre>
 <p>main.cpp:</p>
-<pre><code class="cpp">#include&lt;QApplication&gt;
-#include&lt;QWidget&gt;		//窗口
-#include&lt;QPushButton&gt;
+<pre><code class="cpp">#include &lt;QApplication&gt;
+#include &lt;QWidget&gt;		//窗口
+#include &lt;QPushButton&gt;
 class Widget : public QWidget
 &#123;
     Q_OBJECT		//使用信号与槽，必须包含此宏
@@ -1210,7 +1210,7 @@ int main(int argc,char* argv[])
     <p><span class="copy-title">字数:</span><span class="post-count">1.6k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="kpsun">kpsun</a></p>
     <p><span class="copy-title">发布时间:</span>2022-10-20, 22:40:59</p>
-    <p><span class="copy-title">最后更新:</span>2022-10-20, 22:46:06</p>
+    <p><span class="copy-title">最后更新:</span>2022-10-21, 22:19:45</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/10/20/QT(%E4%BF%A1%E5%8F%B7%E4%B8%8E%E6%A7%BD)/" title="QT(信号与槽)">http://goskp.github.io/2022/10/20/QT(%E4%BF%A1%E5%8F%B7%E4%B8%8E%E6%A7%BD)/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
