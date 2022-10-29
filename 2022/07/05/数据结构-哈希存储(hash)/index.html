@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>数据结构-哈希存储(hash) | kpsun</title>
+  <meta name="keywords" content=" 数据结构 ">
+  <meta name="description" content="数据结构-哈希存储(hash) | kpsun">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="个人简介孙楷朋准大二计算机相关专业在读热爱编程,乐于合作,善于总结分享,有良好的的编程习惯目标BAT大厂联系方式 QQ: 1287923885 WeChat: code_cpp Email: &amp;#107;&amp;#112;&amp;#115;&amp;#117;&amp;#110;&amp;#64;&amp;#x66;&amp;#111;&amp;#x78;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于我">
+<meta property="og:url" content="http://goskp.github.io/about/index.html">
+<meta property="og:site_name" content="kpsun">
+<meta property="og:description" content="个人简介孙楷朋准大二计算机相关专业在读热爱编程,乐于合作,善于总结分享,有良好的的编程习惯目标BAT大厂联系方式 QQ: 1287923885 WeChat: code_cpp Email: &amp;#107;&amp;#112;&amp;#115;&amp;#117;&amp;#110;&amp;#64;&amp;#x66;&amp;#111;&amp;#x78;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-14T04:24:56.000Z">
+<meta property="article:modified_time" content="2022-10-13T13:05:22.823Z">
+<meta property="article:author" content="kpsun">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/o.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="false" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="false" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/o.jpg"/>
+</a>
+<div class="author">
+    <span>kpsun</span>
+</div>
+
+<div class="icon">
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(50)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        
+                        后端
+                        <small>(23)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="数据库">
+                        
+                        数据库
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Unity">
+                        
+                        Unity
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="数据结构">
+                        
+                        数据结构
+                        <small>(22)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="算法">
+                        
+                        算法
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="计算机硬件">
+                        
+                        计算机硬件
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="设计模式">
+                        
+                        设计模式
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="50">
+<input type="hidden" id="yelog_site_word_count" value="66.5k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://fomalhaut1998.github.io/">Fomalhaut1998a</a></li>
+            
+            <li><a target="_blank" href="https://cnhuazhu.gitee.io/">cnhuazhu</a></li>
+            
+            <li><a target="_blank" href="https://wangeasycloud.cn/">cheerio</a></li>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://lee-jhong001-github-io.vercel.app/">lee-jhong</a></li>
+            
+            <li><a target="_blank" href="https://hi-wilson.github.io/">Wilson</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Algorithm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>C++</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>DesignPattern</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>MySQL</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Rust</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unity</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数据结构</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>计算机硬件</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/10/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91(AVL)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-平衡二叉树(AVL)">数据结构-平衡二叉树(AVL)</span>
+            <span class="post-date" title="2022-10-22 10:54:28">2022/10/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 Unity "
+           href="/2022/10/14/Unity%E9%A1%B9%E7%9B%AE/"
+           data-tag="Unity"
+           data-author="" >
+            <span class="post-title" title="Unity">Unity</span>
+            <span class="post-date" title="2022-10-14 22:37:13">2022/10/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据库 "
+           href="/2022/10/13/MySQL%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B%E7%9A%84%E7%BB%86%E8%8A%82/"
+           data-tag="MySQL"
+           data-author="" >
+            <span class="post-title" title="MySQL配置过程的细节">MySQL配置过程的细节</span>
+            <span class="post-date" title="2022-10-13 21:05:13">2022/10/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 设计模式 "
+           href="/2022/10/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="DesignPattern"
+           data-author="" >
+            <span class="post-title" title="设计模式(观察者模式)">设计模式(观察者模式)</span>
+            <span class="post-date" title="2022-10-01 10:34:34">2022/10/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/08/31/Rust(1)/"
+           data-tag="Rust"
+           data-author="" >
+            <span class="post-title" title="Rust(1)">Rust(1)</span>
+            <span class="post-date" title="2022-08-31 18:39:55">2022/08/31</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%9E%E6%BA%AF%E6%B3%95(DP,Queen)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-回溯法(DP,Queen)">数据结构-回溯法(DP,Queen)</span>
+            <span class="post-date" title="2022-07-22 16:19:29">2022/07/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92(DP)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-动态规划(DP)">数据结构-动态规划(DP)</span>
+            <span class="post-date" title="2022-07-20 16:18:50">2022/07/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-分而治之">数据结构-分而治之</span>
+            <span class="post-date" title="2022-07-17 16:18:25">2022/07/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95(graph)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-贪心算法(graph)">数据结构-贪心算法(graph)</span>
+            <span class="post-date" title="2022-07-16 16:17:58">2022/07/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%B7%B1%E5%BA%A6%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88(DFS,BFS)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-深度/广度优先(DFS,BFS)">数据结构-深度/广度优先(DFS,BFS)</span>
+            <span class="post-date" title="2022-07-15 16:17:01">2022/07/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%BE(graph)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-图(graph)">数据结构-图(graph)</span>
+            <span class="post-date" title="2022-07-13 16:16:30">2022/07/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%A2%E9%BB%91%E6%A0%91(RB)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-红黑树(RB)">数据结构-红黑树(RB)</span>
+            <span class="post-date" title="2022-07-12 16:15:41">2022/07/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%88%86%E6%94%AF%E5%AE%9A%E7%95%8C(C++%E6%8F%8F%E8%BF%B0)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-分支定界(C++描述)">数据结构-分支定界(C++描述)</span>
+            <span class="post-date" title="2022-07-10 16:14:33">2022/07/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91(tree)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-哈夫曼树(tree)">数据结构-哈夫曼树(tree)</span>
+            <span class="post-date" title="2022-07-09 16:06:00">2022/07/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/08/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91(tree)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-二叉搜索树(tree)">数据结构-二叉搜索树(tree)</span>
+            <span class="post-date" title="2022-07-08 19:34:11">2022/07/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91(tree)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-二叉树(tree)">数据结构-二叉树(tree)</span>
+            <span class="post-date" title="2022-07-07 08:26:46">2022/07/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/06/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%A0%86(heap)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-堆(heap)">数据结构-堆(heap)</span>
+            <span class="post-date" title="2022-07-06 12:50:51">2022/07/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%93%88%E5%B8%8C%E8%A1%A8(hash)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-哈希表(hash)">数据结构-哈希表(hash)</span>
+            <span class="post-date" title="2022-07-05 18:06:58">2022/07/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%93%88%E5%B8%8C%E5%AD%98%E5%82%A8(hash)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-哈希存储(hash)">数据结构-哈希存储(hash)</span>
+            <span class="post-date" title="2022-07-05 17:12:58">2022/07/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%B0%81%E8%A3%85string%E7%B1%BB(C++%E6%8F%8F%E8%BF%B0)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-简单封装string类(C++描述)">数据结构-简单封装string类(C++描述)</span>
+            <span class="post-date" title="2022-07-04 16:17:52">2022/07/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/07/04/%E7%AE%80%E5%8D%95%E5%B0%81%E8%A3%85string%E7%B1%BB/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="简单封装string类">简单封装string类</span>
+            <span class="post-date" title="2022-07-04 16:17:52">2022/07/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%B8%B2(string,BF,KMP)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-串(string,BF,KMP)">数据结构-串(string,BF,KMP)</span>
+            <span class="post-date" title="2022-07-03 14:36:09">2022/07/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97(queue)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-队列(queue)">数据结构-队列(queue)</span>
+            <span class="post-date" title="2022-07-02 15:38:29">2022/07/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/07/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88(stack)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-栈(stack)">数据结构-栈(stack)</span>
+            <span class="post-date" title="2022-07-01 20:29:22">2022/07/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/06/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%A1%BA%E5%BA%8F%E8%A1%A8(list)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-顺序表(list)">数据结构-顺序表(list)</span>
+            <span class="post-date" title="2022-06-30 12:46:33">2022/06/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 算法 "
+           href="/2022/06/29/%E7%AE%97%E6%B3%95-%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%8A%A8%E4%BD%9C/"
+           data-tag="Algorithm"
+           data-author="" >
+            <span class="post-title" title="算法-单链表的动作">算法-单链表的动作</span>
+            <span class="post-date" title="2022-06-29 10:40:49">2022/06/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/06/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8(list)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-双向链表(list)">数据结构-双向链表(list)</span>
+            <span class="post-date" title="2022-06-28 10:34:06">2022/06/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据结构 "
+           href="/2022/06/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E7%A1%80%E5%8D%95%E9%93%BE%E8%A1%A8(list)/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构-基础单链表(list)">数据结构-基础单链表(list)</span>
+            <span class="post-date" title="2022-06-27 20:54:15">2022/06/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/26/C++%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E6%A8%A1%E6%9D%BF/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++可变参数模板">C++可变参数模板</span>
+            <span class="post-date" title="2022-06-26 18:15:05">2022/06/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/24/C++%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++正则表达式">C++正则表达式</span>
+            <span class="post-date" title="2022-06-24 17:10:54">2022/06/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/21/C++%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++智能指针">C++智能指针</span>
+            <span class="post-date" title="2022-06-21 19:06:51">2022/06/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/17/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E7%AE%97%E6%B3%95%E7%AF%87(%E6%8B%B7%E8%B4%9D,%E7%AE%97%E6%95%B0,%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88,%E5%A0%86)/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库算法篇(拷贝,算数,排列组合,堆)">C++标准模板库算法篇(拷贝,算数,排列组合,堆)</span>
+            <span class="post-date" title="2022-06-17 14:01:01">2022/06/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/13/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E7%AE%97%E6%B3%95%E7%AF%87(%E6%9F%A5%E6%89%BE,%E6%8E%92%E5%BA%8F,%E9%9B%86%E5%90%88)/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库算法篇(查找,排序,集合)">C++标准模板库算法篇(查找,排序,集合)</span>
+            <span class="post-date" title="2022-06-13 15:56:33">2022/06/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/09/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库之迭代器">C++标准模板库之迭代器</span>
+            <span class="post-date" title="2022-06-09 16:47:20">2022/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/06/04/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E4%B9%8Binitalizer_list%E4%B8%8Eset%E4%B8%8Emap/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库之initalizer_list与set与map">C++标准模板库之initalizer_list与set与map</span>
+            <span class="post-date" title="2022-06-04 16:41:40">2022/06/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/30/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E4%B9%8Blist%E4%B8%8Estack%E4%B8%8Equeue/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库之list与stack与queue">C++标准模板库之list与stack与queue</span>
+            <span class="post-date" title="2022-05-30 12:35:09">2022/05/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/27/C++%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E4%B9%8Barray%E4%B8%8Evector/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++标准模板库之array与vector">C++标准模板库之array与vector</span>
+            <span class="post-date" title="2022-05-27 14:16:07">2022/05/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/26/C++%E6%A8%A1%E6%9D%BF/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++模板">C++模板</span>
+            <span class="post-date" title="2022-05-26 08:32:18">2022/05/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/25/C++%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++异常处理">C++异常处理</span>
+            <span class="post-date" title="2022-05-25 16:26:04">2022/05/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/24/C++IO%E6%B5%81/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++IO流">C++IO流</span>
+            <span class="post-date" title="2022-05-24 16:11:36">2022/05/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/23/C++%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++虚函数与多态">C++虚函数与多态</span>
+            <span class="post-date" title="2022-05-23 16:04:05">2022/05/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/22/C++%E7%BB%A7%E6%89%BF/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++继承">C++继承</span>
+            <span class="post-date" title="2022-05-22 11:47:42">2022/05/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/21/C++%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++运算符重载">C++运算符重载</span>
+            <span class="post-date" title="2022-05-21 08:32:18">2022/05/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/20/C++%E5%8F%8B%E5%85%83/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++友元">C++友元</span>
+            <span class="post-date" title="2022-05-20 18:37:54">2022/05/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/19/C++%E7%89%B9%E6%AE%8A%E6%88%90%E5%91%98/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++特殊成员">C++特殊成员</span>
+            <span class="post-date" title="2022-05-19 21:07:35">2022/05/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/18/C++%E7%B1%BB%E7%9A%84%E7%BB%84%E5%90%88%E6%A1%88%E4%BE%8B/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++类的组合案例">C++类的组合案例</span>
+            <span class="post-date" title="2022-05-18 19:07:35">2022/05/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/17/C++%E6%9E%84%E9%80%A0%E4%B8%8E%E6%9E%90%E6%9E%84/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++构造与析构">C++构造与析构</span>
+            <span class="post-date" title="2022-05-17 13:17:08">2022/05/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/16/C++%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++类和对象">C++类和对象</span>
+            <span class="post-date" title="2022-05-16 11:58:16">2022/05/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/05/15/C++%E5%92%8CC%E7%9A%84%E5%8C%BA%E5%88%AB/"
+           data-tag="C++"
+           data-author="" >
+            <span class="post-title" title="C++和C的区别">C++和C的区别</span>
+            <span class="post-date" title="2022-05-15 15:24:31">2022/05/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 计算机硬件 "
+           href="/2022/05/10/%E8%AE%A1%E7%BB%84-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80/"
+           data-tag="计算机硬件"
+           data-author="" >
+            <span class="post-title" title="计组-计算机硬件基础">计组-计算机硬件基础</span>
+            <span class="post-date" title="2022-05-10 10:30:46">2022/05/10</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-数据结构-哈希存储(hash)" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">数据结构-哈希存储(hash)</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="数据结构">数据结构</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">数据结构</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2022-10-29 22:48:53'>2022-07-05 17:12</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:665</span>
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hash%E5%9F%BA%E7%A1%80-hash%E5%8F%AB%E5%81%9A%E5%93%88%E5%B8%8C-%E5%8F%88%E7%A7%B0%E4%B8%BA%E6%95%A3%E5%88%97"><span class="toc-text">Hash基础(hash叫做哈希,又称为散列)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0-%E7%94%A8%E6%9D%A5%E6%B1%82hash%E5%9C%B0%E5%9D%80%E7%9A%84-%E4%B8%8D%E6%98%AF%E6%8C%87%E9%92%88-%E4%BA%BA%E4%B8%BA%E7%9A%84%E5%9C%B0%E5%9D%80"><span class="toc-text">哈希构造函数(用来求hash地址的,不是指针),人为的地址</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%96%E4%BD%99%E6%B3%95-h-k-x3D-k-p"><span class="toc-text">取余法: h(k) &#x3D; k % p</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#h-key-x3D-key-p"><span class="toc-text">h(key) &#x3D; key % p</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#p-x3D-10-p%E7%94%B1%E8%87%AA%E5%B7%B1%E5%86%B3%E5%AE%9A"><span class="toc-text">p &#x3D; 10(p由自己决定)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#h-10-x3D-10-10-x3D-0"><span class="toc-text">h(10) &#x3D; 10 % 10 &#x3D; 0;</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#h-14-x3D-14-10-x3D-4"><span class="toc-text">h(14) &#x3D; 14 % 10 &#x3D; 4;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E5%AE%9A%E5%9D%80-h-k-x3D-k"><span class="toc-text">直接定址: h(k) &#x3D; k</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#array-12-x3D-12"><span class="toc-text">array[12] &#x3D; 12;</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#array-13-x3D-13"><span class="toc-text">array[13] &#x3D; 13</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E6%B3%95"><span class="toc-text">随机数法:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#rand"><span class="toc-text">rand();</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%E5%86%B2%E7%AA%81"><span class="toc-text">哈希冲突:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E7%9A%84%E5%85%83%E7%B4%A0%E4%BC%9A%E4%BA%A7%E7%94%9F%E7%9B%B8%E5%90%8C%E7%9A%84%E5%93%88%E5%B8%8C%E5%9C%B0%E5%9D%80"><span class="toc-text">不同的元素会产生相同的哈希地址</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E5%93%88%E5%B8%8C%E5%86%B2%E7%AA%81"><span class="toc-text">如何处理哈希冲突</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%80%E6%94%BE%E5%9C%B0%E5%9D%80%E6%B3%95"><span class="toc-text">开放地址法:</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BA%A7%E7%94%9F%E5%86%B2%E7%AA%81%E7%9A%84%E5%85%83%E7%B4%A0%E5%AD%98%E6%94%BE%E5%88%B0%E7%A9%BA%E7%9A%84%E7%A9%BA%E9%97%B4%E4%B8%AD"><span class="toc-text">产生冲突的元素存放到空的空间中</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%82%BB%E6%8E%A5%E8%A1%A8-gt-%E5%9B%BE"><span class="toc-text">邻接表-&gt;图:</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%9C%A8%E5%86%B2%E7%AA%81%E4%BD%8D%E7%BD%AE%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%93%BE%E8%A1%A8"><span class="toc-text">在冲突位置创建一个链表</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BB%BB%E4%BD%95%E6%9C%89%E5%86%B2%E7%AA%81%E7%9A%84%E5%85%83%E7%B4%A0%E9%83%BD%E5%AD%98%E5%88%B0%E6%AD%A4%E9%93%BE%E8%A1%A8%E4%B8%AD"><span class="toc-text">任何有冲突的元素都存到此链表中</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%8F%8F%E8%BF%B0Hash%E7%BB%93%E6%9E%84"><span class="toc-text">数组描述Hash结构:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E6%95%B0%E6%8D%AE%E6%9E%84%E5%BB%BA%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">为数据构建关键字:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hash%E7%BB%93%E6%9E%84"><span class="toc-text">Hash结构:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAHash%E8%A1%A8"><span class="toc-text">创建Hash表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96Hash%E5%9C%B0%E5%9D%80"><span class="toc-text">获取Hash地址:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91Hash%E8%A1%A8%E4%B8%AD%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-text">向Hash表中插入数据:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%81%8D%E5%8E%86Hash%E8%A1%A8%E4%B8%8E%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE"><span class="toc-text">遍历Hash表与测试数据:</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Hash基础-hash叫做哈希-又称为散列"><a href="#Hash基础-hash叫做哈希-又称为散列" class="headerlink" title="Hash基础(hash叫做哈希,又称为散列)"></a>Hash基础(hash叫做哈希,又称为散列)</h1><h3 id="哈希构造函数-用来求hash地址的-不是指针-人为的地址"><a href="#哈希构造函数-用来求hash地址的-不是指针-人为的地址" class="headerlink" title="哈希构造函数(用来求hash地址的,不是指针),人为的地址"></a>哈希构造函数(用来求hash地址的,不是指针),人为的地址</h3><ul>
+<li><h4 id="取余法-h-k-x3D-k-p"><a href="#取余法-h-k-x3D-k-p" class="headerlink" title="取余法: h(k) &#x3D; k % p"></a>取余法: h(k) &#x3D; k % p</h4><ul>
+<li><h5 id="h-key-x3D-key-p"><a href="#h-key-x3D-key-p" class="headerlink" title="h(key) &#x3D; key % p"></a>h(key) &#x3D; key % p</h5></li>
+<li><h5 id="p-x3D-10-p由自己决定"><a href="#p-x3D-10-p由自己决定" class="headerlink" title="p &#x3D; 10(p由自己决定)"></a>p &#x3D; 10(p由自己决定)</h5></li>
+<li><h5 id="h-10-x3D-10-10-x3D-0"><a href="#h-10-x3D-10-10-x3D-0" class="headerlink" title="h(10) &#x3D; 10 % 10 &#x3D; 0;"></a>h(10) &#x3D; 10 % 10 &#x3D; 0;</h5></li>
+<li><h5 id="h-14-x3D-14-10-x3D-4"><a href="#h-14-x3D-14-10-x3D-4" class="headerlink" title="h(14) &#x3D; 14 % 10 &#x3D; 4;"></a>h(14) &#x3D; 14 % 10 &#x3D; 4;</h5></li>
+</ul>
+</li>
+<li><h3 id="直接定址-h-k-x3D-k"><a href="#直接定址-h-k-x3D-k" class="headerlink" title="直接定址: h(k) &#x3D; k"></a>直接定址: h(k) &#x3D; k</h3><ul>
+<li><h5 id="array-12-x3D-12"><a href="#array-12-x3D-12" class="headerlink" title="array[12] &#x3D; 12;"></a>array[12] &#x3D; 12;</h5></li>
+<li><h5 id="array-13-x3D-13"><a href="#array-13-x3D-13" class="headerlink" title="array[13] &#x3D; 13"></a>array[13] &#x3D; 13</h5></li>
+</ul>
+</li>
+<li><h4 id="随机数法"><a href="#随机数法" class="headerlink" title="随机数法:"></a>随机数法:</h4><ul>
+<li><h5 id="rand"><a href="#rand" class="headerlink" title="rand();"></a>rand();</h5></li>
+</ul>
+</li>
+<li><h4 id="哈希冲突"><a href="#哈希冲突" class="headerlink" title="哈希冲突:"></a>哈希冲突:</h4><ul>
+<li><h5 id="不同的元素会产生相同的哈希地址"><a href="#不同的元素会产生相同的哈希地址" class="headerlink" title="不同的元素会产生相同的哈希地址"></a>不同的元素会产生相同的哈希地址</h5></li>
+<li><h5 id="如何处理哈希冲突"><a href="#如何处理哈希冲突" class="headerlink" title="如何处理哈希冲突"></a>如何处理哈希冲突</h5><ul>
+<li><h5 id="开放地址法"><a href="#开放地址法" class="headerlink" title="开放地址法:"></a>开放地址法:</h5><ul>
+<li><h6 id="产生冲突的元素存放到空的空间中"><a href="#产生冲突的元素存放到空的空间中" class="headerlink" title="产生冲突的元素存放到空的空间中"></a>产生冲突的元素存放到空的空间中</h6></li>
+</ul>
+</li>
+<li><h5 id="邻接表-gt-图"><a href="#邻接表-gt-图" class="headerlink" title="邻接表-&gt;图:"></a>邻接表-&gt;图:</h5><ul>
+<li><h6 id="在冲突位置创建一个链表"><a href="#在冲突位置创建一个链表" class="headerlink" title="在冲突位置创建一个链表"></a>在冲突位置创建一个链表</h6></li>
+<li><h6 id="任何有冲突的元素都存到此链表中"><a href="#任何有冲突的元素都存到此链表中" class="headerlink" title="任何有冲突的元素都存到此链表中"></a>任何有冲突的元素都存到此链表中</h6></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="数组描述Hash结构"><a href="#数组描述Hash结构" class="headerlink" title="数组描述Hash结构:"></a>数组描述Hash结构:</h2><h4 id="为数据构建关键字"><a href="#为数据构建关键字" class="headerlink" title="为数据构建关键字:"></a>为数据构建关键字:</h4><pre><code class="c">typedef struct Pair &#123;
+    int hash_address;  //为数据构建一个关键字,用来产生hash地址
+    char element[20];
+&#125; DATA, *LPDATA;
+</code></pre>
+<h3 id="Hash结构"><a href="#Hash结构" class="headerlink" title="Hash结构:"></a>Hash结构:</h3><pre><code class="c">typedef struct HashTable &#123;
+    LPDATA* table;  //注意这里是二级指针
+    int divisor;    //除数, 采用取余法   key%p, p就是divisor
+    int hash_size;  //当前元素个数
+&#125; HASH, *LPHASH;
+</code></pre>
+<h3 id="创建Hash表"><a href="#创建Hash表" class="headerlink" title="创建Hash表"></a>创建Hash表</h3><pre><code class="c">LPHASH CreateHash(int divisor) &#123;
+    LPHASH p_hash_table = (LPHASH)malloc(sizeof(HASH));
+    if (NULL == p_hash_table) &#123;
+        return NULL;
+    &#125;
+    //初始化hash表
+    p_hash_table-&gt;hash_size = 0;
+    p_hash_table-&gt;divisor = divisor;
+    //动态内存申请HashTable
+    p_hash_table-&gt;table = (LPDATA*)malloc(sizeof(LPDATA) * p_hash_table-&gt;divisor);
+    // p_hash_table[i]:一级指针
+    for (int i = 0; i &lt; p_hash_table-&gt;divisor; ++i) &#123;
+        p_hash_table-&gt;table[i] = NULL;
+    &#125;
+    return p_hash_table;
+&#125;
+</code></pre>
+<h3 id="获取Hash地址"><a href="#获取Hash地址" class="headerlink" title="获取Hash地址:"></a>获取Hash地址:</h3><pre><code class="c">int SearchHashAddress(LPHASH p_hash_table, int data_address) &#123;
+    //因为存在哈希地址,所以我这里单独封装一个函数做这个事情
+    int pos = data_address % p_hash_table-&gt;divisor;
+    int cur_pos = pos;  //查找结束的结果
+    do &#123;
+        //没有值就可以存到里面
+        if (p_hash_table-&gt;table[cur_pos] == NULL ||
+            p_hash_table-&gt;table[cur_pos]-&gt;hash_address == data_address) &#123;
+            return cur_pos;
+        &#125;
+        cur_pos = (cur_pos + 1) % p_hash_table-&gt;divisor;
+    &#125; while (cur_pos != pos);
+    return cur_pos;
+&#125;
+</code></pre>
+<h3 id="向Hash表中插入数据"><a href="#向Hash表中插入数据" class="headerlink" title="向Hash表中插入数据:"></a>向Hash表中插入数据:</h3><pre><code class="c">void InsertData(LPHASH p_hash_table, DATA data) &#123;
+    //求出哈希地址
+    int pos = SearchHashAddress(p_hash_table, data.hash_address);
+    if (p_hash_table-&gt;table[pos] == NULL) &#123;
+        p_hash_table-&gt;table[pos] = (LPDATA)malloc(sizeof(DATA));
+        memcpy(p_hash_table-&gt;table[pos], &amp;data, sizeof(DATA));
+        p_hash_table-&gt;hash_size++;
+    &#125; else &#123;
+        //有元素
+        if (p_hash_table-&gt;table[pos]-&gt;hash_address == data.hash_address) &#123;
+            //相同关键字采用覆盖方式
+            strcpy(p_hash_table-&gt;table[pos]-&gt;element, data.element);
+        &#125; else &#123;
+            printf(&quot;空间已满,无法插入\n&quot;);
+            return;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="遍历Hash表与测试数据"><a href="#遍历Hash表与测试数据" class="headerlink" title="遍历Hash表与测试数据:"></a>遍历Hash表与测试数据:</h3><pre><code class="c">void PrintHashTable(LPHASH p_hash_table) &#123;
+    for (int i = 0; i &lt; p_hash_table-&gt;divisor; ++i) &#123;
+        if (p_hash_table-&gt;table[i] == NULL) &#123;
+            printf(&quot;NULL\n&quot;);
+        &#125; else &#123;
+            printf(&quot;%d:%s\n&quot;, p_hash_table-&gt;table[i]-&gt;hash_address,
+                   p_hash_table-&gt;table[i]-&gt;element);
+        &#125;
+    &#125;
+&#125;
+
+//测试数据
+int main(int argc, char** argv) &#123;
+    LPHASH p_hash_table = CreateHash(10);
+    DATA array[5] = &#123;1,&quot;刘亦菲&quot;,12,&quot;王菲&quot;, 11,&quot;王冰冰&quot;,15,&quot;Baby&quot;, 1,&quot;睿睿&quot;&#125;;
+    for (int i = 0; i &lt; 5; ++i) &#123;
+        InsertData(p_hash_table, array[i]);
+    &#125;
+    PrintHashTable(p_hash_table);
+    return 0;
+&#125;
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。邮件至kpsun@foxmail.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>数据结构-哈希存储(hash)</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">665</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="kpsun">kpsun</a></p>
+    <p><span class="copy-title">发布时间:</span>2022-07-05, 17:12:58</p>
+    <p><span class="copy-title">最后更新:</span>2022-10-29, 22:48:53</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/07/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%93%88%E5%B8%8C%E5%AD%98%E5%82%A8(hash)/" title="数据结构-哈希存储(hash)">http://goskp.github.io/2022/07/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%93%88%E5%B8%8C%E5%AD%98%E5%82%A8(hash)/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(e){e.imageLazyLoadSetting.processImages=t;var n=e.imageLazyLoadSetting.isSPA,i=e.imageLazyLoadSetting.preloadRatio||1,r=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){n&&(r=o());for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(e.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];e=function(){r=r.filter(function(t){return o!==t})},(t=o).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,t.removeAttribute("data-original"),e&&e()},t.src!==i&&(n.src=i))}()}function a(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",a),e.addEventListener("resize",a),e.addEventListener("orientationchange",a)}(this);</script></body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
