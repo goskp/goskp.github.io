@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>算法-单链表的动作 | kpsun</title>
+  <title>算法-经典排序算法 | kpsun</title>
   <meta name="keywords" content=" Algorithm ">
-  <meta name="description" content="算法-单链表的动作 | kpsun">
+  <meta name="description" content="算法-经典排序算法 | kpsun">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介孙楷朋准大二计算机相关专业在读热爱编程,乐于合作,善于总结分享,有良好的的编程习惯目标BAT大厂联系方式 QQ: 1287923885 WeChat: code_cpp Email: &amp;#107;&amp;#112;&amp;#x73;&amp;#x75;&amp;#x6e;&amp;#64;&amp;#x66;&amp;#x6f;&amp;#x78;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#x6d;">
 <meta property="og:type" content="website">
@@ -782,9 +782,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-算法-单链表的动作" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-算法-经典排序算法" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">算法-单链表的动作</h1>
+        <h1 class="article-title">算法-经典排序算法</h1>
     
     <div class="article-meta">
         
@@ -809,12 +809,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-10-29 22:49:34'>2022-06-29 10:40</time>
+            发布时间 : <time class="date" title='最后更新: 2022-11-05 23:04:50'>2022-11-05 23:02</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:928</span>
+        <span>字数:1.3k</span>
         
         
         
@@ -822,7 +822,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%BE%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E7%9B%B8%E5%90%8C%E5%85%83%E7%B4%A0%E7%BB%84%E6%88%90%E7%AC%AC%E4%B8%89%E4%B8%AA%E9%93%BE%E8%A1%A8"><span class="toc-text">找两个链表中的相同元素组成第三个链表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6"><span class="toc-text">如何合并:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%81%8D%E5%8E%86%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8-%E6%89%BE%E5%88%B0%E7%9B%B8%E5%90%8C%E5%85%83%E7%B4%A0"><span class="toc-text">遍历两个链表,找到相同元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E7%94%A8%E4%B8%80%E7%A7%8D%E6%8F%92%E5%85%A5%E6%96%B9%E5%BC%8F%E5%8D%B3%E5%8F%AF"><span class="toc-text">调用一种插入方式即可</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">插入方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%96%E4%BA%A4%E9%9B%86-%E5%B0%86%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E7%9B%B8%E5%90%8C%E5%85%83%E7%B4%A0%E5%90%88%E5%B9%B6%E4%B8%BA%E7%AC%AC%E4%B8%89%E4%B8%AA%E9%93%BE%E8%A1%A8"><span class="toc-text">取交集,将两个链表中的相同元素合并为第三个链表</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="toc-text">反转链表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-text">第一种方法:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%B4%E6%97%B6%E9%93%BE%E8%A1%A8"><span class="toc-text">创建一个临时链表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%81%8D%E5%8E%86%E5%BD%93%E5%89%8D%E9%93%BE%E8%A1%A8-%E5%B0%86%E7%BB%93%E7%82%B9%E9%80%86%E5%BA%8F%E6%8F%92%E5%85%A5%E5%88%B0%E4%B8%B4%E6%97%B6%E9%93%BE%E8%A1%A8%E4%B8%AD"><span class="toc-text">遍历当前链表,将结点逆序插入到临时链表中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8A%E6%94%BE%E5%8E%9F%E6%9C%89%E9%93%BE%E8%A1%A8%E5%86%85%E5%AD%98"><span class="toc-text">释放原有链表内存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E5%90%91%E6%96%B0%E9%93%BE%E8%A1%A8"><span class="toc-text">指向新链表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="toc-text">代码如下:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%E6%96%B9%E6%B3%95-%E8%8A%82%E7%9C%81%E7%A9%BA%E9%97%B4"><span class="toc-text">第二种方法(节省空间)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-text">思路:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%86%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9%E7%9A%84p-next%E6%8C%87%E9%92%88%E5%8F%8D%E8%BD%AC"><span class="toc-text">将每一个结点的p_next指针反转</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9%E6%8C%87%E5%90%91%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9"><span class="toc-text">第一个结点指向最后一个结点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-text">实现:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9%E7%9A%84%E5%89%8D%E9%A9%B1%E7%BB%93%E7%82%B9%E7%94%A8%E7%A9%BA%E8%A1%A8%E7%A4%BA-p-pre-node-x3D-x3D-NULL"><span class="toc-text">第一个结点的前驱结点用空表示(p_pre_node &#x3D;&#x3D; NULL)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9%E7%9A%84p-next%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E5%89%8D%E9%A9%B1%E7%BB%93%E7%82%B9-%E8%80%8C%E5%89%8D%E9%A9%B1%E7%BB%93%E7%82%B9%E6%98%AFNULL-%E5%AF%BC%E8%87%B4%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9%E5%B0%B1%E6%89%BE%E4%B8%8D%E5%88%B0%E4%BA%86"><span class="toc-text">第一个结点的p_next指针指向前驱结点,而前驱结点是NULL,导致下一个结点就找不到了</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%80%E4%BB%A5%E5%9C%A8%E6%9B%B4%E6%94%B9%E5%BD%93%E5%89%8D%E7%BB%93%E7%82%B9%E7%9A%84%E6%8C%87%E5%90%91%E4%B9%8B%E5%89%8D%E5%BA%94%E5%BD%93%E5%85%88%E4%BF%9D%E5%AD%98%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9-p-next-node-x3D-p-cur-node-gt-p-next"><span class="toc-text">所以在更改当前结点的指向之前应当先保存下一个结点(p_next_node &#x3D; p_cur_node-&gt;p_next;)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8E%E9%9D%A2%E7%9A%84%E7%BB%93%E7%82%B9%E4%B9%9F%E8%A6%81%E5%81%9A%E4%BB%A5%E4%B8%8A%E7%9B%B8%E5%90%8C%E7%9A%84%E4%BA%8B%E6%83%85"><span class="toc-text">后面的结点也要做以上相同的事情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E9%A9%B1%E7%BB%93%E7%82%B9%E5%8F%98%E6%88%90%E5%BD%93%E5%89%8D%E7%BB%93%E7%82%B9"><span class="toc-text">前驱结点变成当前结点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BD%93%E5%89%8D%E7%BB%93%E7%82%B9%E5%8F%98%E6%88%90%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9"><span class="toc-text">当前结点变成下一个结点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E5%A4%B4%E6%8C%87%E5%90%91%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9"><span class="toc-text">表头指向最后一个结点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="toc-text">实现代码如下:</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8"><span class="toc-text">有序链表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%8D%E6%8F%92%E5%85%A5%E7%BB%93%E7%82%B9%E6%97%B6%E8%AE%A9%E9%93%BE%E8%A1%A8%E6%9C%89%E5%BA%8F-%E8%BF%99%E4%B8%AA%E6%AF%94%E8%BE%83%E7%AE%80%E5%8D%95-%E7%9C%8B%E4%B8%80%E7%9C%BC%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BA%86"><span class="toc-text">再插入结点时让链表有序,这个比较简单,看一眼就可以了</span></a></li></ol></li></ol></li></ol></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -838,185 +838,320 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="找两个链表中的相同元素组成第三个链表"><a href="#找两个链表中的相同元素组成第三个链表" class="headerlink" title="找两个链表中的相同元素组成第三个链表"></a>找两个链表中的相同元素组成第三个链表</h1><h2 id="如何合并"><a href="#如何合并" class="headerlink" title="如何合并:"></a>如何合并:</h2><ul>
-<li><h3 id="遍历两个链表-找到相同元素"><a href="#遍历两个链表-找到相同元素" class="headerlink" title="遍历两个链表,找到相同元素"></a>遍历两个链表,找到相同元素</h3></li>
-<li><h3 id="调用一种插入方式即可"><a href="#调用一种插入方式即可" class="headerlink" title="调用一种插入方式即可"></a>调用一种插入方式即可</h3><ul>
-<li><h4 id="插入方式"><a href="#插入方式" class="headerlink" title="插入方式"></a>插入方式</h4></li>
-</ul>
-</li>
-</ul>
-<pre><code class="c">void InsertNode(struct Node* p_list, int new_data) &#123;
-    struct Node* p_new_node = CreateNewNode(new_data);
-    p_new_node-&gt;p_next = p_list-&gt;p_next;  
-    p_list-&gt;p_next = p_new_node;  
+        <pre><code class="cpp">#include &lt;Windows.h&gt;
+#include &lt;memory.h&gt;
+#include &lt;time.h&gt;
+
+#include &lt;algorithm&gt;
+#include &lt;cassert&gt;
+#include &lt;cstdlib&gt;
+#include &lt;iostream&gt;
+using namespace std;
+
+#define JUDGE_SORT_TIME 0
+#define EASY_SORT 0
+
+#define BUCKET_DIGIT 1000
+#define BUCKET_NUMBER 10
+#define MAX_NUMBER 100000
+
+void InitArrTime(int arr[], int arr_len);
+void TraverArray(int arr[], int arr_len, bool is_sort = true);
+void BubbleSort(int arr[], int arr_len);
+void InsertSort(int arr[], int arr_len);
+void SelectSort(int arr[], int arr_len);
+void ShellSort(int arr[], int arr_len);
+void RadixSort(int arr[], int arr_len, int max_value);
+void BucketSort(int arr[], int arr_len);
+void Merge(int arr[], int first_array_begin, int first_array_end,
+           int second_array_begin, int second_array_end, int new_arr[]);
+void MergeSort(int arr[], int left_index, int right_index, int new_arr[]);
+void MergeSort(int arr[], int arr_len);
+int main2(int argc, char **argv)
+&#123;
+#if JUDGE_SORT_TIME
+  ULONGLONG before_sort_time;
+  ULONGLONG after_sort_time;
+  srand((unsigned)time(NULL));
+  int arr_time[MAX_NUMBER];
+  InitArrTime(arr_time, MAX_NUMBER);
+  //获取排序前的时间
+  before_sort_time = GetCurrentTime();
+  BubbleSort(arr_time, MAX_NUMBER);
+  //获取排序后时间
+  after_sort_time = GetCurrentTime();
+  //输出时间差
+  printf(&quot;BubbleSort:%d\n&quot;, (after_sort_time - before_sort_time));
+
+  InitArrTime(arr_time, MAX_NUMBER);
+  //获取排序前的时间
+  before_sort_time = GetCurrentTime();
+  InsertSort(arr_time, MAX_NUMBER);
+  //获取排序后时间
+  after_sort_time = GetCurrentTime();
+  //输出时间差
+  printf(&quot;InsertSort:%d\n&quot;, (after_sort_time - before_sort_time));
+
+  InitArrTime(arr_time, MAX_NUMBER);
+  //获取排序前的时间
+  before_sort_time = GetCurrentTime();
+  SelectSort(arr_time, MAX_NUMBER);
+  //获取排序后时间
+  after_sort_time = GetCurrentTime();
+  //输出时间差
+  printf(&quot;SelectSort:%d\n&quot;, (after_sort_time - before_sort_time));
+
+  InitArrTime(arr_time, MAX_NUMBER);
+  //获取排序前的时间
+  before_sort_time = GetCurrentTime();
+  ShellSort(arr_time, MAX_NUMBER);
+  //获取排序后时间
+  after_sort_time = GetCurrentTime();
+  //输出时间差
+  printf(&quot;ShellSort:%d\n&quot;, (after_sort_time - before_sort_time));
+#else
+
+  srand((unsigned int)time(NULL));
+  int arr[] = &#123;1, 3, 2, 6, 5, 4, 9, 7, 8, 10, 13, 11, 12,
+               16, 17, 15, 14, 19, 18, 20, 24, 25, 21, 23, 22&#125;;
+
+  int bucket_arr[BUCKET_NUMBER] = &#123;6, 996, 666, 985, 520, 612, 123, 211, 700&#125;;
+  TraverArray(bucket_arr, BUCKET_NUMBER);
+  BucketSort(bucket_arr, BUCKET_NUMBER);
+  TraverArray(bucket_arr, BUCKET_NUMBER, false);
+
+  // for (int i = 0; i &lt; BUCKET_NUMBER; ++i)
+  // &#123;
+  //   bucket_arr[i] = rand() % BUCKET_DIGIT;
+  // &#125;
+
+  // TraverArray(arr, sizeof(arr) / sizeof(int));
+  // // RadixSort(arr, sizeof(arr) / sizeof(int), 25);
+  // // BubbleSort(arr, sizeof(arr) / sizeof(int));
+  // // ShellSort(arr, sizeof(arr) / sizeof(int));
+  // // InsertSort(arr, sizeof(arr) / sizeof(int));
+  // // SelectSort(arr, sizeof(arr) / sizeof(int));
+  // TraverArray(arr, sizeof(arr) / sizeof(int), false);
+
+#endif
+
+  return 0;
 &#125;
-</code></pre>
-<ul>
-<li><h4 id="取交集-将两个链表中的相同元素合并为第三个链表"><a href="#取交集-将两个链表中的相同元素合并为第三个链表" class="headerlink" title="取交集,将两个链表中的相同元素合并为第三个链表"></a>取交集,将两个链表中的相同元素合并为第三个链表</h4></li>
-</ul>
-<pre><code class="c">void Intersection(struct Node* p_list_one,
-                  struct Node* p_list_two,
-                  struct Node* p_list_three) &#123;
-    for (struct Node* p_first = p_list_one-&gt;p_next; NULL != p_first;
-         p_first = p_first-&gt;p_next) &#123;
-        for (struct Node* p_second = p_list_two-&gt;p_next; NULL != p_second;
-             p_second = p_second-&gt;p_next) &#123;
-            if (p_first-&gt;data == p_second-&gt;data) &#123;
-                InsertNode(p_list_three, p_second-&gt;data);
-            &#125;
+
+int main(int argc, char *argv[])
+&#123;
+  int arr[] = &#123;1, 3, 2, 6, 5, 4, 9, 7, 8, 10, 13, 11, 12,
+               16, 17, 15, 14, 19, 18, 20, 24, 25, 21, 23, 22&#125;;
+  TraverArray(arr, sizeof(arr) / sizeof(int));
+  MergeSort(arr, sizeof(arr) / sizeof(int));
+  TraverArray(arr, sizeof(arr) / sizeof(int), false);
+  return 0;
+&#125;
+void MergeSort(int arr[], int arr_len)
+&#123;
+  int *p_tmp_array = (int *)malloc(sizeof(int) * arr_len);
+  if (nullptr == p_tmp_array)
+  &#123;
+    return;
+  &#125;
+  else
+  &#123;
+    MergeSort(arr, 0, arr_len - 1, p_tmp_array);
+    free(p_tmp_array);
+  &#125;
+&#125;
+void Merge(int arr[], int first_array_begin, int first_array_end,
+           int second_array_begin, int second_array_end, int new_arr[])
+&#123;
+  int index = first_array_begin;
+  int f_begin = first_array_begin;
+  int s_begin = second_array_end;
+  while (f_begin &lt;= first_array_end &amp;&amp; s_begin &lt;= second_array_end)
+  &#123;
+    if (arr[f_begin] &lt;= arr[s_begin])
+    &#123;
+      new_arr[index++] = arr[f_begin++];
+    &#125;
+    else
+    &#123;
+      new_arr[index++] = arr[s_begin++];
+    &#125;
+  &#125;
+  //处理剩下的元素
+  while (f_begin &lt;= first_array_end)
+  &#123;
+    new_arr[index++] = arr[f_begin++];
+  &#125;
+  while (s_begin &lt;= second_array_end)
+  &#123;
+    new_arr[index++] = arr[s_begin++];
+  &#125;
+  memcpy(arr + f_begin, new_arr + f_begin,
+         sizeof(int) * (second_array_end - first_array_begin + 1));
+&#125;
+void MergeSort(int arr[], int left_index, int right_index, int new_arr[])
+&#123;
+  if (left_index &gt;= right_index)
+  &#123;
+    return;
+  &#125;
+  else
+  &#123;
+    int mid_index = (left_index + right_index) / 2;
+    MergeSort(arr, left_index, mid_index, new_arr);
+    MergeSort(arr, mid_index + 1, right_index, new_arr);
+    Merge(arr, left_index, mid_index, mid_index + 1, right_index, new_arr);
+  &#125;
+&#125;
+void InitArrTime(int arr[], int arr_len)
+&#123;
+  for (int i = 0; i &lt; arr_len; ++i)
+  &#123;
+    arr[i] = rand() % 1000;
+  &#125;
+&#125;
+void TraverArray(int arr[], int arr_len, bool is_sort)
+&#123;
+  if (is_sort)
+  &#123;
+    cout &lt;&lt; &quot;排序前:&quot;;
+  &#125;
+  else
+  &#123;
+    cout &lt;&lt; &quot;排序后:&quot;;
+  &#125;
+  for (int i = 0; i &lt; arr_len; i++)
+  &#123;
+    cout &lt;&lt; arr[i] &lt;&lt; &quot; &quot;;
+  &#125;
+  cout &lt;&lt; endl;
+&#125;
+void BubbleSort(int arr[], int arr_len)
+&#123;
+  for (int i = 0; i &lt; arr_len - 1; ++i)
+  &#123;
+    for (int j = 0; j &lt; arr_len - 1 - i; ++j)
+    &#123;
+      if (arr[j] &gt; arr[j + 1])
+      &#123;
+        int t = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = t;
+      &#125;
+    &#125;
+  &#125;
+&#125;
+void InsertSort(int arr[], int arr_len)
+&#123;
+  int pre_index;
+  for (int i = 1; i &lt; arr_len; ++i)
+  &#123;
+    int t = arr[i];
+    for (pre_index = i - 1; pre_index &gt;= 0 &amp;&amp; arr[pre_index] &gt; t; --pre_index)
+    &#123;
+      arr[pre_index + 1] = arr[pre_index];
+    &#125;
+    arr[pre_index + 1] = t;
+  &#125;
+&#125;
+void SelectSort(int arr[], int arr_len)
+&#123;
+  for (int i = 0; i &lt; arr_len - 1; ++i)
+  &#123;
+    for (int j = i + 1; j &lt; arr_len; ++j)
+    &#123;
+      if (arr[j] &lt; arr[i])
+      &#123;
+        int t = arr[j];
+        arr[j] = arr[i];
+        arr[i] = t;
+      &#125;
+    &#125;
+  &#125;
+&#125;
+void ShellSort(int arr[], int arr_len)
+&#123;
+  for (int pace = arr_len / 2; pace &gt; 0; pace /= 2)
+  &#123;
+    for (int i = pace; i &lt; arr_len; ++i)
+    &#123;
+      int j = i;
+      int current = arr[i];
+      while (j - pace &gt;= 0 &amp;&amp; current &lt; arr[j - pace])
+      &#123;
+        arr[j] = arr[j - pace];
+        j = j - pace;
+      &#125;
+      arr[j] = current;
+    &#125;
+  &#125;
+&#125;
+void RadixSort(int arr[], int arr_len, int max_value)
+&#123;
+  //创建一个临时数组
+  int *p_tmp_array = new int[max_value + 1];
+  //给临时数组全部赋值为一个不会出现的数
+  for (int i = 0; i &lt; max_value + 1; ++i)
+  &#123;
+    p_tmp_array[i] = -1;
+  &#125;
+  //根据数组下标来把a数组中数据放到临时数组中去
+  for (int i = 0; i &lt; arr_len; ++i)
+  &#123;
+    p_tmp_array[arr[i]] = arr[i];
+  &#125;
+  //依序把p_tmp_array中数据放回原数组
+  int arr_index = 0;
+  for (int i = 0; i &lt; max_value + 1; ++i)
+  &#123;
+    if (-1 != p_tmp_array[i])
+    &#123;
+      arr[arr_index++] = p_tmp_array[i];
+    &#125;
+  &#125;
+  //释放内存
+  delete[] p_tmp_array;
+&#125;
+void BucketSort(int arr[], int arr_len)
+&#123;
+  int digit = 1; //位数
+  int **pp_bucket = new int *[10];
+  for (int i = 0; i &lt; 10; ++i)
+  &#123;
+    pp_bucket[i] = new int[arr_len];
+  &#125;
+  int digit_value = -1; //用来获取当前位上的数据
+  int arr_index = 0;
+  while (digit &lt; BUCKET_DIGIT)
+  &#123;
+    //初始化箱子数据
+    for (int i = 0; i &lt; 10; ++i)
+    &#123;
+      for (int j = 0; j &lt; arr_len; ++j)
+      &#123;
+        pp_bucket[i][j] = -1;
+      &#125;
+    &#125;
+    //数据放到箱子里去
+    for (int i = 0; i &lt; arr_len; ++i)
+    &#123;
+      digit_value = arr[i] / digit % 10; //获取当前位上的数字
+      pp_bucket[digit_value][i] = arr[i];
+    &#125;
+    //数据从箱子里拿出来覆盖回原数组
+    for (int i = 0; i &lt; 10; ++i)
+    &#123;
+      for (int j = 0; j &lt; arr_len; ++j)
+      &#123;
+        if (-1 != pp_bucket[i][j])
+        &#123;
+          arr[arr_index++] = pp_bucket[i][j];
         &#125;
+      &#125;
     &#125;
-&#125;
-</code></pre>
-<h1 id="反转链表"><a href="#反转链表" class="headerlink" title="反转链表"></a>反转链表</h1><ul>
-<li><h2 id="第一种方法"><a href="#第一种方法" class="headerlink" title="第一种方法:"></a>第一种方法:</h2><ul>
-<li><h4 id="创建一个临时链表"><a href="#创建一个临时链表" class="headerlink" title="创建一个临时链表"></a>创建一个临时链表</h4></li>
-<li><h4 id="遍历当前链表-将结点逆序插入到临时链表中"><a href="#遍历当前链表-将结点逆序插入到临时链表中" class="headerlink" title="遍历当前链表,将结点逆序插入到临时链表中"></a>遍历当前链表,将结点逆序插入到临时链表中</h4></li>
-<li><h4 id="释放原有链表内存"><a href="#释放原有链表内存" class="headerlink" title="释放原有链表内存"></a>释放原有链表内存</h4></li>
-<li><h4 id="指向新链表"><a href="#指向新链表" class="headerlink" title="指向新链表"></a>指向新链表</h4></li>
-<li><h4 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h4></li>
-</ul>
-</li>
-</ul>
-<pre><code class="c">//释放链表
-void FreeList(struct Node** p_list) &#123;
-    if (NULL == p_list) &#123;
-        return;
-    &#125;
-    struct Node* p_next_node = NULL;
-    while (NULL != *p_list) &#123;
-        p_next_node = (*p_list)-&gt;p_next;
-        free(*p_list);
-        *p_list = p_next_node;
-    &#125;
-&#125;
-//反转链表第一种方法
-void ReverseFirstWay(struct Node** p_list) &#123;
-    struct Node* p_tmp_list = CreateList();
-    struct Node* p_move = (*p_list)-&gt;p_next;
-    while (NULL != p_move) &#123;
-        InsertNode(p_tmp_list, p_move-&gt;data);
-        p_move = p_move-&gt;p_next;
-    &#125;
-    //释放原有的内存
-    FreeList(p_list);
-    *p_list = p_tmp_list;  //指向新的链表
-&#125;
-</code></pre>
-<ul>
-<li><h3 id="第二种方法-节省空间"><a href="#第二种方法-节省空间" class="headerlink" title="第二种方法(节省空间)"></a>第二种方法(节省空间)</h3><ul>
-<li><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><ul>
-<li><h4 id="将每一个结点的p-next指针反转"><a href="#将每一个结点的p-next指针反转" class="headerlink" title="将每一个结点的p_next指针反转"></a>将每一个结点的p_next指针反转</h4></li>
-<li><h4 id="第一个结点指向最后一个结点"><a href="#第一个结点指向最后一个结点" class="headerlink" title="第一个结点指向最后一个结点"></a>第一个结点指向最后一个结点</h4></li>
-</ul>
-</li>
-<li><h4 id="实现"><a href="#实现" class="headerlink" title="实现:"></a>实现:</h4><ul>
-<li><h4 id="第一个结点的前驱结点用空表示-p-pre-node-x3D-x3D-NULL"><a href="#第一个结点的前驱结点用空表示-p-pre-node-x3D-x3D-NULL" class="headerlink" title="第一个结点的前驱结点用空表示(p_pre_node &#x3D;&#x3D; NULL)"></a>第一个结点的前驱结点用空表示(p_pre_node &#x3D;&#x3D; NULL)</h4></li>
-<li><h4 id="第一个结点的p-next指针指向前驱结点-而前驱结点是NULL-导致下一个结点就找不到了"><a href="#第一个结点的p-next指针指向前驱结点-而前驱结点是NULL-导致下一个结点就找不到了" class="headerlink" title="第一个结点的p_next指针指向前驱结点,而前驱结点是NULL,导致下一个结点就找不到了"></a>第一个结点的p_next指针指向前驱结点,而前驱结点是NULL,导致下一个结点就找不到了</h4></li>
-<li><h4 id="所以在更改当前结点的指向之前应当先保存下一个结点-p-next-node-x3D-p-cur-node-gt-p-next"><a href="#所以在更改当前结点的指向之前应当先保存下一个结点-p-next-node-x3D-p-cur-node-gt-p-next" class="headerlink" title="所以在更改当前结点的指向之前应当先保存下一个结点(p_next_node &#x3D; p_cur_node-&gt;p_next;)"></a>所以在更改当前结点的指向之前应当先保存下一个结点(p_next_node &#x3D; p_cur_node-&gt;p_next;)</h4></li>
-<li><h4 id="后面的结点也要做以上相同的事情"><a href="#后面的结点也要做以上相同的事情" class="headerlink" title="后面的结点也要做以上相同的事情"></a>后面的结点也要做以上相同的事情</h4></li>
-<li><h4 id="前驱结点变成当前结点"><a href="#前驱结点变成当前结点" class="headerlink" title="前驱结点变成当前结点"></a>前驱结点变成当前结点</h4></li>
-<li><h4 id="当前结点变成下一个结点"><a href="#当前结点变成下一个结点" class="headerlink" title="当前结点变成下一个结点"></a>当前结点变成下一个结点</h4></li>
-<li><h4 id="表头指向最后一个结点"><a href="#表头指向最后一个结点" class="headerlink" title="表头指向最后一个结点"></a>表头指向最后一个结点</h4></li>
-<li><h4 id="实现代码如下"><a href="#实现代码如下" class="headerlink" title="实现代码如下:"></a>实现代码如下:</h4></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<pre><code class="c">void ReverseSecondWay(struct Node** p_list) &#123;
-    struct Node* p_pre_node = NULL;               //前驱结点
-    struct Node* p_cur_node = (*p_list)-&gt;p_next;  //当前结点
-    struct Node* p_next_node = (*p_list)-&gt;p_next;  //当前结点的下一个结点
-    while (NULL != p_cur_node) &#123;
-        p_next_node = p_cur_node-&gt;p_next;  //保存下一个结点
-        p_cur_node-&gt;p_next = p_pre_node;  //当前结点的p_next指针指向前驱结点
-        p_pre_node = p_cur_node;   //前驱结点变成当前结点
-        p_cur_node = p_next_node;  //当前结点变成下一个结点
-    &#125;
-    (*p_list)-&gt;p_next = p_pre_node;  //表头指向最后一个结点
-&#125;
-</code></pre>
-<h1 id="有序链表"><a href="#有序链表" class="headerlink" title="有序链表"></a>有序链表</h1><ul>
-<li><h4 id="再插入结点时让链表有序-这个比较简单-看一眼就可以了"><a href="#再插入结点时让链表有序-这个比较简单-看一眼就可以了" class="headerlink" title="再插入结点时让链表有序,这个比较简单,看一眼就可以了"></a>再插入结点时让链表有序,这个比较简单,看一眼就可以了</h4></li>
-</ul>
-<pre><code class="c">/*
-    @author:   KaiPeng_Sun
-    @Time:     2022年7月11日18:22:13
-    @brief:    有序链表
-    @message:  代码的上一行为所写注释
-*/
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-
-struct data &#123;
-    int index;  //构建序号
-    int data;   //数据
-&#125;;
-
-struct Node &#123;
-    struct data my_data;
-    struct Node* p_next;
-&#125;;
-
-//创建有头链表
-struct Node* CreateList() &#123;
-    struct Node* p_list = (struct Node*)malloc(sizeof(struct Node));
-    if (NULL == p_list) &#123;
-        return NULL;
-    &#125;
-    //初始化头结点
-    p_list-&gt;p_next = NULL;
-    return p_list;
-&#125;
-
-//创建结点
-struct Node* CreateNewNode(struct data my_data) &#123;
-    struct Node* p_new_node = (struct Node*)malloc(sizeof(struct Node));
-    if (NULL == p_new_node) &#123;
-        return NULL;
-    &#125;
-    //初始化结点数据
-    p_new_node-&gt;my_data = my_data;
-    p_new_node-&gt;p_next = NULL;
-    return p_new_node;
-&#125;
-
-void InsertOrderList(struct Node* p_list, struct data my_data) &#123;
-    struct Node* p_new_node = CreateNewNode(my_data);
-    struct Node* pre_node = p_list;          //前驱结点
-    struct Node* cur_node = p_list-&gt;p_next;  //当前结点
-    //升序
-    while (NULL != cur_node &amp;&amp; cur_node-&gt;my_data.index &lt; my_data.index) &#123;
-        pre_node = cur_node;
-        cur_node = pre_node-&gt;p_next;
-    &#125;
-    if (NULL == cur_node) &#123;
-        pre_node-&gt;p_next = p_new_node;
-    &#125; else &#123;
-        pre_node-&gt;p_next = p_new_node;
-        p_new_node-&gt;p_next = cur_node;
-    &#125;
-&#125;
-
-void PrintList(struct Node* p_list) &#123;
-    struct Node* p_move = p_list-&gt;p_next;
-    while (NULL != p_move) &#123;
-        printf(&quot;序号:%d,数据:%d\n&quot;, p_move-&gt;my_data.index, p_move-&gt;my_data.data);
-        p_move = p_move-&gt;p_next;
-    &#125;
-    putchar(&#39;\n&#39;);
-&#125;
-
-int main(int argc, char* argv[]) &#123;
-    //五对数据,两个两个是一对
-    struct data array[5] = &#123;2, 1, 5, 3, 6, 8, 7, 10, 11, 0&#125;;
-    struct Node* p_list = CreateList();
-    for (int i = 0; i &lt; 5; ++i) &#123;
-        InsertOrderList(p_list, array[i]);
-    &#125;
-    PrintList(p_list);
-    return 0;
+    TraverArray(arr, BUCKET_NUMBER, false);
+    digit *= 10;
+  &#125;
 &#125;
 </code></pre>
 
@@ -1028,12 +1163,12 @@ int main(int argc, char* argv[]) &#123;
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>算法-单链表的动作</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">928</span></p>
+    <p><span class="copy-title">文章标题:</span>算法-经典排序算法</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">1.3k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="kpsun">kpsun</a></p>
-    <p><span class="copy-title">发布时间:</span>2022-06-29, 10:40:49</p>
-    <p><span class="copy-title">最后更新:</span>2022-10-29, 22:49:34</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/06/29/%E7%AE%97%E6%B3%95-%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%8A%A8%E4%BD%9C/" title="算法-单链表的动作">http://goskp.github.io/2022/06/29/%E7%AE%97%E6%B3%95-%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%8A%A8%E4%BD%9C/</a>
+    <p><span class="copy-title">发布时间:</span>2022-11-05, 23:02:01</p>
+    <p><span class="copy-title">最后更新:</span>2022-11-05, 23:04:50</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/11/05/%E7%AE%97%E6%B3%95-%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="算法-经典排序算法">http://goskp.github.io/2022/11/05/%E7%AE%97%E6%B3%95-%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
