@@ -6,15 +6,13 @@
   <meta name="keywords" content=" Algorithm ">
   <meta name="description" content="算法-经典排序算法 | kpsun">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="个人简介孙楷朋准大二计算机相关专业在读热爱编程,乐于合作,善于总结分享,有良好的的编程习惯目标BAT大厂联系方式 QQ: 1287923885 WeChat: code_cpp Email: &amp;#x6b;&amp;#112;&amp;#115;&amp;#117;&amp;#x6e;&amp;#64;&amp;#102;&amp;#111;&amp;#120;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#108;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;">
 <meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="http://goskp.github.io/about/index.html">
+<meta property="og:title" content="category">
+<meta property="og:url" content="http://goskp.github.io/category/index.html">
 <meta property="og:site_name" content="kpsun">
-<meta property="og:description" content="个人简介孙楷朋准大二计算机相关专业在读热爱编程,乐于合作,善于总结分享,有良好的的编程习惯目标BAT大厂联系方式 QQ: 1287923885 WeChat: code_cpp Email: &amp;#x6b;&amp;#112;&amp;#115;&amp;#117;&amp;#x6e;&amp;#64;&amp;#102;&amp;#111;&amp;#120;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#108;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-14T04:24:56.000Z">
-<meta property="article:modified_time" content="2022-10-13T13:05:22.823Z">
+<meta property="article:published_time" content="2022-08-14T04:20:49.000Z">
+<meta property="article:modified_time" content="2022-08-14T04:20:49.238Z">
 <meta property="article:author" content="kpsun">
 <meta name="twitter:card" content="summary">
 
@@ -202,7 +200,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="52">
-<input type="hidden" id="yelog_site_word_count" value="71.8k">
+<input type="hidden" id="yelog_site_word_count" value="72.5k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -809,12 +807,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-11-05 23:04:50'>2022-11-05 23:02</time>
+            发布时间 : <time class="date" title='最后更新: 2022-11-09 19:06:03'>2022-11-05 23:02</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1.3k</span>
+        <span>字数:2k</span>
         
         
         
@@ -855,19 +853,53 @@ using namespace std;
 #define BUCKET_NUMBER 10
 #define MAX_NUMBER 100000
 
+//初始化时间
 void InitArrTime(int arr[], int arr_len);
+//遍历数组
 void TraverArray(int arr[], int arr_len, bool is_sort = true);
+//遍历排序后数组
+void PrintIsSortArray(int arr[], int arr_len, void (*pIsSort)(int *, int));
+//冒泡排序
 void BubbleSort(int arr[], int arr_len);
+//插入排序
 void InsertSort(int arr[], int arr_len);
+//插入排序
 void SelectSort(int arr[], int arr_len);
+//希尔排序
 void ShellSort(int arr[], int arr_len);
+//基数排序
 void RadixSort(int arr[], int arr_len, int max_value);
+//桶排序(这个写的不好,详见下面的)
 void BucketSort(int arr[], int arr_len);
-void Merge(int arr[], int first_array_begin, int first_array_end,
-           int second_array_begin, int second_array_end, int new_arr[]);
+//普通归并
+void CommonMerge(int arr[], int first_array_begin, int first_array_end, int second_array_begin, int second_array_end, int new_arr[]);
+//归并排序
 void MergeSort(int arr[], int left_index, int right_index, int new_arr[]);
-void MergeSort(int arr[], int arr_len);
-int main2(int argc, char **argv)
+//统一归并排序接口
+void UniformInterfaceMergeSort(int arr[], int arr_len);
+//交换辅助函数
+void MySwap(int* arr, int i, int j);
+//获取基准
+int GetChangeTheBenchmark(int* arr, int left_index, int right_index);
+//快速排序
+void QuickSort(int* arr, int left_index, int right_index);
+//统一快速排序接口
+void UniformInterfaceQuickSort(int* arr, int arr_len);
+//计数排序
+void CountSort(int* arr, int arr_len);
+//获取当前任意位上的数字
+//digit从个位数开始算,123,第二位是2,(dighit为2)
+int GetDigitNumber(int number, int digit);
+//获取数组的最大值
+int GetArrayMaxValue(int* arr, int arr_len);
+//求最大值的位数
+int GetMaxValueDigit(int number);
+//桶排序
+void BucketSort(int* arr, int arr_len, int digit);
+//基数排序
+void RadixSort(int* arr, int arr_len);
+
+int main2(int argc, char **argv) 
 &#123;
 #if JUDGE_SORT_TIME
   ULONGLONG before_sort_time;
@@ -912,7 +944,7 @@ int main2(int argc, char **argv)
 #else
 
   srand((unsigned int)time(NULL));
-  int arr[] = &#123;1, 3, 2, 6, 5, 4, 9, 7, 8, 10, 13, 11, 12,
+  int arr[] = &#123;1,  3,  2,  6,  5,  4,  9,  7,  8,  10, 13, 11, 12,
                16, 17, 15, 14, 19, 18, 20, 24, 25, 21, 23, 22&#125;;
 
   int bucket_arr[BUCKET_NUMBER] = &#123;6, 996, 666, 985, 520, 612, 123, 211, 700&#125;;
@@ -934,105 +966,221 @@ int main2(int argc, char **argv)
   // TraverArray(arr, sizeof(arr) / sizeof(int), false);
 
 #endif
-
   return 0;
 &#125;
 
-int main(int argc, char *argv[])
+int main(int argc, char *argv[]) 
 &#123;
-  int arr[] = &#123;1, 3, 2, 6, 5, 4, 9, 7, 8, 10, 13, 11, 12,
+  int arr[] = &#123;1,  3,  2,  6,  5,  4,  9,  7,  8,  10, 13, 11, 12,
                16, 17, 15, 14, 19, 18, 20, 24, 25, 21, 23, 22&#125;;
-  TraverArray(arr, sizeof(arr) / sizeof(int));
-  MergeSort(arr, sizeof(arr) / sizeof(int));
-  TraverArray(arr, sizeof(arr) / sizeof(int), false);
+  //PrintIsSortArray(arr, 25, UniformInterfaceMergeSort);
+  PrintIsSortArray(arr, 25, CountSort);
+  
   return 0;
 &#125;
-void MergeSort(int arr[], int arr_len)
+void RadixSort(int* arr, int arr_len)
 &#123;
-  int *p_tmp_array = (int *)malloc(sizeof(int) * arr_len);
-  if (nullptr == p_tmp_array)
+  int max_value = GetArrayMaxValue(arr, arr_len);
+  int max_value_digit = GetMaxValueDigit(max_value);
+  for (int i = 1; i &lt; max_value_digit; ++i)
   &#123;
-    return;
-  &#125;
-  else
-  &#123;
-    MergeSort(arr, 0, arr_len - 1, p_tmp_array);
-    free(p_tmp_array);
+    BucketSort(arr, arr_len, i);
   &#125;
 &#125;
-void Merge(int arr[], int first_array_begin, int first_array_end,
-           int second_array_begin, int second_array_end, int new_arr[])
+void BucketSort(int* arr, int arr_len, int digit)
 &#123;
-  int index = first_array_begin;
-  int f_begin = first_array_begin;
-  int s_begin = second_array_end;
-  while (f_begin &lt;= first_array_end &amp;&amp; s_begin &lt;= second_array_end)
+  int* p_bucket_array[10] = &#123; nullptr &#125;;
+  for (int i = 0; i &lt; 10; ++i)
   &#123;
-    if (arr[f_begin] &lt;= arr[s_begin])
+    //初始化为0, 如果数据中有0的数据,换一个数据作标记
+    p_bucket_array[i] = (int*)calloc(sizeof(int), arr_len);
+    if (nullptr == p_bucket_array)
     &#123;
-      new_arr[index++] = arr[f_begin++];
+      return;
     &#125;
     else
+    &#123;
+    &#125;
+  &#125;
+  //装桶
+  for (int i = 0; i &lt; arr_len; ++i)
+  &#123;
+    int index = GetDigitNumber(arr[i], digit);
+    for (int j = 0; j &lt; arr_len; ++j)
+    &#123;
+      if (p_bucket_array[index][j] == 0)
+      &#123;
+        p_bucket_array[index][j] = arr[i];
+        break;
+      &#125;
+    &#125;
+  &#125;
+  //出桶
+  int k = 0;
+  for (int i = 0; i &lt; 10; ++i)
+  &#123;
+    for (int j = 0; j &lt; arr_len; ++j)
+    &#123;
+      if (p_bucket_array[i][j] != 0)
+      &#123;
+        arr[k] = p_bucket_array[i][k];
+        p_bucket_array[i][k] = 0;
+        k++;
+      &#125;
+    &#125;
+  &#125;
+&#125;
+int GetMaxValueDigit(int number)
+&#123;
+  int count = 1;
+  while (number / 10)
+  &#123;
+    count++;
+    number /= 10;
+  &#125;
+  return count;
+&#125;
+int GetArrayMaxValue(int* arr, int arr_len)
+&#123;
+  int max_value = arr[0];
+  for (int i = 0; i &lt; arr_len; ++i)
+  &#123;
+    if (max_value &lt; arr[i])
+    &#123;
+      max_value = arr[i];
+    &#125;
+  &#125;
+  return max_value;
+&#125;
+int GetDigitNumber(int number, int digit)
+&#123;
+  int tmp = 1;
+  for (int i = 0; i &lt; digit - 1; ++i)
+  &#123;
+    tmp *= 10;
+  &#125;
+  return (number / tmp) % 10;
+&#125;
+void MySwap(int* arr, int i, int j)
+&#123;
+  int tmp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = tmp;
+&#125;
+int GetChangeTheBenchmark(int* arr, int left_index, int right_index)
+&#123;
+  //左边的第一个元素为基准
+  int pivot_index = left_index;
+  //与后边的元素进行比较
+  int index = pivot_index + 1;
+  for (int i = index; i &lt;= right_index; ++i)
+  &#123;
+    if (arr[i] &lt; arr[pivot_index])
+    &#123;
+      MySwap(arr, i, index);
+      index++;
+    &#125;
+  &#125;
+  MySwap(arr, pivot_index, index - 1);
+  return index - 1;
+&#125;
+void QuickSort(int* arr, int left_index, int right_index)
+&#123;
+  if (left_index &lt; right_index)
+  &#123;
+    int benchmark_index = GetChangeTheBenchmark(arr, left_index, right_index);
+    QuickSort(arr, left_index, benchmark_index - 1);
+    QuickSort(arr, benchmark_index + 1, right_index);
+  &#125;
+&#125;
+void UniformInterfaceQuickSort(int* arr, int arr_len)
+&#123;
+  QuickSort(arr, 0, arr_len - 1);
+&#125;
+void CommonMerge(int arr[], int first_array_begin, int first_array_end, int second_array_begin, int second_array_end, int new_arr[]) 
+&#123;
+  int index = first_array_begin;
+  //把两个起始序号拿出来
+  int f_begin = first_array_begin;
+  int s_begin = second_array_begin;
+  while (f_begin &lt;= first_array_end &amp;&amp; s_begin &lt;= second_array_end)
+  &#123;
+    if (arr[f_begin] &lt;= arr[s_begin]) 
+    &#123;
+      new_arr[index++] = arr[f_begin++];
+    &#125; 
+    else 
     &#123;
       new_arr[index++] = arr[s_begin++];
     &#125;
   &#125;
   //处理剩下的元素
-  while (f_begin &lt;= first_array_end)
+  while (f_begin &lt;= first_array_end) 
   &#123;
     new_arr[index++] = arr[f_begin++];
   &#125;
-  while (s_begin &lt;= second_array_end)
+  while (s_begin &lt;= second_array_end) 
   &#123;
     new_arr[index++] = arr[s_begin++];
   &#125;
-  memcpy(arr + f_begin, new_arr + f_begin,
-         sizeof(int) * (second_array_end - first_array_begin + 1));
+  memcpy(arr + f_begin, new_arr + f_begin, sizeof(int) * (second_array_end - first_array_begin + 1));
 &#125;
-void MergeSort(int arr[], int left_index, int right_index, int new_arr[])
+void MergeSort(int arr[], int left_index, int right_index, int new_arr[]) 
 &#123;
   if (left_index &gt;= right_index)
   &#123;
     return;
   &#125;
-  else
-  &#123;
-    int mid_index = (left_index + right_index) / 2;
-    MergeSort(arr, left_index, mid_index, new_arr);
-    MergeSort(arr, mid_index + 1, right_index, new_arr);
-    Merge(arr, left_index, mid_index, mid_index + 1, right_index, new_arr);
-  &#125;
+  int mid_index = (left_index + right_index) / 2;
+  MergeSort(arr, left_index, mid_index, new_arr);
+  MergeSort(arr, mid_index + 1, right_index, new_arr);
+  CommonMerge(arr, left_index, mid_index, mid_index + 1, right_index, new_arr);
+&#125;
+void UniformInterfaceMergeSort(int arr[], int arr_len) 
+&#123;
+  int *p_tmp_array = (int *)malloc(sizeof(int) * arr_len);
+  MergeSort(arr, 0, arr_len - 1, p_tmp_array);
+  free(p_tmp_array);
 &#125;
 void InitArrTime(int arr[], int arr_len)
-&#123;
-  for (int i = 0; i &lt; arr_len; ++i)
+ &#123;
+  for (int i = 0; i &lt; arr_len; ++i) 
   &#123;
     arr[i] = rand() % 1000;
   &#125;
 &#125;
-void TraverArray(int arr[], int arr_len, bool is_sort)
+void PrintIsSortArray(int arr[], int arr_len, void (*pIsSort)(int *, int)) 
 &#123;
-  if (is_sort)
-  &#123;
-    cout &lt;&lt; &quot;排序前:&quot;;
-  &#125;
-  else
-  &#123;
-    cout &lt;&lt; &quot;排序后:&quot;;
-  &#125;
-  for (int i = 0; i &lt; arr_len; i++)
+  pIsSort(arr, arr_len);  
+  for (int i = 0; i &lt; arr_len; ++i) 
   &#123;
     cout &lt;&lt; arr[i] &lt;&lt; &quot; &quot;;
   &#125;
   cout &lt;&lt; endl;
 &#125;
-void BubbleSort(int arr[], int arr_len)
+void TraverArray(int arr[], int arr_len, bool is_sort) 
 &#123;
-  for (int i = 0; i &lt; arr_len - 1; ++i)
+  if (is_sort)
   &#123;
-    for (int j = 0; j &lt; arr_len - 1 - i; ++j)
+    cout &lt;&lt; &quot;排序前:&quot;;
+  &#125;
+  else 
+  &#123;
+    cout &lt;&lt; &quot;排序后:&quot;;
+  &#125;
+  for (int i = 0; i &lt; arr_len; i++) 
+  &#123;
+    cout &lt;&lt; arr[i] &lt;&lt; &quot; &quot;;
+  &#125;
+  cout &lt;&lt; endl;
+&#125;
+void BubbleSort(int arr[], int arr_len) 
+&#123;
+  for (int i = 0; i &lt; arr_len - 1; ++i) 
+  &#123;
+    for (int j = 0; j &lt; arr_len - 1 - i; ++j) 
     &#123;
-      if (arr[j] &gt; arr[j + 1])
+      if (arr[j] &gt; arr[j + 1]) 
       &#123;
         int t = arr[j];
         arr[j] = arr[j + 1];
@@ -1041,24 +1189,24 @@ void BubbleSort(int arr[], int arr_len)
     &#125;
   &#125;
 &#125;
-void InsertSort(int arr[], int arr_len)
+void InsertSort(int arr[], int arr_len) 
 &#123;
   int pre_index;
-  for (int i = 1; i &lt; arr_len; ++i)
+  for (int i = 1; i &lt; arr_len; ++i) 
   &#123;
     int t = arr[i];
-    for (pre_index = i - 1; pre_index &gt;= 0 &amp;&amp; arr[pre_index] &gt; t; --pre_index)
+    for (pre_index = i - 1; pre_index &gt;= 0 &amp;&amp; arr[pre_index] &gt; t; --pre_index) 
     &#123;
       arr[pre_index + 1] = arr[pre_index];
     &#125;
     arr[pre_index + 1] = t;
   &#125;
 &#125;
-void SelectSort(int arr[], int arr_len)
+void SelectSort(int arr[], int arr_len) 
 &#123;
-  for (int i = 0; i &lt; arr_len - 1; ++i)
+  for (int i = 0; i &lt; arr_len - 1; ++i) 
   &#123;
-    for (int j = i + 1; j &lt; arr_len; ++j)
+    for (int j = i + 1; j &lt; arr_len; ++j) 
     &#123;
       if (arr[j] &lt; arr[i])
       &#123;
@@ -1069,15 +1217,15 @@ void SelectSort(int arr[], int arr_len)
     &#125;
   &#125;
 &#125;
-void ShellSort(int arr[], int arr_len)
+void ShellSort(int arr[], int arr_len) 
 &#123;
-  for (int pace = arr_len / 2; pace &gt; 0; pace /= 2)
+  for (int pace = arr_len / 2; pace &gt; 0; pace /= 2) 
   &#123;
-    for (int i = pace; i &lt; arr_len; ++i)
+    for (int i = pace; i &lt; arr_len; ++i) 
     &#123;
       int j = i;
       int current = arr[i];
-      while (j - pace &gt;= 0 &amp;&amp; current &lt; arr[j - pace])
+      while (j - pace &gt;= 0 &amp;&amp; current &lt; arr[j - pace]) 
       &#123;
         arr[j] = arr[j - pace];
         j = j - pace;
@@ -1086,25 +1234,25 @@ void ShellSort(int arr[], int arr_len)
     &#125;
   &#125;
 &#125;
-void RadixSort(int arr[], int arr_len, int max_value)
+void RadixSort(int arr[], int arr_len, int max_value) 
 &#123;
   //创建一个临时数组
   int *p_tmp_array = new int[max_value + 1];
   //给临时数组全部赋值为一个不会出现的数
-  for (int i = 0; i &lt; max_value + 1; ++i)
+  for (int i = 0; i &lt; max_value + 1; ++i) 
   &#123;
     p_tmp_array[i] = -1;
   &#125;
   //根据数组下标来把a数组中数据放到临时数组中去
-  for (int i = 0; i &lt; arr_len; ++i)
+  for (int i = 0; i &lt; arr_len; ++i) 
   &#123;
     p_tmp_array[arr[i]] = arr[i];
   &#125;
   //依序把p_tmp_array中数据放回原数组
   int arr_index = 0;
-  for (int i = 0; i &lt; max_value + 1; ++i)
+  for (int i = 0; i &lt; max_value + 1; ++i) 
   &#123;
-    if (-1 != p_tmp_array[i])
+    if (-1 != p_tmp_array[i]) 
     &#123;
       arr[arr_index++] = p_tmp_array[i];
     &#125;
@@ -1112,38 +1260,38 @@ void RadixSort(int arr[], int arr_len, int max_value)
   //释放内存
   delete[] p_tmp_array;
 &#125;
-void BucketSort(int arr[], int arr_len)
+void BucketSort(int arr[], int arr_len) 
 &#123;
-  int digit = 1; //位数
+  int digit = 1;  //位数
   int **pp_bucket = new int *[10];
-  for (int i = 0; i &lt; 10; ++i)
+  for (int i = 0; i &lt; 10; ++i) 
   &#123;
     pp_bucket[i] = new int[arr_len];
   &#125;
-  int digit_value = -1; //用来获取当前位上的数据
+  int digit_value = -1;  //用来获取当前位上的数据
   int arr_index = 0;
-  while (digit &lt; BUCKET_DIGIT)
+  while (digit &lt; BUCKET_DIGIT) 
   &#123;
     //初始化箱子数据
-    for (int i = 0; i &lt; 10; ++i)
+    for (int i = 0; i &lt; 10; ++i) 
     &#123;
-      for (int j = 0; j &lt; arr_len; ++j)
+      for (int j = 0; j &lt; arr_len; ++j) 
       &#123;
         pp_bucket[i][j] = -1;
       &#125;
     &#125;
     //数据放到箱子里去
-    for (int i = 0; i &lt; arr_len; ++i)
+    for (int i = 0; i &lt; arr_len; ++i) 
     &#123;
-      digit_value = arr[i] / digit % 10; //获取当前位上的数字
+      digit_value = arr[i] / digit % 10;  //获取当前位上的数字
       pp_bucket[digit_value][i] = arr[i];
     &#125;
     //数据从箱子里拿出来覆盖回原数组
-    for (int i = 0; i &lt; 10; ++i)
+    for (int i = 0; i &lt; 10; ++i) 
     &#123;
       for (int j = 0; j &lt; arr_len; ++j)
       &#123;
-        if (-1 != pp_bucket[i][j])
+        if (-1 != pp_bucket[i][j]) 
         &#123;
           arr[arr_index++] = pp_bucket[i][j];
         &#125;
@@ -1151,6 +1299,44 @@ void BucketSort(int arr[], int arr_len)
     &#125;
     TraverArray(arr, BUCKET_NUMBER, false);
     digit *= 10;
+  &#125;
+&#125;
+void CountSort(int* arr, int arr_len)
+&#123;
+  int* p_count_array = (int*)calloc(sizeof(int), 100);
+  if (nullptr == p_count_array)
+  &#123;
+    return;
+  &#125;
+  else
+  &#123;
+    for (int i = 0; i &lt; arr_len; ++i)
+    &#123; 
+      //把数据当做数组下标去记录当前数据的个数
+      p_count_array[arr[i]]++;
+    &#125;
+    int* p_is_sort_array = (int*)malloc(sizeof(int) * arr_len);
+    if (nullptr == p_is_sort_array)
+    &#123;
+      return;
+    &#125;
+    else
+    &#123;
+      for (int i = 1; i &lt; 100; ++i)
+      &#123;
+        //求和
+        p_count_array[i] += p_count_array[i - 1];
+      &#125;
+      //取数据
+      for (int i = arr_len; i &gt; 0; --i)
+      &#123;
+        p_is_sort_array[p_count_array[arr[i - 1]] - 1] = arr[i - 1];
+        p_count_array[arr[i - 1]]--;
+      &#125;
+      memcpy(arr, p_is_sort_array, arr_len * sizeof(int));
+      free(p_count_array);
+      free(p_is_sort_array);
+    &#125;
   &#125;
 &#125;
 </code></pre>
@@ -1164,10 +1350,10 @@ void BucketSort(int arr[], int arr_len)
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>算法-经典排序算法</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">1.3k</span></p>
+    <p><span class="copy-title">字数:</span><span class="post-count">2k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="kpsun">kpsun</a></p>
     <p><span class="copy-title">发布时间:</span>2022-11-05, 23:02:01</p>
-    <p><span class="copy-title">最后更新:</span>2022-11-05, 23:04:50</p>
+    <p><span class="copy-title">最后更新:</span>2022-11-09, 19:06:03</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/11/05/%E7%AE%97%E6%B3%95-%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="算法-经典排序算法">http://goskp.github.io/2022/11/05/%E7%AE%97%E6%B3%95-%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
