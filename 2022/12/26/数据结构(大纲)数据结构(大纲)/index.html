@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>数据结构-顺序表(list) | kpsun</title>
+  <title>数据结构(大纲) | kpsun</title>
   <meta name="keywords" content=" 数据结构 ">
-  <meta name="description" content="数据结构-顺序表(list) | kpsun">
+  <meta name="description" content="数据结构(大纲) | kpsun">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介孙楷朋准大二计算机相关专业在读热爱编程,乐于合作,善于总结分享,有良好的的编程习惯目标BAT大厂联系方式 QQ: 1287923885 WeChat: code_cpp Email: &amp;#107;&amp;#x70;&amp;#x73;&amp;#117;&amp;#x6e;&amp;#64;&amp;#x66;&amp;#111;&amp;#x78;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x2e;&amp;#99;&amp;#111;&amp;#x6d;">
 <meta property="og:type" content="website">
@@ -800,9 +800,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-数据结构-顺序表(list)" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-数据结构(大纲)数据结构(大纲)" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">数据结构-顺序表(list)</h1>
+        <h1 class="article-title">数据结构(大纲)</h1>
     
     <div class="article-meta">
         
@@ -827,12 +827,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-10-29 22:49:18'>2022-06-30 12:46</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-26 20:49:10'>2022-12-26 20:48</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:939</span>
+        <span>字数:196</span>
         
         
         
@@ -840,7 +840,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E8%A1%A8-%E6%9C%89%E5%BA%8F%E6%8F%92%E5%85%A5%E7%BB%93%E7%82%B9"><span class="toc-text">顺序表(有序插入结点)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8E%E9%93%BE%E8%A1%A8%E5%A4%A7%E5%B7%AE%E4%B8%8D%E5%A4%A7-%E5%8F%AA%E6%98%AF%E5%AD%98%E4%B8%80%E4%B8%8B%E4%BB%A3%E7%A0%81-%E4%B8%8D%E5%81%9A%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A%E4%BA%86-%E9%93%BE%E8%A1%A8%E5%A6%82%E6%9E%9C%E7%90%86%E8%A7%A3%E7%9A%84%E9%80%8F%E5%BD%BB-%E9%A1%BA%E5%BA%8F%E8%A1%A8%E5%B0%B1%E5%A6%82%E6%8E%A2%E5%9B%8A%E5%8F%96%E7%89%A9"><span class="toc-text">与链表大差不大,只是存一下代码,不做详细解释了, 链表如果理解的透彻,顺序表就如探囊取物</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%8F%8F%E8%BF%B0"><span class="toc-text">数组描述:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%B9%E9%87%8F"><span class="toc-text">元素容量:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">元素数据类型:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%BA%E5%BA%8F%E8%A1%A8"><span class="toc-text">创建顺序表:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%80%E8%BE%9F%E6%9B%B4%E5%A4%9A%E5%86%85%E5%AD%98"><span class="toc-text">开辟更多内存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%93%E7%82%B9%E6%8F%92%E5%85%A5%E9%A1%BA%E5%BA%8F%E8%A1%A8"><span class="toc-text">结点插入顺序表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E9%A1%BA%E5%BA%8F%E8%A1%A8"><span class="toc-text">删除顺序表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%A0%E4%B8%BA%E9%A1%BA%E5%BA%8F%E8%A1%A8%E6%9C%AC%E8%BA%AB%E5%B0%B1%E6%9C%89%E9%A1%BA%E5%BA%8F-%E6%89%80%E4%BB%A5%E5%8F%AA%E9%9C%80%E6%8C%AA%E4%BD%8D%E7%BD%AE%E5%8D%B3%E5%8F%AF-%E7%A7%BB%E5%8A%A8%E5%85%83%E7%B4%A0"><span class="toc-text">因为顺序表本身就有顺序,所以只需挪位置即可,移动元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%81%8D%E5%8E%86%E9%A1%BA%E5%BA%8F%E8%A1%A8"><span class="toc-text">遍历顺序表</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E8%A1%A8%E6%8F%8F%E8%BF%B0"><span class="toc-text">链表描述:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-1"><span class="toc-text">元素数据类型:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE"><span class="toc-text">测试数据:</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84%E6%98%AF%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E6%8A%BD%E8%B1%A1%EF%BC%8C%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%E6%98%AF%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%AE%9E%E7%8E%B0%EF%BC%8C%E4%B8%A4%E8%80%85%E7%BB%BC%E5%90%88%E8%B5%B7%E6%9D%A5%E5%B0%B1%E5%BB%BA%E7%AB%8B%E4%BA%86%E6%95%B0%E6%8D%AE%E5%85%83%E7%B4%A0%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">逻辑结构是数据结构的抽象，存储结构是数据结构的实现，两者综合起来就建立了数据元素的关系</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84"><span class="toc-text">逻辑结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E7%A7%8D%E5%9F%BA%E6%9C%AC%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84"><span class="toc-text">四种基本逻辑结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%BD%A2%E5%BC%8F%E5%AE%9A%E4%B9%89"><span class="toc-text">抽象数据类型的形式定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%89%B9%E6%80%A7"><span class="toc-text">算法特性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E8%A6%81%E6%B1%82"><span class="toc-text">算法设计要求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E6%B8%90%E8%BF%91%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">算法渐近时间复杂度</span></a>
     
 <style>
     .left-col .switch-btn,
@@ -856,232 +856,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="顺序表-有序插入结点"><a href="#顺序表-有序插入结点" class="headerlink" title="顺序表(有序插入结点)"></a>顺序表(有序插入结点)</h1><h1 id="与链表大差不大-只是存一下代码-不做详细解释了-链表如果理解的透彻-顺序表就如探囊取物"><a href="#与链表大差不大-只是存一下代码-不做详细解释了-链表如果理解的透彻-顺序表就如探囊取物" class="headerlink" title="与链表大差不大,只是存一下代码,不做详细解释了, 链表如果理解的透彻,顺序表就如探囊取物"></a>与链表大差不大,只是存一下代码,不做详细解释了, 链表如果理解的透彻,顺序表就如探囊取物</h1><h3 id="数组描述"><a href="#数组描述" class="headerlink" title="数组描述:"></a>数组描述:</h3><ul>
-<li><h4 id="元素容量"><a href="#元素容量" class="headerlink" title="元素容量:"></a>元素容量:</h4></li>
+        <h4 id="逻辑结构是数据结构的抽象，存储结构是数据结构的实现，两者综合起来就建立了数据元素的关系"><a href="#逻辑结构是数据结构的抽象，存储结构是数据结构的实现，两者综合起来就建立了数据元素的关系" class="headerlink" title="逻辑结构是数据结构的抽象，存储结构是数据结构的实现，两者综合起来就建立了数据元素的关系"></a>逻辑结构是数据结构的抽象，存储结构是数据结构的实现，两者综合起来就建立了数据元素的关系</h4><h1 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h1><ul>
+<li>线性结构<ul>
+<li>线性表，栈，队列， 串，</li>
 </ul>
-<pre><code class="c">#define MAX 2
-</code></pre>
+</li>
+<li>非线性结构<ul>
+<li>树，图</li>
+</ul>
+</li>
+</ul>
+<h1 id="四种基本逻辑结构"><a href="#四种基本逻辑结构" class="headerlink" title="四种基本逻辑结构"></a>四种基本逻辑结构</h1><ul>
+<li>集合结构</li>
+<li>线性结构</li>
+<li>树形结构</li>
+<li>图状结构</li>
+</ul>
+<p>四种基本存储结构</p>
 <ul>
-<li><h4 id="元素数据类型"><a href="#元素数据类型" class="headerlink" title="元素数据类型:"></a>元素数据类型:</h4></li>
+<li>顺序存储</li>
+<li>链式存储</li>
+<li>索引存储</li>
+<li>散列存储</li>
 </ul>
-<pre><code class="c">struct MM &#123;
-    char name[20];
-    int age;
-&#125;;
-
-struct Data &#123;
-    int index;  //序号
-    struct MM mm_data;
-&#125;;
-
-//顺序表的结构体
-typedef struct SqList &#123;
-    int sqlist_size;  //顺序表中元素个数
-    struct Data* p_memory;
-&#125; SQLIST, *LPSQLIST;
-</code></pre>
-<ul>
-<li><h4 id="创建顺序表"><a href="#创建顺序表" class="headerlink" title="创建顺序表:"></a>创建顺序表:</h4></li>
+<h1 id="抽象数据类型的形式定义"><a href="#抽象数据类型的形式定义" class="headerlink" title="抽象数据类型的形式定义"></a>抽象数据类型的形式定义</h1><p>（D,S,P)三元组表示</p>
+<p>D是数据对象，S是D上的关系集，P是对D的基本操作集</p>
+<h1 id="算法特性"><a href="#算法特性" class="headerlink" title="算法特性"></a>算法特性</h1><ul>
+<li>有穷性</li>
+<li>确定性</li>
+<li>可行性</li>
+<li>输入</li>
+<li>输出</li>
 </ul>
-<pre><code class="c">LPSQLIST CreateSqList() &#123;
-    LPSQLIST p_sqlist = (LPSQLIST)malloc(sizeof(SQLIST));
-    if (NULL == p_sqlist) &#123;
-        return NULL;
-    &#125;
-    p_sqlist-&gt;sqlist_size = 0;
-    p_sqlist-&gt;p_memory = (struct Data*)malloc(sizeof(struct Data) * MAX);
-    return p_sqlist;
-&#125;
-</code></pre>
-<ul>
-<li><h4 id="开辟更多内存"><a href="#开辟更多内存" class="headerlink" title="开辟更多内存"></a>开辟更多内存</h4></li>
+<h1 id="算法设计要求"><a href="#算法设计要求" class="headerlink" title="算法设计要求"></a>算法设计要求</h1><ul>
+<li>正确性</li>
+<li>可读性</li>
+<li>健壮性</li>
+<li>高效性</li>
 </ul>
-<pre><code class="c">void ReallocMemory(LPSQLIST p_sqlist, int cur_size, int new_size) &#123;
-    printf(&quot;开辟更多内存\n&quot;);
-    int max_size = cur_size &gt; new_size ? cur_size : new_size;
-    p_sqlist-&gt;p_memory = (struct Data*)realloc(p_sqlist-&gt;p_memory,
-                                               sizeof(struct Data) * max_size);
-&#125;
-</code></pre>
-<ul>
-<li><h4 id="结点插入顺序表"><a href="#结点插入顺序表" class="headerlink" title="结点插入顺序表"></a>结点插入顺序表</h4></li>
-</ul>
-<pre><code class="c">void InsertData(LPSQLIST p_sqlist, struct Data new_data) &#123;
-    //元素个数已满,内存重新申请为当前大小的两倍
-    if (MAX == p_sqlist-&gt;sqlist_size) &#123;
-        ReallocMemory(p_sqlist, MAX, 2 * MAX);
-    &#125;
-    //直接插在表尾
-    p_sqlist-&gt;p_memory[p_sqlist-&gt;sqlist_size] = new_data;
-    //调整位置
-    //后面的和前面的相比
-    for (int i = p_sqlist-&gt;sqlist_size; i &gt;= 0; --i) &#123;
-        if (p_sqlist-&gt;p_memory[i - 1].index &gt; p_sqlist-&gt;p_memory[i].index) &#123;
-            struct Data tmp = p_sqlist-&gt;p_memory[i - 1];
-            p_sqlist-&gt;p_memory[i - 1] = p_sqlist-&gt;p_memory[i];
-            p_sqlist-&gt;p_memory[i] = tmp;
-        &#125; else &#123;
-            break;
-        &#125;
-    &#125;
-    //元素个数+1
-    p_sqlist-&gt;sqlist_size++;
-&#125;
-</code></pre>
-<ul>
-<li><h4 id="删除顺序表"><a href="#删除顺序表" class="headerlink" title="删除顺序表"></a>删除顺序表</h4></li>
-<li><h4 id="因为顺序表本身就有顺序-所以只需挪位置即可-移动元素"><a href="#因为顺序表本身就有顺序-所以只需挪位置即可-移动元素" class="headerlink" title="因为顺序表本身就有顺序,所以只需挪位置即可,移动元素"></a>因为顺序表本身就有顺序,所以只需挪位置即可,移动元素</h4></li>
-</ul>
-<pre><code class="c">void DeleteData(LPSQLIST p_sqlist, int del_index) &#123;
-    //找到删除元素的下标
-    int del_pos = -1;
-    for (int i = 0; i &lt; p_sqlist-&gt;sqlist_size; ++i) &#123;
-        if (p_sqlist-&gt;p_memory[i].index == del_index) &#123;
-            del_pos = i;
-            break;
-        &#125;
-    &#125;
-    //调整数组
-    if (del_pos == -1) &#123;
-        printf(&quot;未找到指定元素&quot;);
-        return;
-    &#125; else &#123;
-        //数组后面的元素往前移动
-        for (int i = del_pos; i &lt; p_sqlist-&gt;sqlist_size; ++i) &#123;
-            p_sqlist-&gt;p_memory[i] = p_sqlist-&gt;p_memory[i + 1];
-        &#125;
-        //元素个数-1
-        p_sqlist-&gt;sqlist_size--;
-    &#125;
-&#125;
-</code></pre>
-<ul>
-<li><h4 id="遍历顺序表"><a href="#遍历顺序表" class="headerlink" title="遍历顺序表"></a>遍历顺序表</h4></li>
-</ul>
-<pre><code class="c">void PrintSqList(LPSQLIST p_sqlist) &#123;
-    for (int i = 0; i &lt; p_sqlist-&gt;sqlist_size; ++i) &#123;
-        printf(&quot;序号:%d\t名字:%s\t年龄:%d\n&quot;, p_sqlist-&gt;p_memory[i].index,
-               p_sqlist-&gt;p_memory[i].mm_data.name,
-               p_sqlist-&gt;p_memory[i].mm_data.age);
-    &#125;
-    putchar(&#39;\n&#39;);
-&#125;
-</code></pre>
-<h3 id="链表描述"><a href="#链表描述" class="headerlink" title="链表描述:"></a>链表描述:</h3><ul>
-<li><h4 id="元素数据类型-1"><a href="#元素数据类型-1" class="headerlink" title="元素数据类型:"></a>元素数据类型:</h4></li>
-</ul>
-<pre><code class="c">struct MM &#123;
-    char name[20];
-    int age;
-&#125;;
-
-struct Data &#123;
-    int index;
-    struct MM mm_data;
-&#125;;
-
-typedef struct Node &#123;
-    struct Data data;
-    struct Node* p_next;
-&#125; NODE, *LPNODE;
-
-typedef struct SqList &#123;
-    int sql_size;
-    LPNODE p_head_node;
-&#125; SQLIST, *LPSQLIST;
-</code></pre>
-<pre><code class="c">LPNODE CreateList() &#123;
-    LPNODE p_head_node = (LPNODE)malloc(sizeof(NODE));
-    if (NULL == p_head_node) &#123;
-        return NULL;
-    &#125;
-    p_head_node-&gt;p_next = NULL;
-    return p_head_node;
-&#125;
-
-LPNODE CreateNode(struct Data new_data) &#123;
-    LPNODE p_new_node = (LPNODE)malloc(sizeof(NODE));
-    if (NULL == p_new_node) &#123;
-        return NULL;
-    &#125;
-    p_new_node-&gt;data = new_data;
-    p_new_node-&gt;p_next = NULL;
-    return p_new_node;
-&#125;
-
-//创建顺序表
-LPSQLIST CreateSqList() &#123;
-    LPSQLIST p_sqlist = (LPSQLIST)malloc(sizeof(SQLIST));
-    if (NULL == p_sqlist) &#123;
-        return NULL;
-    &#125;
-    p_sqlist-&gt;sql_size = 0;
-    p_sqlist-&gt;p_head_node = CreateList();
-    return p_sqlist;
-&#125;
-
-void PrintSqList(LPSQLIST p_sqlist) &#123;
-    LPNODE p_move = p_sqlist-&gt;p_head_node-&gt;p_next;
-    while (NULL != p_move) &#123;
-        printf(&quot;序号:%d\t姓名:%s\t年龄:%d\n&quot;, p_move-&gt;data.index,
-               p_move-&gt;data.mm_data.name, p_move-&gt;data.mm_data.age);
-        p_move = p_move-&gt;p_next;
-    &#125;
-    putchar(&#39;\n&#39;);
-&#125;
-
-void InsertData(LPSQLIST p_sqlist, struct Data new_data) &#123;
-    LPNODE p_new_node = CreateNode(new_data);
-    //找到指定位置
-    LPNODE p_pre_node = p_sqlist-&gt;p_head_node;
-    LPNODE p_pos_node = p_sqlist-&gt;p_head_node-&gt;p_next;
-    while (NULL != p_pos_node &amp;&amp; p_pos_node-&gt;data.index &lt; new_data.index) &#123;
-        p_pre_node = p_pos_node;
-        p_pos_node = p_pre_node-&gt;p_next;
-    &#125;
-    // if (NULL == p_pos_node) &#123;
-    //     p_pre_node-&gt;p_next = p_new_node;
-    // &#125; else &#123;
-    //     p_pre_node-&gt;p_next = p_new_node;
-    //     p_new_node-&gt;p_next = p_pos_node;
-    // &#125;
-    p_pre_node-&gt;p_next = p_new_node;
-    p_new_node-&gt;p_next = p_pos_node;
-    p_sqlist-&gt;sql_size++;
-&#125;
-
-void DeleteNode(LPSQLIST p_sqlist, int index) &#123;
-    LPNODE p_pre_node = p_sqlist-&gt;p_head_node;
-    LPNODE p_pos_node = p_sqlist-&gt;p_head_node-&gt;p_next;
-    while (NULL != p_pos_node &amp;&amp; p_pos_node-&gt;data.index != index) &#123;
-        p_pre_node = p_pos_node;
-        p_pos_node = p_pos_node-&gt;p_next;
-    &#125;
-    if (NULL == p_pos_node) &#123;
-        printf(&quot;未找到数据&quot;);
-        return;
-    &#125; else &#123;
-        p_pre_node-&gt;p_next = p_pos_node-&gt;p_next;
-        free(p_pos_node);
-        p_pos_node = NULL;
-        p_sqlist-&gt;sql_size--;
-    &#125;
-&#125;
-</code></pre>
-<ul>
-<li><h4 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据:"></a>测试数据:</h4></li>
-</ul>
-<pre><code class="c">LPSQLIST p_sqlist = CreateSqList();
-struct Data array[4] = &#123;3, &quot;小红&quot;, 18, 1, &quot;小明&quot;,  14,
-                        0, &quot;雨墨&quot;, 18, 2, &quot;小asd&quot;, 4&#125;;
-for (int i = 0; i &lt; 4; ++i) &#123;
-    InsertData(p_sqlist, array[i]);
-&#125;
-PrintSqList(p_sqlist);
-printf(&quot;删除序号为3的结点:\n&quot;);
-DeleteNode(p_sqlist, 3);
-PrintSqList(p_sqlist);
-</code></pre>
+<h1 id="算法渐近时间复杂度"><a href="#算法渐近时间复杂度" class="headerlink" title="算法渐近时间复杂度"></a>算法渐近时间复杂度</h1><p>+ </p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。邮件至kpsun@foxmail.com </span>
@@ -1091,12 +904,12 @@ PrintSqList(p_sqlist);
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>数据结构-顺序表(list)</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">939</span></p>
+    <p><span class="copy-title">文章标题:</span>数据结构(大纲)</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">196</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="kpsun">kpsun</a></p>
-    <p><span class="copy-title">发布时间:</span>2022-06-30, 12:46:33</p>
-    <p><span class="copy-title">最后更新:</span>2022-10-29, 22:49:18</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/06/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%A1%BA%E5%BA%8F%E8%A1%A8(list)/" title="数据结构-顺序表(list)">http://goskp.github.io/2022/06/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%A1%BA%E5%BA%8F%E8%A1%A8(list)/</a>
+    <p><span class="copy-title">发布时间:</span>2022-12-26, 20:48:28</p>
+    <p><span class="copy-title">最后更新:</span>2022-12-26, 20:49:10</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/12/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84(%E5%A4%A7%E7%BA%B2)%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84(%E5%A4%A7%E7%BA%B2)/" title="数据结构(大纲)">http://goskp.github.io/2022/12/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84(%E5%A4%A7%E7%BA%B2)%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84(%E5%A4%A7%E7%BA%B2)/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
